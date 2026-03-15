@@ -456,8 +456,9 @@ function onDragStart(e: MouseEvent | TouchEvent, cardId: string) {
   const offsetY = startY - rect.top
   let dragging = false
 
-  const card = activeCards.value.find(c => c.id === cardId)!
-  if (!card) return
+  const foundCard = activeCards.value.find(c => c.id === cardId)
+  if (!foundCard) return
+  const card: CardData = foundCard
 
   function onMove(ev: MouseEvent | TouchEvent) {
     const cx = 'touches' in ev ? ev.touches[0].clientX : ev.clientX
