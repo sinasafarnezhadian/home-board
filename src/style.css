@@ -1,0 +1,658 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  background: #e8ecf1;
+  color: #2d3748;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 2px; }
+
+/* ── Shared Modal Styles (used by Teleport components) ── */
+
+.ha-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.ha-modal-box {
+  width: 340px;
+  max-height: 80vh;
+  background: #e8ecf1;
+  border-radius: 20px;
+  padding: 28px 24px 24px;
+  box-shadow: 0px 0 20px 0px #969698;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.ha-modal-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ha-modal-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2d3748;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ha-modal-close {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: color 0.15s;
+}
+
+.ha-modal-close:hover {
+  color: #e53e3e;
+}
+
+.ha-modal-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ha-modal-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.ha-modal-input {
+  background: #e8ecf1;
+  border: none;
+  border-radius: 12px;
+  color: #2d3748;
+  font-size: 0.9rem;
+  outline: none;
+  padding: 11px 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s;
+  box-shadow: inset 4px 4px 8px #c8cdd5, inset -4px -4px 8px #ffffff;
+}
+
+.ha-modal-input:focus {
+  box-shadow: inset 4px 4px 8px #c8cdd5, inset -4px -4px 8px #ffffff, 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.ha-modal-input::placeholder {
+  color: #c0c7d0;
+}
+
+.ha-modal-suggestions {
+  background: #e8ecf1;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 8px 8px 20px #c8cdd5, -4px -4px 12px #ffffff;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  position: absolute;
+  top: calc(100% + 6px);
+  width: 100%;
+  z-index: 20;
+}
+
+.ha-modal-suggestion-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 9px 14px;
+  transition: background 0.1s;
+}
+
+.ha-modal-suggestion-item:hover,
+.ha-modal-suggestion-item.active {
+  background: rgba(37, 99, 235, 0.07);
+}
+
+.ha-modal-s-entity {
+  color: #4a5568;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.ha-modal-s-name {
+  color: #a0aec0;
+  font-size: 0.71rem;
+}
+
+.ha-modal-hint {
+  font-size: 0.72rem;
+  color: #b0bac6;
+  letter-spacing: 0.01em;
+}
+
+.ha-modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.ha-modal-btn {
+  background: #e8ecf1;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  flex: 1;
+  box-shadow: 3px 3px 6px #c8cdd5, -3px -3px 6px #ffffff;
+  transition: box-shadow 0.15s, color 0.15s;
+}
+
+.ha-modal-btn:hover {
+  box-shadow: 2px 2px 4px #c8cdd5, -2px -2px 4px #ffffff;
+}
+
+.ha-modal-btn:active {
+  box-shadow: inset 2px 2px 5px #c8cdd5, inset -2px -2px 5px #ffffff;
+}
+
+.ha-modal-btn.confirm {
+  color: #38a169;
+}
+
+.ha-modal-btn.cancel {
+  color: #e53e3e;
+}
+
+.ha-modal-empty {
+  text-align: center;
+  color: #a0aec0;
+  font-size: 0.85rem;
+  padding: 16px 0;
+}
+
+.ha-modal-entity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ha-modal-entity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 12px;
+  transition: background 0.1s;
+}
+
+.ha-modal-entity-row:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.ha-modal-entity-name {
+  font-size: 0.82rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.ha-modal-entity-value {
+  font-size: 0.82rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.ha-modal-entity-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.ha-modal-entity-badge.closed {
+  color: #38a169;
+  background: rgba(56, 161, 105, 0.1);
+}
+
+.ha-modal-entity-badge.open {
+  color: #e53e3e;
+  background: rgba(229, 62, 62, 0.1);
+}
+
+.ha-modal-toggle-btn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #e8ecf1;
+  box-shadow: 2px 2px 4px #c8cdd5, -2px -2px 4px #ffffff;
+  transition: box-shadow 0.15s, color 0.15s;
+}
+
+.ha-modal-toggle-btn.on {
+  color: #d69e2e;
+}
+
+.ha-modal-toggle-btn.off {
+  color: #a0aec0;
+}
+
+.ha-modal-toggle-btn:active {
+  box-shadow: inset 2px 2px 4px #c8cdd5, inset -2px -2px 4px #ffffff;
+}
+
+.ha-modal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ha-modal-icon-btn {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.ha-modal-icon-btn:hover {
+  color: #718096;
+}
+
+.ha-modal-icon-btn.active {
+  color: #2563eb;
+}
+
+.ha-modal-remove-btn {
+  background: none;
+  border: none;
+  color: #c0c7d0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: color 0.15s;
+}
+
+.ha-modal-remove-btn:hover {
+  color: #e53e3e;
+}
+
+.ha-modal-delete-btn {
+  background: none;
+  border: none;
+  color: #e53e3e;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 8px 0;
+  text-align: center;
+  transition: color 0.15s;
+}
+
+.ha-modal-delete-btn:hover {
+  color: #c53030;
+}
+
+/* ── Light control modal ── */
+
+.ha-light-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ha-light-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ha-light-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ha-light-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  height: 10px;
+  border-radius: 10px;
+  background: #e8ecf1;
+  box-shadow: inset 3px 3px 6px #c8cdd5, inset -3px -3px 6px #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+
+.ha-light-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e8ecf1;
+  box-shadow: 3px 3px 6px #c8cdd5, -3px -3px 6px #ffffff;
+  cursor: pointer;
+  border: none;
+  transition: box-shadow 0.15s;
+}
+
+.ha-light-slider::-webkit-slider-thumb:hover {
+  box-shadow: 2px 2px 4px #c8cdd5, -2px -2px 4px #ffffff;
+}
+
+.ha-light-slider::-webkit-slider-thumb:active {
+  box-shadow: inset 2px 2px 4px #c8cdd5, inset -2px -2px 4px #ffffff;
+}
+
+.ha-light-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #e8ecf1;
+  box-shadow: 3px 3px 6px #c8cdd5, -3px -3px 6px #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+.ha-light-slider::-moz-range-track {
+  height: 10px;
+  border-radius: 10px;
+  background: #e8ecf1;
+  box-shadow: inset 3px 3px 6px #c8cdd5, inset -3px -3px 6px #ffffff;
+}
+
+.ha-light-slider-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2d3748;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Hue slider — rainbow gradient track */
+.ha-light-slider--hue {
+  background: linear-gradient(to right,
+    hsl(0,100%,50%),
+    hsl(60,100%,50%),
+    hsl(120,100%,50%),
+    hsl(180,100%,50%),
+    hsl(240,100%,50%),
+    hsl(300,100%,50%),
+    hsl(360,100%,50%)
+  ) !important;
+  box-shadow: none !important;
+  border-radius: 10px;
+}
+
+/* Saturation slider — white to full color */
+.ha-light-slider--sat {
+  background: linear-gradient(to right, #e8ecf1, var(--sat-color, #ff0000)) !important;
+  box-shadow: none !important;
+  border-radius: 10px;
+}
+
+/* ── Weather forecast modal ── */
+
+.ha-modal-box--wide {
+  width: 480px;
+}
+
+/* Current weather summary */
+.wf-current {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.wf-current-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wf-current-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wf-current-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wf-current-condition {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.wf-current-ago {
+  font-size: 0.72rem;
+  color: #a0aec0;
+  font-weight: 500;
+}
+
+.wf-current-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.wf-current-temp {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.wf-current-hilo {
+  font-size: 0.72rem;
+  color: #a0aec0;
+  font-weight: 500;
+}
+
+/* Detail rows */
+.wf-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 4px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.wf-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.wf-detail-label {
+  font-size: 0.8rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.wf-detail-value {
+  font-size: 0.8rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* Tabs */
+.wf-tabs {
+  display: flex;
+  gap: 0;
+  position: relative;
+}
+
+.wf-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #a0aec0;
+  padding: 8px 0;
+  text-align: center;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.wf-tab.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.wf-tab:hover:not(.active) {
+  color: #718096;
+}
+
+/* Forecast rows */
+.weather-forecast-row {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+}
+
+.weather-forecast-day {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 4px;
+  background: #e8ecf1;
+  border-radius: 14px;
+  box-shadow: inset 2px 2px 5px #c8cdd5, inset -2px -2px 5px #ffffff;
+}
+
+.wf-date {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wf-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wf-temps {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.wf-temps-low {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #a0aec0;
+}
+
+.wf-condition {
+  font-size: 0.6rem;
+  color: #a0aec0;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.wf-rain {
+  font-size: 0.62rem;
+  color: #5b9bd5;
+  font-weight: 500;
+}
+
+/* Hourly forecast */
+.wf-hourly-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.wf-hourly-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wf-hourly-day-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wf-hourly-group .weather-forecast-row {
+  overflow-x: auto;
+  justify-content: flex-start;
+  gap: 6px;
+  padding-bottom: 4px;
+}
+
+.wf-hourly-group .weather-forecast-day {
+  flex: 0 0 auto;
+  min-width: 50px;
+  padding: 8px 6px;
+}
+
+.ha-light-color-preview {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 6px #c8cdd5, -3px -3px 6px #ffffff;
+  border: 2px solid #fff;
+}
