@@ -1,19 +1,22 @@
 <template>
   <div class="heading" :class="{ short: rows === 1 }">
-    <h2
-      v-if="!editing"
-      class="heading-text"
-      @dblclick="startEdit"
-    >{{ label }}</h2>
-    <input
-      v-else
-      ref="inputRef"
-      v-model="editValue"
-      class="heading-input"
-      @blur="finishEdit"
-      @keydown.enter="finishEdit"
-      @keydown.escape="cancelEdit"
-    />
+    <div class="heading-content">
+      <h2
+        v-if="!editing"
+        class="heading-text"
+        @dblclick="startEdit"
+      >{{ label }}</h2>
+      <input
+        v-else
+        ref="inputRef"
+        v-model="editValue"
+        class="heading-input"
+        @blur="finishEdit"
+        @keydown.enter="finishEdit"
+        @keydown.escape="cancelEdit"
+      />
+      <hr class="heading-line" />
+    </div>
 
     <!-- Edit / delete button -->
     <button class="heading-edit-btn" @click.stop="openMenu" title="Bearbeiten">
@@ -161,38 +164,54 @@ function startResize(e: MouseEvent | TouchEvent) {
 .heading {
   display: flex;
   align-items: flex-end;
-  padding: 0 4px 6px;
+  padding: 0 2px 0;
   position: relative;
   overflow: hidden;
   user-select: none;
 }
 
 .heading.short {
-  align-items: center;
-  padding: 0 4px;
+  align-items: flex-end;
+}
+
+.heading-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
 }
 
 .heading-text {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: #2d3748;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1;
   margin: 0;
   cursor: default;
   word-break: break-word;
 }
 
 .heading.short .heading-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+.heading-line {
+  border: none;
+  height: 2px;
+  background: #d2d8e0;
+  margin: 0;
+  width: 100%;
+  border-radius: 1px;
 }
 
 .heading-input {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: #2d3748;
   letter-spacing: -0.02em;
-  line-height: 1.1;
+  line-height: 1;
   background: transparent;
   border: none;
   border-bottom: 2px solid #2563eb;

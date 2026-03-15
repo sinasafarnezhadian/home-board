@@ -398,7 +398,7 @@ function addHeading() {
   const id = generateId()
   const page = activePage.value
   if (!page) return
-  page.cards = [...page.cards, { id, type: 'heading', entityId: '', label: 'Überschrift', cols: 3, rows: 1 }]
+  page.cards = [...page.cards, { id, type: 'heading', entityId: '', label: 'Überschrift', cols: 4, rows: 1 }]
   pages.value = [...pages.value]
   savePages()
 }
