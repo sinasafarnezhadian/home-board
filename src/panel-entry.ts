@@ -14,23 +14,23 @@ class HomeBoardPanel extends HTMLElement {
     if (!this._app && newToken) {
       setPanelMode(true)
 
-      // HA renders custom panels inside a shadow DOM (ha-panel-custom).
-      // CSS injected into document.head can't penetrate shadow boundaries,
-      // so we copy our styles into the shadow root we live in.
-      const root = this.getRootNode()
-      if (root instanceof ShadowRoot) {
-        document.head.querySelectorAll('style').forEach(s => {
-          if (s.textContent && s.textContent.includes('data-v-')) {
-            const clone = document.createElement('style')
-            clone.textContent = s.textContent
-            root.prepend(clone)
-          }
-        })
-      }
+      // Create our own shadow root so we control the style boundary.
+      // vite-plugin-css-injected-by-js puts all CSS into document.head,
+      // but HA's panel host (ha-panel-custom) uses shadow DOM, so those
+      // styles never reach our elements. We copy them into our own shadow.
+      const shadow = this.attachShadow({ mode: 'open' })
+
+      document.head.querySelectorAll('style').forEach(s => {
+        if (s.textContent && s.textContent.includes('.dashboard')) {
+          const clone = document.createElement('style')
+          clone.textContent = s.textContent
+          shadow.appendChild(clone)
+        }
+      })
 
       const container = document.createElement('div')
       container.style.height = '100%'
-      this.appendChild(container)
+      shadow.appendChild(container)
       this._app = createApp(App, { panelMode: true })
       this._app.mount(container)
     }
