@@ -439,7 +439,7 @@ function onDragStart(e: MouseEvent | TouchEvent, cardId: string) {
   const offsetY = startY - rect.top
   let dragging = false
 
-  const card = activeCards.value.find(c => c.id === cardId)
+  const card = activeCards.value.find(c => c.id === cardId)!
   if (!card) return
 
   function onMove(ev: MouseEvent | TouchEvent) {
