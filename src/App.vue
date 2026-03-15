@@ -20,25 +20,40 @@
       </header>
 
       <main ref="gridRef" class="dashboard-main">
-        <SensorCard
-          v-for="card in activeCards"
-          :key="card.id"
-          :data-card-id="card.id"
-          :style="cardStyle(card)"
-          :class="{ 'card-dragging': dragCardId === card.id }"
-          :entity-id="card.entityId"
-          :token="token!"
-          :cols="card.cols"
-          :rows="card.rows"
-          :state="sensors[card.id]?.state ?? null"
-          :loading="sensors[card.id]?.loading ?? true"
-          :error="sensors[card.id]?.error ?? null"
-          @change-entity="(newId: string) => onChangeEntity(card.id, newId)"
-          @remove="removeCard(card.id)"
-          @resize="(cols: number, rows: number) => onResizeCard(card.id, cols, rows)"
-          @mousedown="(e: MouseEvent) => onDragStart(e, card.id)"
-          @touchstart="(e: TouchEvent) => onDragStart(e, card.id)"
-        />
+        <template v-for="card in activeCards" :key="card.id">
+          <HeadingCard
+            v-if="card.type === 'heading'"
+            :data-card-id="card.id"
+            :style="cardStyle(card)"
+            :class="{ 'card-dragging': dragCardId === card.id }"
+            :label="card.label || 'Überschrift'"
+            :cols="card.cols"
+            :rows="card.rows"
+            @update-label="(label: string) => onUpdateHeading(card.id, label)"
+            @remove="removeCard(card.id)"
+            @resize="(cols: number, rows: number) => onResizeCard(card.id, cols, rows)"
+            @mousedown="(e: MouseEvent) => onDragStart(e, card.id)"
+            @touchstart="(e: TouchEvent) => onDragStart(e, card.id)"
+          />
+          <SensorCard
+            v-else
+            :data-card-id="card.id"
+            :style="cardStyle(card)"
+            :class="{ 'card-dragging': dragCardId === card.id }"
+            :entity-id="card.entityId"
+            :token="token!"
+            :cols="card.cols"
+            :rows="card.rows"
+            :state="sensors[card.id]?.state ?? null"
+            :loading="sensors[card.id]?.loading ?? true"
+            :error="sensors[card.id]?.error ?? null"
+            @change-entity="(newId: string) => onChangeEntity(card.id, newId)"
+            @remove="removeCard(card.id)"
+            @resize="(cols: number, rows: number) => onResizeCard(card.id, cols, rows)"
+            @mousedown="(e: MouseEvent) => onDragStart(e, card.id)"
+            @touchstart="(e: TouchEvent) => onDragStart(e, card.id)"
+          />
+        </template>
         <div
           v-if="dragCardId"
           class="drop-placeholder"
@@ -104,6 +119,9 @@
             <button class="burger-item" @click="addCard(); burgerOpen = false">
               <span class="burger-item-icon">+</span> Karte hinzufügen
             </button>
+            <button class="burger-item" @click="addHeading(); burgerOpen = false">
+              <span class="burger-item-icon">H</span> Überschrift hinzufügen
+            </button>
             <button class="burger-item" @click="addPage(); burgerOpen = false">
               <span class="burger-item-icon">+</span> Neue Seite
             </button>
@@ -131,6 +149,7 @@
 import { ref, reactive, computed, onUnmounted, onMounted, watch, nextTick } from 'vue'
 import TokenSetup from './components/TokenSetup.vue'
 import SensorCard from './components/SensorCard.vue'
+import HeadingCard from './components/HeadingCard.vue'
 import SecurityPill from './components/SecurityPill.vue'
 import LightsPill from './components/LightsPill.vue'
 import ClimatePill from './components/ClimatePill.vue'
@@ -150,7 +169,9 @@ const token = computed(() => isPanelMode() ? panelToken.value : localToken.value
 
 interface CardData {
   id: string
+  type?: 'card' | 'heading'
   entityId: string
+  label?: string
   cols: number
   rows: number
   gridCol?: number
@@ -186,7 +207,9 @@ function loadPages(): PageData[] {
           name: p.name || 'Seite',
           cards: (p.cards || []).map(c => ({
             id: c.id,
-            entityId: c.entityId,
+            type: c.type ?? 'card',
+            entityId: c.entityId ?? '',
+            label: c.label,
             cols: c.cols ?? 2,
             rows: c.rows ?? 2,
             gridCol: c.gridCol,
@@ -231,7 +254,7 @@ function switchPage(pageId: string) {
   activePageId.value = pageId
   localStorage.setItem('ha_active_page', pageId)
   // Start sensors for new page
-  for (const card of activeCards.value) createSensor(card.id, card.entityId)
+  for (const card of activeCards.value) { if (card.type !== 'heading') createSensor(card.id, card.entityId) }
 }
 
 function addPage() {
@@ -270,7 +293,7 @@ function doRemovePage() {
   if (activePageId.value === pageId) {
     activePageId.value = pages.value[0].id
     localStorage.setItem('ha_active_page', activePageId.value)
-    for (const card of activeCards.value) createSensor(card.id, card.entityId)
+    for (const card of activeCards.value) { if (card.type !== 'heading') createSensor(card.id, card.entityId) }
   }
   savePages()
 }
@@ -351,7 +374,7 @@ const savedPages = loadPages()
 pages.value = savedPages
 const savedActiveId = localStorage.getItem('ha_active_page')
 activePageId.value = savedPages.find(p => p.id === savedActiveId)?.id ?? savedPages[0].id
-for (const c of activeCards.value) createSensor(c.id, c.entityId)
+for (const c of activeCards.value) { if (c.type !== 'heading') createSensor(c.id, c.entityId) }
 
 // In panel mode, start sensors when token first arrives
 watch(token, (newToken, oldToken) => {
@@ -365,9 +388,28 @@ function addCard() {
   const entityId = 'sensor.wohnzimmer_soll_temperatur'
   const page = activePage.value
   if (!page) return
-  page.cards = [...page.cards, { id, entityId, cols: 2, rows: 2 }]
+  page.cards = [...page.cards, { id, type: 'card', entityId, cols: 2, rows: 2 }]
   pages.value = [...pages.value]
   createSensor(id, entityId)
+  savePages()
+}
+
+function addHeading() {
+  const id = generateId()
+  const page = activePage.value
+  if (!page) return
+  page.cards = [...page.cards, { id, type: 'heading', entityId: '', label: 'Überschrift', cols: 3, rows: 1 }]
+  pages.value = [...pages.value]
+  savePages()
+}
+
+function onUpdateHeading(cardId: string, label: string) {
+  const page = activePage.value
+  if (!page) return
+  const card = page.cards.find(c => c.id === cardId)
+  if (!card) return
+  card.label = label
+  pages.value = [...pages.value]
   savePages()
 }
 
