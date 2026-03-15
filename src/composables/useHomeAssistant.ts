@@ -8,9 +8,20 @@ export interface HaState {
   last_updated: string
 }
 
+// ── Panel mode ──
+
+let _panelMode = false
+const _panelToken = ref<string | null>(null)
+
+export function setPanelMode(v: boolean) { _panelMode = v }
+export function isPanelMode() { return _panelMode }
+export function setPanelToken(token: string) { _panelToken.value = token }
+export function getPanelToken() { return _panelToken }
+
 // ── HA URL helpers ──
 
 export function getHaBaseUrl(): string {
+  if (_panelMode) return ''
   return localStorage.getItem('ha_url')?.replace(/\/$/, '') ?? ''
 }
 
@@ -78,10 +89,9 @@ function getWsUrl() {
 }
 
 function connectWs(token: string) {
-  if (ws && wsToken === token) return
-  wsToken = token
+  wsToken = token // always store latest token for reconnects
+  if (ws && (ws.readyState === WebSocket.OPEN || ws.readyState === WebSocket.CONNECTING)) return
   authenticated = false
-  if (ws) { ws.close(); ws = null }
 
   ws = new WebSocket(getWsUrl())
 

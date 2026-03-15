@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TokenSetup v-if="!token" @token="onToken" />
+    <TokenSetup v-if="!token && !panelMode" @token="onToken" />
 
     <div v-else class="dashboard">
       <header class="dashboard-header">
@@ -114,10 +114,12 @@
             >
               <span class="burger-item-icon">&#x2715;</span> Seite löschen
             </button>
-            <div class="burger-divider" />
-            <button class="burger-item burger-item-muted" @click="logout(); burgerOpen = false">
-              Abmelden
-            </button>
+            <template v-if="!panelMode">
+              <div class="burger-divider" />
+              <button class="burger-item burger-item-muted" @click="logout(); burgerOpen = false">
+                Abmelden
+              </button>
+            </template>
           </div>
         </Transition>
       </div>
@@ -133,10 +135,18 @@ import SecurityPill from './components/SecurityPill.vue'
 import LightsPill from './components/LightsPill.vue'
 import ClimatePill from './components/ClimatePill.vue'
 import NotificationsPill from './components/NotificationsPill.vue'
-import { useSensor, disconnectWs } from './composables/useHomeAssistant'
+import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode } from './composables/useHomeAssistant'
 import type { HaState } from './composables/useHomeAssistant'
 
-const token = ref<string | null>(localStorage.getItem('ha_token'))
+const props = withDefaults(defineProps<{
+  panelMode?: boolean
+}>(), { panelMode: false })
+
+if (props.panelMode) setPanelMode(true)
+
+const localToken = ref<string | null>(localStorage.getItem('ha_token'))
+const panelToken = getPanelToken()
+const token = computed(() => isPanelMode() ? panelToken.value : localToken.value)
 
 interface CardData {
   id: string
@@ -343,6 +353,13 @@ const savedActiveId = localStorage.getItem('ha_active_page')
 activePageId.value = savedPages.find(p => p.id === savedActiveId)?.id ?? savedPages[0].id
 for (const c of activeCards.value) createSensor(c.id, c.entityId)
 
+// In panel mode, start sensors when token first arrives
+watch(token, (newToken, oldToken) => {
+  if (newToken && !oldToken) {
+    for (const [, sensor] of sensorInstances) sensor.start(newToken)
+  }
+})
+
 function addCard() {
   const id = generateId()
   const entityId = 'sensor.wohnzimmer_soll_temperatur'
@@ -364,7 +381,7 @@ function removeCard(id: string) {
 }
 
 function onToken(t: string) {
-  token.value = t
+  localToken.value = t
   for (const [, sensor] of sensorInstances) sensor.start(t)
 }
 
@@ -399,7 +416,7 @@ function logout() {
   localStorage.removeItem('ha_token')
   localStorage.removeItem('ha_pages')
   localStorage.removeItem('ha_active_page')
-  token.value = null
+  localToken.value = null
 }
 
 // ── Drag & Drop ──
