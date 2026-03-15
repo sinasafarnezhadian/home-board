@@ -6742,8 +6742,15 @@ class bd extends HTMLElement {
     const s = ((i = (o = n == null ? void 0 : n.auth) == null ? void 0 : o.data) == null ? void 0 : i.access_token) ?? null;
     if (s && fc(s), !this._app && s) {
       pl(!0);
-      const l = document.createElement("div");
-      l.style.height = "100%", this.appendChild(l), this._app = Za(_d, { panelMode: !0 }), this._app.mount(l);
+      const l = this.getRootNode();
+      l instanceof ShadowRoot && document.head.querySelectorAll("style").forEach((a) => {
+        if (a.textContent && a.textContent.includes("data-v-")) {
+          const u = document.createElement("style");
+          u.textContent = a.textContent, l.prepend(u);
+        }
+      });
+      const r = document.createElement("div");
+      r.style.height = "100%", this.appendChild(r), this._app = Za(_d, { panelMode: !0 }), this._app.mount(r);
     }
   }
 }
