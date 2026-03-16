@@ -18,6 +18,22 @@ export function isPanelMode() { return _panelMode }
 export function setPanelToken(token: string) { _panelToken.value = token }
 export function getPanelToken() { return _panelToken }
 
+// ── Auth Key (long-lived access token, overrides panel token for REST calls) ──
+
+const _authKey = ref<string | null>(localStorage.getItem('ha_auth_key'))
+
+export function getAuthKey() { return _authKey }
+export function setAuthKey(key: string | null) {
+  _authKey.value = key
+  if (key) localStorage.setItem('ha_auth_key', key)
+  else localStorage.removeItem('ha_auth_key')
+}
+
+/** Returns the best available token: auth key > panel token > local token */
+export function getEffectiveToken(fallback?: string): string {
+  return _authKey.value || fallback || ''
+}
+
 // ── HA URL helpers ──
 
 export function getHaBaseUrl(): string {

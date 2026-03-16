@@ -6,10 +6,10 @@
       <header class="dashboard-header">
         <div class="header-left">
           <!--span class="app-name">HomeBoard</span-->
-          <SecurityPill :token="token!" />
-          <LightsPill :token="token!" />
-          <ClimatePill :token="token!" />
-          <NotificationsPill :token="token!" />
+          <SecurityPill :token="effectiveToken" />
+          <LightsPill :token="effectiveToken" />
+          <ClimatePill :token="effectiveToken" />
+          <NotificationsPill :token="effectiveToken" />
         </div>
         <div class="header-right">
           <div class="clock">
@@ -41,7 +41,7 @@
             :style="cardStyle(card)"
             :class="{ 'card-dragging': dragCardId === card.id }"
             :entity-id="card.entityId"
-            :token="token!"
+            :token="effectiveToken"
             :cols="card.cols"
             :rows="card.rows"
             :state="sensors[card.id]?.state ?? null"
@@ -132,6 +132,23 @@
             >
               <span class="burger-item-icon">&#x2715;</span> Seite löschen
             </button>
+            <div class="burger-divider" />
+            <button class="burger-item burger-item-muted" @click="showAuthKeyInput = !showAuthKeyInput">
+              <span class="burger-item-icon">🔑</span> Auth Key {{ authKey ? '✓' : '' }}
+            </button>
+            <div v-if="showAuthKeyInput" class="burger-auth-key" @click.stop>
+              <input
+                v-model="authKeyInput"
+                class="burger-auth-input"
+                type="password"
+                placeholder="Long-Lived Access Token"
+                @keydown.enter="saveAuthKey()"
+              />
+              <div class="burger-auth-actions">
+                <button class="burger-auth-save" @click="saveAuthKey()">Speichern</button>
+                <button v-if="authKey" class="burger-auth-clear" @click="authKeyInput = ''; setAuthKey(null)">Löschen</button>
+              </div>
+            </div>
             <template v-if="!panelMode">
               <div class="burger-divider" />
               <button class="burger-item burger-item-muted" @click="logout(); burgerOpen = false">
@@ -154,7 +171,7 @@ import SecurityPill from './components/SecurityPill.vue'
 import LightsPill from './components/LightsPill.vue'
 import ClimatePill from './components/ClimatePill.vue'
 import NotificationsPill from './components/NotificationsPill.vue'
-import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode } from './composables/useHomeAssistant'
+import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode, getAuthKey, setAuthKey, getEffectiveToken } from './composables/useHomeAssistant'
 import type { HaState } from './composables/useHomeAssistant'
 
 const props = withDefaults(defineProps<{
@@ -166,6 +183,12 @@ if (props.panelMode) setPanelMode(true)
 const localToken = ref<string | null>(localStorage.getItem('ha_token'))
 const panelToken = getPanelToken()
 const token = computed(() => isPanelMode() ? panelToken.value : localToken.value)
+
+// Auth key for service calls (overrides panel token)
+const authKey = getAuthKey()
+const effectiveToken = computed(() => getEffectiveToken(token.value ?? undefined))
+const authKeyInput = ref(authKey.value ?? '')
+const showAuthKeyInput = ref(false)
 
 interface CardData {
   id: string
@@ -585,6 +608,12 @@ function onDragStart(e: MouseEvent | TouchEvent, cardId: string) {
   document.addEventListener('touchend', onUp)
 }
 
+function saveAuthKey() {
+  const val = authKeyInput.value.trim()
+  setAuthKey(val || null)
+  showAuthKeyInput.value = false
+}
+
 // Burger menu
 const burgerOpen = ref(false)
 
@@ -685,8 +714,12 @@ onUnmounted(() => {
 
 .dashboard-main :deep(.card) {
   width: auto;
-
   min-height: unset;
+}
+
+.dashboard-main :deep(.heading) {
+  max-height: 50px;
+  align-self: end;
 }
 
 
@@ -908,6 +941,51 @@ onUnmounted(() => {
   height: 1px;
   background: #d2d8e0;
   margin: 4px 14px;
+}
+
+.burger-auth-key {
+  padding: 6px 14px 10px;
+}
+
+.burger-auth-input {
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  background: #e8ecf1;
+  box-shadow: inset 2px 2px 4px #c8cdd5, inset -2px -2px 4px #ffffff;
+  font-size: 0.75rem;
+  color: #2d3748;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.burger-auth-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.burger-auth-save,
+.burger-auth-clear {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #e8ecf1;
+  color: #2d3748;
+  box-shadow: 2px 2px 4px #c8cdd5, -2px -2px 4px #ffffff;
+}
+
+.burger-auth-save:active,
+.burger-auth-clear:active {
+  box-shadow: inset 2px 2px 4px #c8cdd5, inset -2px -2px 4px #ffffff;
+}
+
+.burger-auth-clear {
+  color: #e53e3e;
 }
 
 /* ── Drag & Drop ── */
