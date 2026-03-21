@@ -83,6 +83,30 @@ export async function fetchAllStates(token: string): Promise<HaState[]> {
   return res.json()
 }
 
+// ── HA User Data Storage (cross-device sync via HA server) ──
+
+const HA_STORAGE_KEY = 'homeboard'
+
+export interface HaUserData {
+  pages?: any[]
+  authKey?: string | null
+  activePage?: string
+}
+
+const _userDataLoaded = ref(false)
+const _userData = ref<HaUserData | null>(null)
+const _userDataCallbacks: ((data: HaUserData | null) => void)[] = []
+
+export function isUserDataLoaded() { return _userDataLoaded }
+
+export function onUserDataReady(cb: (data: HaUserData | null) => void) {
+  if (_userDataLoaded.value) {
+    cb(_userData.value)
+  } else {
+    _userDataCallbacks.push(cb)
+  }
+}
+
 // ── Shared WebSocket connection ──
 
 type StateListener = (state: HaState) => void
@@ -127,6 +151,27 @@ function connectWs(token: string) {
       // Subscribe to state changes
       const subId = msgId++
       ws!.send(JSON.stringify({ id: subId, type: 'subscribe_events', event_type: 'state_changed' }))
+      // Load user data from HA server (cross-device sync)
+      const udId = msgId++
+      pendingResponses.set(udId, {
+        resolve: (result: any) => {
+          const data: HaUserData | null = result?.value ?? null
+          _userData.value = data
+          _userDataLoaded.value = true
+          if (data?.authKey) {
+            _authKey.value = data.authKey
+            localStorage.setItem('ha_auth_key', data.authKey)
+          }
+          for (const cb of _userDataCallbacks) cb(data)
+          _userDataCallbacks.length = 0
+        },
+        reject: () => {
+          _userDataLoaded.value = true
+          for (const cb of _userDataCallbacks) cb(null)
+          _userDataCallbacks.length = 0
+        },
+      })
+      ws!.send(JSON.stringify({ id: udId, type: 'frontend/get_user_data', key: HA_STORAGE_KEY }))
       // Resolve pending auth
       for (const cb of pendingAuth) cb()
       pendingAuth = []
@@ -212,6 +257,23 @@ function disconnectWs() {
   authenticated = false
   stateCache.clear()
   listeners.clear()
+  _userDataLoaded.value = false
+  _userData.value = null
+}
+
+// ── HA User Data Save ──
+
+export async function saveHaUserData(data: HaUserData): Promise<void> {
+  _userData.value = data
+  if (!ws || !authenticated) return
+  const id = msgId++
+  return new Promise((resolve, reject) => {
+    pendingResponses.set(id, {
+      resolve: () => resolve(),
+      reject: (err) => reject(err),
+    })
+    ws!.send(JSON.stringify({ id, type: 'frontend/set_user_data', key: HA_STORAGE_KEY, value: data }))
+  })
 }
 
 // ── WebSocket service call with response ──

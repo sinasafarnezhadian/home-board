@@ -171,7 +171,8 @@ import SecurityPill from './components/SecurityPill.vue'
 import LightsPill from './components/LightsPill.vue'
 import ClimatePill from './components/ClimatePill.vue'
 import NotificationsPill from './components/NotificationsPill.vue'
-import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode, getAuthKey, setAuthKey, getEffectiveToken } from './composables/useHomeAssistant'
+import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode, getAuthKey, setAuthKey, getEffectiveToken, onUserDataReady, saveHaUserData } from './composables/useHomeAssistant'
+import type { HaUserData } from './composables/useHomeAssistant'
 import type { HaState } from './composables/useHomeAssistant'
 
 const props = withDefaults(defineProps<{
@@ -266,8 +267,18 @@ const activePageId = ref<string>('')
 const activePage = computed(() => pages.value.find(p => p.id === activePageId.value) ?? pages.value[0])
 const activeCards = computed(() => activePage.value?.cards ?? [])
 
+function buildUserData(): HaUserData {
+  return {
+    pages: pages.value,
+    authKey: authKey.value ?? null,
+    activePage: activePageId.value,
+  }
+}
+
 function savePages() {
   localStorage.setItem('ha_pages', JSON.stringify(pages.value))
+  localStorage.setItem('ha_active_page', activePageId.value)
+  saveHaUserData(buildUserData())
 }
 
 function switchPage(pageId: string) {
@@ -406,6 +417,42 @@ watch(token, (newToken, oldToken) => {
   }
 })
 
+// When WS connects and HA user data loads, sync pages + settings from server
+onUserDataReady((data) => {
+  if (!data?.pages?.length) return
+  // Stop sensors for current cards
+  for (const card of activeCards.value) destroySensor(card.id)
+  // Replace pages with server data
+  pages.value = data.pages.map((p: any) => ({
+    id: p.id,
+    name: p.name || 'Seite',
+    cards: (p.cards || []).map((c: any) => ({
+      id: c.id,
+      type: c.type ?? 'card',
+      entityId: c.entityId ?? '',
+      label: c.label,
+      cols: c.cols ?? 2,
+      rows: c.rows ?? 2,
+      gridCol: c.gridCol,
+      gridRow: c.gridRow,
+    })),
+  }))
+  // Restore active page
+  const savedId = data.activePage ?? localStorage.getItem('ha_active_page')
+  activePageId.value = pages.value.find(p => p.id === savedId)?.id ?? pages.value[0].id
+  // Persist synced data to localStorage as backup
+  localStorage.setItem('ha_pages', JSON.stringify(pages.value))
+  localStorage.setItem('ha_active_page', activePageId.value)
+  // Restart sensors for new page
+  for (const card of activeCards.value) {
+    if (card.type !== 'heading') createSensor(card.id, card.entityId)
+  }
+  // Sync auth key if set server-side
+  if (data.authKey) {
+    authKeyInput.value = data.authKey
+  }
+})
+
 function addCard() {
   const id = generateId()
   const entityId = 'sensor.wohnzimmer_soll_temperatur'
@@ -481,6 +528,9 @@ function logout() {
   localStorage.removeItem('ha_token')
   localStorage.removeItem('ha_pages')
   localStorage.removeItem('ha_active_page')
+  localStorage.removeItem('ha_auth_key')
+  setAuthKey(null)
+  authKeyInput.value = ''
   localToken.value = null
 }
 
@@ -612,6 +662,8 @@ function saveAuthKey() {
   const val = authKeyInput.value.trim()
   setAuthKey(val || null)
   showAuthKeyInput.value = false
+  // Persist to HA user data
+  saveHaUserData(buildUserData())
 }
 
 // Burger menu
