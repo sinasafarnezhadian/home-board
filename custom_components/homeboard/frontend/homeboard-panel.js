@@ -1,4 +1,4 @@
-(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode('.setup[data-v-97d10609]{display:flex;align-items:center;justify-content:center;min-height:100vh}.setup-card[data-v-97d10609]{background:#e8ecf1;border:none;border-radius:28px;padding:40px;max-width:420px;width:calc(100% - 48px);display:flex;flex-direction:column;gap:20px;box-shadow:12px 12px 24px #c8cdd5,-12px -12px 24px #fff}h2[data-v-97d10609]{font-size:1.25rem;font-weight:700;color:#2d3748;letter-spacing:-.01em}p[data-v-97d10609]{font-size:.83rem;color:#a0aec0;line-height:1.7}p strong[data-v-97d10609]{color:#718096;font-weight:600}.field-group[data-v-97d10609]{display:flex;flex-direction:column;gap:6px}.field-label[data-v-97d10609]{font-size:.72rem;font-weight:600;color:#a0aec0;text-transform:uppercase;letter-spacing:.06em}input[data-v-97d10609]{background:#e8ecf1;border:none;border-radius:12px;color:#2d3748;font-size:.9rem;padding:12px 16px;width:100%;outline:none;box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff;transition:box-shadow .2s}input[data-v-97d10609]:focus{box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff,0 0 0 2px #2563eb4d}input[data-v-97d10609]::placeholder{color:#c0c7d0}button[data-v-97d10609]{background:#e8ecf1;border:none;border-radius:12px;color:#2563eb;cursor:pointer;font-size:.92rem;font-weight:700;padding:13px;width:100%;box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff;transition:box-shadow .15s,color .15s;letter-spacing:.01em}button[data-v-97d10609]:disabled{color:#c0c7d0;cursor:not-allowed;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff}button[data-v-97d10609]:hover:not(:disabled){box-shadow:4px 4px 8px #c8cdd5,-4px -4px 8px #fff}button[data-v-97d10609]:active:not(:disabled){box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff}.error[data-v-97d10609]{color:#e53e3e;font-size:.82rem;background:#e53e3e0f;border-radius:10px;padding:10px 14px;box-shadow:inset 2px 2px 5px #c8cdd5,inset -2px -2px 5px #fff}.weather-body[data-v-a3030d6f]{justify-content:center}.weather-layout[data-v-a3030d6f]{display:flex;align-items:center;justify-content:space-between;width:100%;gap:8px;flex:1}.weather-left[data-v-a3030d6f]{display:flex;flex-direction:column;gap:2px;min-width:0}.weather-temp[data-v-a3030d6f]{font-size:2.6rem;font-weight:700;color:#2d3748;line-height:1;letter-spacing:-.03em}.weather-condition[data-v-a3030d6f]{font-size:.72rem;color:#a0aec0;font-weight:600;text-transform:uppercase;letter-spacing:.04em}.weather-meta[data-v-a3030d6f]{display:flex;flex-direction:column;gap:1px;margin-top:4px}.weather-meta-item[data-v-a3030d6f]{font-size:.68rem;color:#a0aec0;font-weight:500}.weather-right[data-v-a3030d6f]{flex-shrink:0}.weather-svg-icon[data-v-a3030d6f]{display:flex;align-items:center;justify-content:center}.weather-body.short .weather-temp[data-v-a3030d6f]{font-size:1.4rem}.weather-body.short .weather-meta[data-v-a3030d6f]{display:none}.weather-body.short .weather-svg-icon[data-v-a3030d6f] svg{width:40px;height:40px}.weather-body.narrow .weather-temp[data-v-a3030d6f]{font-size:1.8rem}.weather-body.narrow .weather-condition[data-v-a3030d6f]{font-size:.6rem}.weather-body.compact .weather-temp[data-v-a3030d6f]{font-size:1.5rem}.weather-body.compact .weather-condition[data-v-a3030d6f]{font-size:.55rem}.weather-body.compact .weather-meta[data-v-a3030d6f]{display:none}.weather-body.compact .weather-svg-icon[data-v-a3030d6f] svg{width:28px;height:28px}.light-ctrl-btn[data-v-a3030d6f]{position:absolute;top:8px;left:8px;z-index:15;background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;color:#d69e2e;opacity:0;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:opacity .2s,box-shadow .15s}.light-ctrl-btn[data-v-a3030d6f]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.light-ctrl-btn[data-v-a3030d6f]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.body-center[data-v-a3030d6f]{flex:1;display:flex;flex-direction:column;align-items:center}.light-ctrl-btn[data-v-c1ca61d1]{position:absolute;top:8px;left:8px;z-index:15;background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;color:#d69e2e;opacity:0;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:opacity .2s,box-shadow .15s}.card:hover{opacity:1}.light-ctrl-btn[data-v-c1ca61d1]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.light-ctrl-btn[data-v-c1ca61d1]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.card.small .light-ctrl-btn{padding:4px;border-radius:8px;top:5px;left:5px}.card.small .light-ctrl-btn{width:12px;height:12px}.body-center[data-v-c1ca61d1]{flex:1;display:flex;flex-direction:column;align-items:center}.body-center .center-wrap[data-v-c1ca61d1]{flex:1;display:flex;align-items:center;justify-content:center}.body-center .updated[data-v-c1ca61d1]{margin-top:auto;padding-top:12px}.bulb-btn[data-v-c1ca61d1]{background:#e8ecf1;border:none;border-radius:50%;cursor:pointer;width:72px;height:72px;display:flex;align-items:center;justify-content:center;color:#b0bac6;box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff;transition:box-shadow .15s,color .15s;outline:none;-webkit-tap-highlight-color:transparent}.bulb-btn svg[data-v-c1ca61d1]{width:32px;height:32px;transition:color .2s,filter .2s}.bulb-btn[data-v-c1ca61d1]:not(.on):not(.pressing){box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff}.bulb-btn.on[data-v-c1ca61d1]:not(.pressing){color:#eab308;box-shadow:3px 3px 7px #c8cdd5,-3px -3px 7px #fff,0 0 18px #eab30866,0 0 5px #eab30840 inset}.bulb-btn.on svg[data-v-c1ca61d1]{fill:#eab30826;filter:drop-shadow(0 0 6px rgba(234,179,8,.6))}.bulb-btn.pressing[data-v-c1ca61d1]{box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff;color:#718096}.body-center.short .bulb-btn[data-v-c1ca61d1]{width:48px;height:48px}.body-center.short .bulb-btn svg[data-v-c1ca61d1]{width:24px;height:24px}.body-center.short .updated[data-v-c1ca61d1]{display:none}.body-center.compact .bulb-btn[data-v-c1ca61d1]{width:40px;height:40px;box-shadow:4px 4px 8px #c8cdd5,-4px -4px 8px #fff}.body-center.compact .bulb-btn svg[data-v-c1ca61d1]{width:20px;height:20px}.body-center.compact .bulb-btn.on[data-v-c1ca61d1]:not(.pressing){box-shadow:2px 2px 5px #c8cdd5,-2px -2px 5px #fff,0 0 10px #eab30859,0 0 3px #eab30833 inset}.body-center.compact .bulb-btn.pressing[data-v-c1ca61d1]{box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff}.updated[data-v-c1ca61d1]{font-size:.7rem;color:#c0c7d0;letter-spacing:.02em;text-align:center}.body-center.compact .updated[data-v-c1ca61d1]{display:none}.body-center[data-v-495ed0f0]{flex:1;display:flex;flex-direction:column;align-items:center}.body-center .center-wrap[data-v-495ed0f0]{flex:1;display:flex;align-items:center;justify-content:center}.body-center .updated[data-v-495ed0f0]{margin-top:auto;padding-top:12px}.updated[data-v-495ed0f0]{font-size:.7rem;color:#c0c7d0;letter-spacing:.02em;text-align:center}.power-btn[data-v-495ed0f0]{background:#e8ecf1;border:none;border-radius:50%;cursor:pointer;width:72px;height:72px;display:flex;align-items:center;justify-content:center;color:#b0bac6;box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff;transition:box-shadow .15s,color .15s;outline:none;-webkit-tap-highlight-color:transparent}.power-btn svg[data-v-495ed0f0]{width:28px;height:28px;transition:color .2s,filter .2s}.power-btn[data-v-495ed0f0]:not(.on):not(.pressing){box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff}.power-btn.on[data-v-495ed0f0]:not(.pressing){color:#22c55e;box-shadow:3px 3px 7px #c8cdd5,-3px -3px 7px #fff,0 0 16px #22c55e59,0 0 4px #22c55e33 inset}.power-btn.on svg[data-v-495ed0f0]{filter:drop-shadow(0 0 5px rgba(34,197,94,.6))}.power-btn.pressing[data-v-495ed0f0]{box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff;color:#718096}.body-center.short .power-btn[data-v-495ed0f0]{width:48px;height:48px}.body-center.short .power-btn svg[data-v-495ed0f0]{width:22px;height:22px}.body-center.short .updated[data-v-495ed0f0]{display:none}.body-center.compact .power-btn[data-v-495ed0f0]{width:40px;height:40px;box-shadow:4px 4px 8px #c8cdd5,-4px -4px 8px #fff}.body-center.compact .power-btn svg[data-v-495ed0f0]{width:18px;height:18px}.body-center.compact .power-btn.on[data-v-495ed0f0]:not(.pressing){box-shadow:2px 2px 5px #c8cdd5,-2px -2px 5px #fff,0 0 10px #22c55e59,0 0 3px #22c55e33 inset}.body-center.compact .power-btn.pressing[data-v-495ed0f0]{box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff}.body-center.compact .updated[data-v-495ed0f0]{display:none}.body-center[data-v-336a5298]{flex:1;display:flex;flex-direction:column;align-items:center}.body-center .center-wrap[data-v-336a5298]{flex:1;display:flex;align-items:center;justify-content:center}.body-center .updated[data-v-336a5298]{margin-top:auto;padding-top:12px}.state[data-v-336a5298]{display:flex;align-items:baseline;justify-content:center;gap:6px}.state.value[data-v-336a5298]{padding:8px 0 4px}.number[data-v-336a5298]{font-size:3.4rem;font-weight:700;color:#2d3748;line-height:1;letter-spacing:-.03em}.unit[data-v-336a5298]{font-size:1.3rem;color:#a0aec0;font-weight:400}.updated[data-v-336a5298]{font-size:.7rem;color:#c0c7d0;letter-spacing:.02em;text-align:center}.body-center.short .number[data-v-336a5298]{font-size:1.4rem}.body-center.short .unit[data-v-336a5298]{font-size:.72rem}.body-center.short .updated[data-v-336a5298]{display:none}.body-center.compact .number[data-v-336a5298]{font-size:1.6rem}.body-center.compact .unit[data-v-336a5298]{font-size:.65rem}.body-center.narrow .number[data-v-336a5298]{font-size:1.8rem}.body-center.narrow .unit[data-v-336a5298]{font-size:.8rem}.card[data-v-7965fac9]{background:#e8ecf1;border:none;border-radius:20px;padding:24px 20px 20px;width:100%;height:100%;display:flex;flex-direction:column;gap:0px;position:relative;box-shadow:8px 8px 16px #c8cdd5,-8px -8px 16px #fff;transition:box-shadow .4s,transform .4s;overflow:hidden}.card[data-v-7965fac9]:after{content:"";position:absolute;bottom:-18px;left:15%;right:15%;height:28px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,160,60,0) 0%,transparent 100%);filter:blur(10px);transition:background .5s,opacity .5s;pointer-events:none;z-index:-1}.card.active[data-v-7965fac9]:after{background:radial-gradient(ellipse at center,rgba(255,155,40,.65) 0%,rgba(255,120,20,.2) 60%,transparent 100%)}.card.active[data-v-7965fac9]{box-shadow:8px 8px 16px #c8cdd5,-8px -8px 16px #fff,0 18px 32px -8px #ff8c1e40}.card-header[data-v-7965fac9]{display:flex;align-items:center;justify-content:center;min-height:24px}.label[data-v-7965fac9]{font-size:.72rem;color:#a0aec0;font-weight:600;letter-spacing:.06em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-transform:uppercase;text-align:center;max-width:100%}.edit-ctrl-btn[data-v-7965fac9]{position:absolute;top:8px;right:8px;z-index:15;background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;padding:6px 7px;display:flex;flex-direction:column;gap:3px;align-items:center;justify-content:center;color:#a0aec0;opacity:0;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:opacity .2s,box-shadow .15s}.card:hover .edit-ctrl-btn[data-v-7965fac9]{opacity:1}.edit-ctrl-btn[data-v-7965fac9]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.edit-ctrl-btn[data-v-7965fac9]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.card.small .edit-ctrl-btn[data-v-7965fac9]{padding:4px 5px;border-radius:8px;top:5px;right:5px;gap:2px}.card.small .edit-ctrl-btn .dot[data-v-7965fac9]{width:2px;height:2px}.dot[data-v-7965fac9]{display:block;width:3px;height:3px;border-radius:50%;background:#a0aec0}.state[data-v-7965fac9]{display:flex;align-items:baseline;justify-content:center;gap:6px}.state.loading[data-v-7965fac9]{justify-content:center;padding:16px 0}.state.error[data-v-7965fac9]{color:#e53e3e;font-size:.875rem;gap:8px;align-items:center;justify-content:center}.spinner[data-v-7965fac9]{display:inline-block;width:26px;height:26px;border:3px solid #d8dde5;border-top-color:#2563eb;border-radius:50%;animation:spin-7965fac9 .8s linear infinite}@keyframes spin-7965fac9{to{transform:rotate(360deg)}}.card.narrow[data-v-7965fac9]{padding:16px 10px 12px;border-radius:16px}.card.narrow .label[data-v-7965fac9]{font-size:.55rem;letter-spacing:.04em}.card.small[data-v-7965fac9]{padding:12px 10px 10px;border-radius:14px;box-shadow:8px 8px 16px #c8cdd5,-8px -8px 16px #fff}.card.small.active[data-v-7965fac9]{box-shadow:8px 8px 16px #c8cdd5,-8px -8px 16px #fff,0 12px 20px -6px #ff8c1e40}.card.small .label[data-v-7965fac9]{font-size:.55rem;letter-spacing:.04em}.card.small .spinner[data-v-7965fac9]{width:18px;height:18px;border-width:2px}.card.small[data-v-7965fac9]:after{bottom:-12px;height:18px}.card.short[data-v-7965fac9]{padding:14px 16px 12px}.card.short .label[data-v-7965fac9]{font-size:.6rem}.resize-handle[data-v-7965fac9]{position:absolute;bottom:0;right:0;width:16px;height:16px;cursor:nwse-resize;opacity:0;transition:opacity .2s;z-index:5}.resize-handle[data-v-7965fac9]:before{content:"";position:absolute;bottom:4px;right:4px;width:8px;height:8px;border-right:2px solid #b0bac6;border-bottom:2px solid #b0bac6;border-radius:0 0 3px}.card:hover .resize-handle[data-v-7965fac9]{opacity:1}.ha-toggle-row[data-v-7965fac9]{display:flex;align-items:center;justify-content:space-between;padding:10px 0 4px}.ha-toggle-label[data-v-7965fac9]{font-size:.85rem;color:#4a5568;font-weight:500}.ha-toggle[data-v-7965fac9]{position:relative;width:44px;height:24px;border:none;border-radius:12px;cursor:pointer;background:#e8ecf1;box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff;transition:box-shadow .25s,background .25s;padding:0}.ha-toggle.on[data-v-7965fac9]{box-shadow:inset 2px 2px 4px #22c55e40,inset -2px -2px 4px #fff9,0 0 8px #22c55e4d}.ha-toggle-knob[data-v-7965fac9]{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#e8ecf1;box-shadow:2px 2px 4px #c8cdd5,-1px -1px 3px #fff;transition:transform .2s,background .2s,box-shadow .2s}.ha-toggle.on .ha-toggle-knob[data-v-7965fac9]{transform:translate(20px);background:#22c55e;box-shadow:1px 1px 3px #00000026,0 0 6px #22c55e66}.heading[data-v-7a388668]{display:flex;align-items:flex-end;padding:0 2px;position:relative;overflow:hidden;-webkit-user-select:none;user-select:none}.heading.short[data-v-7a388668]{align-items:flex-end}.heading-content[data-v-7a388668]{width:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:4px}.heading-text[data-v-7a388668]{font-size:1.3rem;font-weight:800;color:#2d3748;letter-spacing:-.02em;line-height:1;margin:0;cursor:default;word-break:break-word}.heading.short .heading-text[data-v-7a388668]{font-size:1rem}.heading-line[data-v-7a388668]{border:none;height:2px;background:#d2d8e0;margin:0;width:100%;border-radius:1px}.heading-input[data-v-7a388668]{font-size:1.3rem;font-weight:800;color:#2d3748;letter-spacing:-.02em;line-height:1;background:transparent;border:none;border-bottom:2px solid #2563eb;outline:none;width:100%;padding:0}.heading-edit-btn[data-v-7a388668]{position:absolute;top:4px;right:4px;z-index:15;background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;padding:6px 7px;display:flex;flex-direction:column;gap:3px;align-items:center;justify-content:center;color:#a0aec0;opacity:0;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:opacity .2s,box-shadow .15s}.heading:hover .heading-edit-btn[data-v-7a388668]{opacity:1}.heading-edit-btn[data-v-7a388668]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.heading-edit-btn[data-v-7a388668]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.dot[data-v-7a388668]{display:block;width:3px;height:3px;border-radius:50%;background:#a0aec0}.resize-handle[data-v-7a388668]{position:absolute;bottom:0;right:0;width:16px;height:16px;cursor:nwse-resize;opacity:0;transition:opacity .2s;z-index:5}.resize-handle[data-v-7a388668]:before{content:"";position:absolute;bottom:4px;right:4px;width:8px;height:8px;border-right:2px solid #b0bac6;border-bottom:2px solid #b0bac6;border-radius:0 0 3px}.heading:hover .resize-handle[data-v-7a388668]{opacity:1}.pill[data-v-4c919921]{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;height:32px;border-radius:20px;border:none;background:#e8ecf1;cursor:pointer;font-size:.75rem;font-weight:600;color:#38a169;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:box-shadow .15s,color .15s}.pill.active[data-v-4c919921]{color:#e53e3e;background:#f1e8e8fc;box-shadow:3px 3px 6px #dbd5d5,-3px -3px 6px #fff7f8}.pill[data-v-4c919921]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.pill[data-v-4c919921]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.pill-icon[data-v-4c919921]{font-size:.85rem}.pill-label[data-v-4c919921]{white-space:nowrap}.pill[data-v-10807199]{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;height:32px;border-radius:20px;border:none;background:#e8ecf1;cursor:pointer;font-size:.75rem;font-weight:600;color:#a0aec0;box-shadow:3px 3px 6px #e2d2abab,-3px -3px 6px #fffdf6;transition:box-shadow .15s,color .15s}.pill.active[data-v-10807199]{color:#d69e2e;box-shadow:3px 3px 6px #dacdac,-3px -3px 6px #fffdf6}.pill[data-v-10807199]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.pill[data-v-10807199]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.pill-icon[data-v-10807199]{font-size:.85rem}.pill-label[data-v-10807199]{white-space:nowrap}.pill[data-v-2665ddcd]{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;height:32px;border-radius:20px;border:none;background:#e8ecf1;cursor:pointer;font-size:.75rem;font-weight:600;color:#718096;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:box-shadow .15s,color .15s}.pill[data-v-2665ddcd]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.pill[data-v-2665ddcd]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.pill-icon[data-v-2665ddcd]{font-size:.85rem}.pill-label[data-v-2665ddcd]{white-space:nowrap}.pill[data-v-a643a4ed]{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;height:32px;border-radius:20px;border:none;background:#e8ecf1;cursor:pointer;font-size:.75rem;font-weight:600;color:#2563eb;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:box-shadow .15s,color .15s}.pill[data-v-a643a4ed]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.pill[data-v-a643a4ed]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.pill-dot[data-v-a643a4ed]{width:8px;height:8px;border-radius:50%;background:#c125eb;animation:blink-a643a4ed 1.5s ease-in-out infinite;flex-shrink:0}@keyframes blink-a643a4ed{0%,to{opacity:1}50%{opacity:.25}}.pill-label[data-v-a643a4ed]{white-space:nowrap}.notif-item[data-v-a643a4ed]{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border-radius:12px;transition:background .1s}.notif-item[data-v-a643a4ed]:hover{background:#00000008}.notif-header[data-v-a643a4ed]{display:flex;align-items:center;justify-content:space-between;gap:8px}.notif-title[data-v-a643a4ed]{font-size:.82rem;color:#2d3748;font-weight:600}.notif-time[data-v-a643a4ed]{font-size:.68rem;color:#a0aec0;font-weight:500;white-space:nowrap}.notif-message[data-v-a643a4ed]{font-size:.78rem;color:#4a5568;font-weight:400;line-height:1.4;margin:0}.notif-dismiss[data-v-a643a4ed]{align-self:flex-end;background:none;border:none;color:#2563eb;cursor:pointer;font-size:.72rem;font-weight:500;padding:2px 0;transition:color .15s}.notif-dismiss[data-v-a643a4ed]:hover{color:#e53e3e}.dashboard[data-v-2bd2031d]{min-height:100vh;display:flex;flex-direction:column}.dashboard-header[data-v-2bd2031d]{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;background:#e8ecf1;position:relative;z-index:10;box-shadow:0 4px 12px -2px #c8cdd5}.header-left[data-v-2bd2031d]{display:flex;align-items:center;gap:10px}.app-name[data-v-2bd2031d]{font-size:1.1rem;font-weight:700;color:#2d3748;letter-spacing:-.02em;margin-right:6px}.header-right[data-v-2bd2031d]{display:flex;align-items:center}.clock[data-v-2bd2031d]{display:flex;flex-direction:column;gap:2px;text-align:right}.clock-time[data-v-2bd2031d]{font-size:1.9rem;font-weight:700;color:#2d3748;letter-spacing:-.03em;line-height:1}.clock-date[data-v-2bd2031d]{font-size:.78rem;color:#a0aec0;font-weight:500;letter-spacing:.01em}.dashboard-main[data-v-2bd2031d]{flex:1;display:grid;grid-template-columns:repeat(auto-fill,100px);grid-auto-rows:100px;grid-auto-flow:dense;gap:20px;padding:36px 32px;align-content:start}.dashboard-main[data-v-2bd2031d] .card{width:auto;min-height:unset}.dashboard-main[data-v-2bd2031d] .heading{max-height:50px;align-self:end}.page-tabs[data-v-2bd2031d]{display:flex;justify-content:center;padding:0 32px;margin-bottom:20px}.page-tabs-inner[data-v-2bd2031d]{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:16px;background:#e8ecf1;box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.page-tab[data-v-2bd2031d]{position:relative;display:inline-flex;align-items:center;gap:4px;padding:6px 16px;border-radius:12px;border:none;background:transparent;cursor:pointer;font-size:.78rem;font-weight:500;color:#a0aec0;transition:all .2s}.page-tab.active[data-v-2bd2031d]{background:#e8ecf1;color:#2d3748;font-weight:600;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff}.page-tab[data-v-2bd2031d]:not(.active):hover{color:#718096}.page-tab-label[data-v-2bd2031d]{white-space:nowrap}.page-tab-input[data-v-2bd2031d]{background:transparent;border:none;border-bottom:1.5px solid #2563eb;outline:none;font-size:.78rem;font-weight:600;color:#2d3748;width:80px;padding:0;text-align:center}.page-delete-modal[data-v-2bd2031d]{max-width:340px}.page-delete-text[data-v-2bd2031d]{font-size:.85rem;color:#4a5568;line-height:1.5;margin:0 0 20px;text-align:center}.page-delete-actions[data-v-2bd2031d]{display:flex;gap:10px;justify-content:center}.page-delete-cancel[data-v-2bd2031d],.page-delete-confirm[data-v-2bd2031d]{padding:8px 20px;border-radius:10px;border:none;font-size:.8rem;font-weight:600;cursor:pointer;transition:box-shadow .15s,background .15s}.page-delete-cancel[data-v-2bd2031d]{background:#e8ecf1;color:#718096;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff}.page-delete-cancel[data-v-2bd2031d]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.page-delete-confirm[data-v-2bd2031d]{background:#e53e3e;color:#fff;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff}.page-delete-confirm[data-v-2bd2031d]:active{box-shadow:inset 2px 2px 4px #0003}.burger-wrap[data-v-2bd2031d]{position:fixed;bottom:28px;left:28px;z-index:60}.burger-btn[data-v-2bd2031d]{width:48px;height:48px;border-radius:50%;background:#e8ecf1;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:5px 5px 10px #c8cdd5,-5px -5px 10px #fff;transition:box-shadow .15s}.burger-btn[data-v-2bd2031d]:active{box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff}.burger-line[data-v-2bd2031d]{display:block;width:20px;height:2px;border-radius:1px;background:#718096}.burger-menu[data-v-2bd2031d]{position:absolute;bottom:58px;left:0;min-width:190px;background:#e8ecf1;border-radius:14px;padding:8px 0;box-shadow:6px 6px 14px #c8cdd5,-6px -6px 14px #fff;transform-origin:bottom left}.burger-pop-enter-active[data-v-2bd2031d]{transition:opacity .15s,transform .15s}.burger-pop-leave-active[data-v-2bd2031d]{transition:opacity .1s,transform .1s}.burger-pop-enter-from[data-v-2bd2031d],.burger-pop-leave-to[data-v-2bd2031d]{opacity:0;transform:scale(.9) translateY(8px)}.burger-item[data-v-2bd2031d]{display:flex;align-items:center;gap:8px;width:100%;padding:10px 18px;border:none;background:none;cursor:pointer;font-size:.82rem;font-weight:500;color:#2d3748;text-align:left;transition:background .1s}.burger-item[data-v-2bd2031d]:hover{background:#0000000a}.burger-item-icon[data-v-2bd2031d]{font-size:.9rem;font-weight:600;width:18px;text-align:center;color:#718096}.burger-item-danger[data-v-2bd2031d],.burger-item-danger .burger-item-icon[data-v-2bd2031d]{color:#e53e3e}.burger-item-muted[data-v-2bd2031d]{color:#a0aec0;font-size:.76rem}.burger-divider[data-v-2bd2031d]{height:1px;background:#d2d8e0;margin:4px 14px}.burger-auth-key[data-v-2bd2031d]{padding:6px 14px 10px}.burger-auth-input[data-v-2bd2031d]{width:100%;padding:6px 10px;border:none;border-radius:8px;background:#e8ecf1;box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff;font-size:.75rem;color:#2d3748;outline:none;box-sizing:border-box}.burger-auth-actions[data-v-2bd2031d]{display:flex;gap:6px;margin-top:6px}.burger-auth-save[data-v-2bd2031d],.burger-auth-clear[data-v-2bd2031d]{padding:4px 12px;border:none;border-radius:8px;font-size:.72rem;font-weight:600;cursor:pointer;background:#e8ecf1;color:#2d3748;box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.burger-auth-save[data-v-2bd2031d]:active,.burger-auth-clear[data-v-2bd2031d]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.burger-auth-clear[data-v-2bd2031d]{color:#e53e3e}.card-dragging[data-v-2bd2031d]{opacity:.25}.drop-placeholder[data-v-2bd2031d]{border-radius:20px;background:#2563eb0f;border:2px dashed rgba(37,99,235,.25);box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff;pointer-events:none;transition:grid-column .15s,grid-row .15s}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,SF Pro Display,Segoe UI,Roboto,sans-serif;background:#e8ecf1;color:#2d3748;min-height:100vh;-webkit-font-smoothing:antialiased}#app{min-height:100vh}::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#0000001f;border-radius:2px}.ha-modal-overlay{position:fixed;top:0;right:0;bottom:0;left:0;background:#00000040;display:flex;align-items:center;justify-content:center;z-index:100}.ha-modal-box{width:340px;max-height:80vh;background:#e8ecf1;border-radius:20px;padding:28px 24px 24px;box-shadow:0 0 20px #969698;display:flex;flex-direction:column;gap:16px;overflow-y:auto}.ha-modal-header-row{display:flex;align-items:center;justify-content:space-between}.ha-modal-title{font-size:.9rem;font-weight:700;color:#2d3748;letter-spacing:.04em;text-transform:uppercase;margin:0}.ha-modal-close{background:none;border:none;color:#a0aec0;cursor:pointer;font-size:1rem;padding:4px 8px;border-radius:8px;transition:color .15s}.ha-modal-close:hover{color:#e53e3e}.ha-modal-fields{display:flex;flex-direction:column;gap:12px}.ha-modal-input-wrap{position:relative;width:100%}.ha-modal-input{background:#e8ecf1;border:none;border-radius:12px;color:#2d3748;font-size:.9rem;outline:none;padding:11px 14px;width:100%;box-sizing:border-box;transition:box-shadow .2s;box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff}.ha-modal-input:focus{box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff,0 0 0 2px #2563eb4d}.ha-modal-input::placeholder{color:#c0c7d0}.ha-modal-suggestions{background:#e8ecf1;border:none;border-radius:14px;box-shadow:8px 8px 20px #c8cdd5,-4px -4px 12px #fff;left:0;list-style:none;margin:0;padding:0;max-height:240px;overflow-y:auto;position:absolute;top:calc(100% + 6px);width:100%;z-index:20}.ha-modal-suggestion-item{cursor:pointer;display:flex;flex-direction:column;gap:2px;padding:9px 14px;transition:background .1s}.ha-modal-suggestion-item:hover,.ha-modal-suggestion-item.active{background:#2563eb12}.ha-modal-s-entity{color:#4a5568;font-size:.8rem;font-weight:500}.ha-modal-s-name{color:#a0aec0;font-size:.71rem}.ha-modal-hint{font-size:.72rem;color:#b0bac6;letter-spacing:.01em}.ha-modal-actions{display:flex;gap:10px}.ha-modal-btn{background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;font-size:.82rem;font-weight:600;padding:10px 16px;flex:1;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:box-shadow .15s,color .15s}.ha-modal-btn:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.ha-modal-btn:active{box-shadow:inset 2px 2px 5px #c8cdd5,inset -2px -2px 5px #fff}.ha-modal-btn.confirm{color:#38a169}.ha-modal-btn.cancel{color:#e53e3e}.ha-modal-empty{text-align:center;color:#a0aec0;font-size:.85rem;padding:16px 0}.ha-modal-entity-list{list-style:none;display:flex;flex-direction:column;gap:2px}.ha-modal-entity-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-radius:12px;transition:background .1s}.ha-modal-entity-row:hover{background:#00000008}.ha-modal-entity-name{font-size:.82rem;color:#4a5568;font-weight:500}.ha-modal-entity-value{font-size:.82rem;color:#2d3748;font-weight:600}.ha-modal-entity-badge{font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:12px}.ha-modal-entity-badge.closed{color:#38a169;background:#38a1691a}.ha-modal-entity-badge.open{color:#e53e3e;background:#e53e3e1a}.ha-modal-toggle-btn{font-size:.72rem;font-weight:600;padding:4px 12px;border-radius:10px;border:none;cursor:pointer;background:#e8ecf1;box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff;transition:box-shadow .15s,color .15s}.ha-modal-toggle-btn.on{color:#d69e2e}.ha-modal-toggle-btn.off{color:#a0aec0}.ha-modal-toggle-btn:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.ha-modal-header-actions{display:flex;align-items:center;gap:4px}.ha-modal-icon-btn{background:none;border:none;color:#a0aec0;cursor:pointer;padding:4px 6px;border-radius:8px;display:flex;align-items:center;transition:color .15s}.ha-modal-icon-btn:hover{color:#718096}.ha-modal-icon-btn.active{color:#2563eb}.ha-modal-remove-btn{background:none;border:none;color:#c0c7d0;cursor:pointer;font-size:.85rem;padding:2px 6px;border-radius:6px;transition:color .15s}.ha-modal-remove-btn:hover{color:#e53e3e}.ha-modal-delete-btn{background:none;border:none;color:#e53e3e;cursor:pointer;font-size:.78rem;font-weight:500;padding:8px 0;text-align:center;transition:color .15s}.ha-modal-delete-btn:hover{color:#c53030}.ha-light-section{display:flex;flex-direction:column;gap:10px}.ha-light-label{font-size:.75rem;font-weight:600;color:#a0aec0;text-transform:uppercase;letter-spacing:.06em}.ha-light-slider-wrap{display:flex;align-items:center;gap:14px}.ha-light-slider{-webkit-appearance:none;-moz-appearance:none;appearance:none;flex:1;height:10px;border-radius:10px;background:#e8ecf1;box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff;outline:none;cursor:pointer}.ha-light-slider::-webkit-slider-thumb{-webkit-appearance:none;-moz-appearance:none;appearance:none;width:26px;height:26px;border-radius:50%;background:#e8ecf1;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;cursor:pointer;border:none;transition:box-shadow .15s}.ha-light-slider::-webkit-slider-thumb:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.ha-light-slider::-webkit-slider-thumb:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.ha-light-slider::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#e8ecf1;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;cursor:pointer;border:none}.ha-light-slider::-moz-range-track{height:10px;border-radius:10px;background:#e8ecf1;box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff}.ha-light-slider-value{font-size:.85rem;font-weight:700;color:#2d3748;min-width:40px;text-align:right}.ha-light-slider--hue{background:linear-gradient(to right,red,#ff0,#0f0,#0ff,#00f,#f0f,red)!important;box-shadow:none!important;border-radius:10px}.ha-light-slider--sat{background:linear-gradient(to right,#e8ecf1,var(--sat-color, #ff0000))!important;box-shadow:none!important;border-radius:10px}.ha-modal-box--wide{width:480px}.wf-current{display:flex;align-items:center;justify-content:space-between;padding:12px 0}.wf-current-left{display:flex;align-items:center;gap:12px}.wf-current-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0}.wf-current-info{display:flex;flex-direction:column;gap:2px}.wf-current-condition{font-size:1rem;font-weight:700;color:#2d3748}.wf-current-ago{font-size:.72rem;color:#a0aec0;font-weight:500}.wf-current-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px}.wf-current-temp{font-size:1.4rem;font-weight:700;color:#2d3748;line-height:1}.wf-current-hilo{font-size:.72rem;color:#a0aec0;font-weight:500}.wf-details{display:flex;flex-direction:column;gap:0;padding:4px 0;border-top:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06)}.wf-detail-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0}.wf-detail-label{font-size:.8rem;color:#4a5568;font-weight:500}.wf-detail-value{font-size:.8rem;color:#2d3748;font-weight:600}.wf-tabs{display:flex;gap:0;position:relative}.wf-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-size:.82rem;font-weight:600;color:#a0aec0;padding:8px 0;text-align:center;transition:color .15s,border-color .15s}.wf-tab.active{color:#2563eb;border-bottom-color:#2563eb}.wf-tab:hover:not(.active){color:#718096}.weather-forecast-row{display:flex;gap:6px;justify-content:space-between}.weather-forecast-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;background:#e8ecf1;border-radius:14px;box-shadow:inset 2px 2px 5px #c8cdd5,inset -2px -2px 5px #fff}.wf-date{font-size:.72rem;font-weight:700;color:#2d3748;text-transform:uppercase;letter-spacing:.04em}.wf-icon{display:flex;align-items:center;justify-content:center}.wf-temps{font-size:.78rem;font-weight:700;color:#2d3748}.wf-temps-low{font-size:.72rem;font-weight:500;color:#a0aec0}.wf-condition{font-size:.6rem;color:#a0aec0;font-weight:500;text-align:center;line-height:1.2}.wf-rain{font-size:.62rem;color:#5b9bd5;font-weight:500}.wf-hourly-scroll{display:flex;flex-direction:column;gap:12px;max-height:280px;overflow-y:auto}.wf-hourly-group{display:flex;flex-direction:column;gap:6px}.wf-hourly-day-label{font-size:.72rem;font-weight:700;color:#2d3748;text-transform:uppercase;letter-spacing:.04em}.wf-hourly-group .weather-forecast-row{overflow-x:auto;justify-content:flex-start;gap:6px;padding-bottom:4px}.wf-hourly-group .weather-forecast-day{flex:0 0 auto;min-width:50px;padding:8px 6px}.ha-light-color-preview{width:26px;height:26px;min-width:26px;border-radius:50%;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;border:2px solid #fff}')),document.head.appendChild(e)}}catch(a){console.error("vite-plugin-css-injected-by-js",a)}})();
+(function(){"use strict";try{if(typeof document<"u"){var e=document.createElement("style");e.appendChild(document.createTextNode('.setup[data-v-97d10609]{display:flex;align-items:center;justify-content:center;min-height:100vh}.setup-card[data-v-97d10609]{background:#e8ecf1;border:none;border-radius:28px;padding:40px;max-width:420px;width:calc(100% - 48px);display:flex;flex-direction:column;gap:20px;box-shadow:12px 12px 24px #c8cdd5,-12px -12px 24px #fff}h2[data-v-97d10609]{font-size:1.25rem;font-weight:700;color:#2d3748;letter-spacing:-.01em}p[data-v-97d10609]{font-size:.83rem;color:#a0aec0;line-height:1.7}p strong[data-v-97d10609]{color:#718096;font-weight:600}.field-group[data-v-97d10609]{display:flex;flex-direction:column;gap:6px}.field-label[data-v-97d10609]{font-size:.72rem;font-weight:600;color:#a0aec0;text-transform:uppercase;letter-spacing:.06em}input[data-v-97d10609]{background:#e8ecf1;border:none;border-radius:12px;color:#2d3748;font-size:.9rem;padding:12px 16px;width:100%;outline:none;box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff;transition:box-shadow .2s}input[data-v-97d10609]:focus{box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff,0 0 0 2px #2563eb4d}input[data-v-97d10609]::placeholder{color:#c0c7d0}button[data-v-97d10609]{background:#e8ecf1;border:none;border-radius:12px;color:#2563eb;cursor:pointer;font-size:.92rem;font-weight:700;padding:13px;width:100%;box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff;transition:box-shadow .15s,color .15s;letter-spacing:.01em}button[data-v-97d10609]:disabled{color:#c0c7d0;cursor:not-allowed;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff}button[data-v-97d10609]:hover:not(:disabled){box-shadow:4px 4px 8px #c8cdd5,-4px -4px 8px #fff}button[data-v-97d10609]:active:not(:disabled){box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff}.error[data-v-97d10609]{color:#e53e3e;font-size:.82rem;background:#e53e3e0f;border-radius:10px;padding:10px 14px;box-shadow:inset 2px 2px 5px #c8cdd5,inset -2px -2px 5px #fff}.weather-body[data-v-a3030d6f]{justify-content:center}.weather-layout[data-v-a3030d6f]{display:flex;align-items:center;justify-content:space-between;width:100%;gap:8px;flex:1}.weather-left[data-v-a3030d6f]{display:flex;flex-direction:column;gap:2px;min-width:0}.weather-temp[data-v-a3030d6f]{font-size:2.6rem;font-weight:700;color:#2d3748;line-height:1;letter-spacing:-.03em}.weather-condition[data-v-a3030d6f]{font-size:.72rem;color:#a0aec0;font-weight:600;text-transform:uppercase;letter-spacing:.04em}.weather-meta[data-v-a3030d6f]{display:flex;flex-direction:column;gap:1px;margin-top:4px}.weather-meta-item[data-v-a3030d6f]{font-size:.68rem;color:#a0aec0;font-weight:500}.weather-right[data-v-a3030d6f]{flex-shrink:0}.weather-svg-icon[data-v-a3030d6f]{display:flex;align-items:center;justify-content:center}.weather-body.short .weather-temp[data-v-a3030d6f]{font-size:1.4rem}.weather-body.short .weather-meta[data-v-a3030d6f]{display:none}.weather-body.short .weather-svg-icon[data-v-a3030d6f] svg{width:40px;height:40px}.weather-body.narrow .weather-temp[data-v-a3030d6f]{font-size:1.8rem}.weather-body.narrow .weather-condition[data-v-a3030d6f]{font-size:.6rem}.weather-body.compact .weather-temp[data-v-a3030d6f]{font-size:1.5rem}.weather-body.compact .weather-condition[data-v-a3030d6f]{font-size:.55rem}.weather-body.compact .weather-meta[data-v-a3030d6f]{display:none}.weather-body.compact .weather-svg-icon[data-v-a3030d6f] svg{width:28px;height:28px}.light-ctrl-btn[data-v-a3030d6f]{position:absolute;top:8px;left:8px;z-index:15;background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;color:#d69e2e;opacity:0;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:opacity .2s,box-shadow .15s}.light-ctrl-btn[data-v-a3030d6f]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.light-ctrl-btn[data-v-a3030d6f]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.body-center[data-v-a3030d6f]{flex:1;display:flex;flex-direction:column;align-items:center}.light-ctrl-btn[data-v-c1ca61d1]{position:absolute;top:8px;left:8px;z-index:15;background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;color:#d69e2e;opacity:0;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:opacity .2s,box-shadow .15s}.card:hover{opacity:1}.light-ctrl-btn[data-v-c1ca61d1]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.light-ctrl-btn[data-v-c1ca61d1]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.card.small .light-ctrl-btn{padding:4px;border-radius:8px;top:5px;left:5px}.card.small .light-ctrl-btn{width:12px;height:12px}.body-center[data-v-c1ca61d1]{flex:1;display:flex;flex-direction:column;align-items:center}.body-center .center-wrap[data-v-c1ca61d1]{flex:1;display:flex;align-items:center;justify-content:center}.body-center .updated[data-v-c1ca61d1]{margin-top:auto;padding-top:12px}.bulb-btn[data-v-c1ca61d1]{background:#e8ecf1;border:none;border-radius:50%;cursor:pointer;width:72px;height:72px;display:flex;align-items:center;justify-content:center;color:#b0bac6;box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff;transition:box-shadow .15s,color .15s;outline:none;-webkit-tap-highlight-color:transparent}.bulb-btn svg[data-v-c1ca61d1]{width:32px;height:32px;transition:color .2s,filter .2s}.bulb-btn[data-v-c1ca61d1]:not(.on):not(.pressing){box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff}.bulb-btn.on[data-v-c1ca61d1]:not(.pressing){color:#eab308;box-shadow:3px 3px 7px #c8cdd5,-3px -3px 7px #fff,0 0 18px #eab30866,0 0 5px #eab30840 inset}.bulb-btn.on svg[data-v-c1ca61d1]{fill:#eab30826;filter:drop-shadow(0 0 6px rgba(234,179,8,.6))}.bulb-btn.pressing[data-v-c1ca61d1]{box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff;color:#718096}.body-center.short .bulb-btn[data-v-c1ca61d1]{width:48px;height:48px}.body-center.short .bulb-btn svg[data-v-c1ca61d1]{width:24px;height:24px}.body-center.short .updated[data-v-c1ca61d1]{display:none}.body-center.compact .bulb-btn[data-v-c1ca61d1]{width:40px;height:40px;box-shadow:4px 4px 8px #c8cdd5,-4px -4px 8px #fff}.body-center.compact .bulb-btn svg[data-v-c1ca61d1]{width:20px;height:20px}.body-center.compact .bulb-btn.on[data-v-c1ca61d1]:not(.pressing){box-shadow:2px 2px 5px #c8cdd5,-2px -2px 5px #fff,0 0 10px #eab30859,0 0 3px #eab30833 inset}.body-center.compact .bulb-btn.pressing[data-v-c1ca61d1]{box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff}.updated[data-v-c1ca61d1]{font-size:.7rem;color:#c0c7d0;letter-spacing:.02em;text-align:center}.body-center.compact .updated[data-v-c1ca61d1]{display:none}.body-center[data-v-495ed0f0]{flex:1;display:flex;flex-direction:column;align-items:center}.body-center .center-wrap[data-v-495ed0f0]{flex:1;display:flex;align-items:center;justify-content:center}.body-center .updated[data-v-495ed0f0]{margin-top:auto;padding-top:12px}.updated[data-v-495ed0f0]{font-size:.7rem;color:#c0c7d0;letter-spacing:.02em;text-align:center}.power-btn[data-v-495ed0f0]{background:#e8ecf1;border:none;border-radius:50%;cursor:pointer;width:72px;height:72px;display:flex;align-items:center;justify-content:center;color:#b0bac6;box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff;transition:box-shadow .15s,color .15s;outline:none;-webkit-tap-highlight-color:transparent}.power-btn svg[data-v-495ed0f0]{width:28px;height:28px;transition:color .2s,filter .2s}.power-btn[data-v-495ed0f0]:not(.on):not(.pressing){box-shadow:6px 6px 12px #c8cdd5,-6px -6px 12px #fff}.power-btn.on[data-v-495ed0f0]:not(.pressing){color:#22c55e;box-shadow:3px 3px 7px #c8cdd5,-3px -3px 7px #fff,0 0 16px #22c55e59,0 0 4px #22c55e33 inset}.power-btn.on svg[data-v-495ed0f0]{filter:drop-shadow(0 0 5px rgba(34,197,94,.6))}.power-btn.pressing[data-v-495ed0f0]{box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff;color:#718096}.body-center.short .power-btn[data-v-495ed0f0]{width:48px;height:48px}.body-center.short .power-btn svg[data-v-495ed0f0]{width:22px;height:22px}.body-center.short .updated[data-v-495ed0f0]{display:none}.body-center.compact .power-btn[data-v-495ed0f0]{width:40px;height:40px;box-shadow:4px 4px 8px #c8cdd5,-4px -4px 8px #fff}.body-center.compact .power-btn svg[data-v-495ed0f0]{width:18px;height:18px}.body-center.compact .power-btn.on[data-v-495ed0f0]:not(.pressing){box-shadow:2px 2px 5px #c8cdd5,-2px -2px 5px #fff,0 0 10px #22c55e59,0 0 3px #22c55e33 inset}.body-center.compact .power-btn.pressing[data-v-495ed0f0]{box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff}.body-center.compact .updated[data-v-495ed0f0]{display:none}.body-center[data-v-336a5298]{flex:1;display:flex;flex-direction:column;align-items:center}.body-center .center-wrap[data-v-336a5298]{flex:1;display:flex;align-items:center;justify-content:center}.body-center .updated[data-v-336a5298]{margin-top:auto;padding-top:12px}.state[data-v-336a5298]{display:flex;align-items:baseline;justify-content:center;gap:6px}.state.value[data-v-336a5298]{padding:8px 0 4px}.number[data-v-336a5298]{font-size:3.4rem;font-weight:700;color:#2d3748;line-height:1;letter-spacing:-.03em}.unit[data-v-336a5298]{font-size:1.3rem;color:#a0aec0;font-weight:400}.updated[data-v-336a5298]{font-size:.7rem;color:#c0c7d0;letter-spacing:.02em;text-align:center}.body-center.short .number[data-v-336a5298]{font-size:1.4rem}.body-center.short .unit[data-v-336a5298]{font-size:.72rem}.body-center.short .updated[data-v-336a5298]{display:none}.body-center.compact .number[data-v-336a5298]{font-size:1.6rem}.body-center.compact .unit[data-v-336a5298]{font-size:.65rem}.body-center.narrow .number[data-v-336a5298]{font-size:1.8rem}.body-center.narrow .unit[data-v-336a5298]{font-size:.8rem}.card[data-v-7965fac9]{background:#e8ecf1;border:none;border-radius:20px;padding:24px 20px 20px;width:100%;height:100%;display:flex;flex-direction:column;gap:0px;position:relative;box-shadow:8px 8px 16px #c8cdd5,-8px -8px 16px #fff;transition:box-shadow .4s,transform .4s;overflow:hidden}.card[data-v-7965fac9]:after{content:"";position:absolute;bottom:-18px;left:15%;right:15%;height:28px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,160,60,0) 0%,transparent 100%);filter:blur(10px);transition:background .5s,opacity .5s;pointer-events:none;z-index:-1}.card.active[data-v-7965fac9]:after{background:radial-gradient(ellipse at center,rgba(255,155,40,.65) 0%,rgba(255,120,20,.2) 60%,transparent 100%)}.card.active[data-v-7965fac9]{box-shadow:8px 8px 16px #c8cdd5,-8px -8px 16px #fff,0 18px 32px -8px #ff8c1e40}.card-header[data-v-7965fac9]{display:flex;align-items:center;justify-content:center;min-height:24px}.label[data-v-7965fac9]{font-size:.72rem;color:#a0aec0;font-weight:600;letter-spacing:.06em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-transform:uppercase;text-align:center;max-width:100%}.edit-ctrl-btn[data-v-7965fac9]{position:absolute;top:8px;right:8px;z-index:15;background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;padding:6px 7px;display:flex;flex-direction:column;gap:3px;align-items:center;justify-content:center;color:#a0aec0;opacity:0;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:opacity .2s,box-shadow .15s}.card:hover .edit-ctrl-btn[data-v-7965fac9]{opacity:1}.edit-ctrl-btn[data-v-7965fac9]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.edit-ctrl-btn[data-v-7965fac9]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.card.small .edit-ctrl-btn[data-v-7965fac9]{padding:4px 5px;border-radius:8px;top:5px;right:5px;gap:2px}.card.small .edit-ctrl-btn .dot[data-v-7965fac9]{width:2px;height:2px}.dot[data-v-7965fac9]{display:block;width:3px;height:3px;border-radius:50%;background:#a0aec0}.state[data-v-7965fac9]{display:flex;align-items:baseline;justify-content:center;gap:6px}.state.loading[data-v-7965fac9]{justify-content:center;padding:16px 0}.state.error[data-v-7965fac9]{color:#e53e3e;font-size:.875rem;gap:8px;align-items:center;justify-content:center}.spinner[data-v-7965fac9]{display:inline-block;width:26px;height:26px;border:3px solid #d8dde5;border-top-color:#2563eb;border-radius:50%;animation:spin-7965fac9 .8s linear infinite}@keyframes spin-7965fac9{to{transform:rotate(360deg)}}.card.narrow[data-v-7965fac9]{padding:16px 10px 12px;border-radius:16px}.card.narrow .label[data-v-7965fac9]{font-size:.55rem;letter-spacing:.04em}.card.small[data-v-7965fac9]{padding:12px 10px 10px;border-radius:14px;box-shadow:8px 8px 16px #c8cdd5,-8px -8px 16px #fff}.card.small.active[data-v-7965fac9]{box-shadow:8px 8px 16px #c8cdd5,-8px -8px 16px #fff,0 12px 20px -6px #ff8c1e40}.card.small .label[data-v-7965fac9]{font-size:.55rem;letter-spacing:.04em}.card.small .spinner[data-v-7965fac9]{width:18px;height:18px;border-width:2px}.card.small[data-v-7965fac9]:after{bottom:-12px;height:18px}.card.short[data-v-7965fac9]{padding:14px 16px 12px}.card.short .label[data-v-7965fac9]{font-size:.6rem}.resize-handle[data-v-7965fac9]{position:absolute;bottom:0;right:0;width:16px;height:16px;cursor:nwse-resize;opacity:0;transition:opacity .2s;z-index:5}.resize-handle[data-v-7965fac9]:before{content:"";position:absolute;bottom:4px;right:4px;width:8px;height:8px;border-right:2px solid #b0bac6;border-bottom:2px solid #b0bac6;border-radius:0 0 3px}.card:hover .resize-handle[data-v-7965fac9]{opacity:1}.ha-toggle-row[data-v-7965fac9]{display:flex;align-items:center;justify-content:space-between;padding:10px 0 4px}.ha-toggle-label[data-v-7965fac9]{font-size:.85rem;color:#4a5568;font-weight:500}.ha-toggle[data-v-7965fac9]{position:relative;width:44px;height:24px;border:none;border-radius:12px;cursor:pointer;background:#e8ecf1;box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff;transition:box-shadow .25s,background .25s;padding:0}.ha-toggle.on[data-v-7965fac9]{box-shadow:inset 2px 2px 4px #22c55e40,inset -2px -2px 4px #fff9,0 0 8px #22c55e4d}.ha-toggle-knob[data-v-7965fac9]{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#e8ecf1;box-shadow:2px 2px 4px #c8cdd5,-1px -1px 3px #fff;transition:transform .2s,background .2s,box-shadow .2s}.ha-toggle.on .ha-toggle-knob[data-v-7965fac9]{transform:translate(20px);background:#22c55e;box-shadow:1px 1px 3px #00000026,0 0 6px #22c55e66}.heading[data-v-7a388668]{display:flex;align-items:flex-end;padding:0 2px;position:relative;overflow:hidden;-webkit-user-select:none;user-select:none}.heading.short[data-v-7a388668]{align-items:flex-end}.heading-content[data-v-7a388668]{width:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:4px}.heading-text[data-v-7a388668]{font-size:1.3rem;font-weight:800;color:#2d3748;letter-spacing:-.02em;line-height:1;margin:0;cursor:default;word-break:break-word}.heading.short .heading-text[data-v-7a388668]{font-size:1rem}.heading-line[data-v-7a388668]{border:none;height:2px;background:#d2d8e0;margin:0;width:100%;border-radius:1px}.heading-input[data-v-7a388668]{font-size:1.3rem;font-weight:800;color:#2d3748;letter-spacing:-.02em;line-height:1;background:transparent;border:none;border-bottom:2px solid #2563eb;outline:none;width:100%;padding:0}.heading-edit-btn[data-v-7a388668]{position:absolute;top:4px;right:4px;z-index:15;background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;padding:6px 7px;display:flex;flex-direction:column;gap:3px;align-items:center;justify-content:center;color:#a0aec0;opacity:0;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:opacity .2s,box-shadow .15s}.heading:hover .heading-edit-btn[data-v-7a388668]{opacity:1}.heading-edit-btn[data-v-7a388668]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.heading-edit-btn[data-v-7a388668]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.dot[data-v-7a388668]{display:block;width:3px;height:3px;border-radius:50%;background:#a0aec0}.resize-handle[data-v-7a388668]{position:absolute;bottom:0;right:0;width:16px;height:16px;cursor:nwse-resize;opacity:0;transition:opacity .2s;z-index:5}.resize-handle[data-v-7a388668]:before{content:"";position:absolute;bottom:4px;right:4px;width:8px;height:8px;border-right:2px solid #b0bac6;border-bottom:2px solid #b0bac6;border-radius:0 0 3px}.heading:hover .resize-handle[data-v-7a388668]{opacity:1}.pill[data-v-4c919921]{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;height:32px;border-radius:20px;border:none;background:#e8ecf1;cursor:pointer;font-size:.75rem;font-weight:600;color:#38a169;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:box-shadow .15s,color .15s}.pill.active[data-v-4c919921]{color:#e53e3e;background:#f1e8e8fc;box-shadow:3px 3px 6px #dbd5d5,-3px -3px 6px #fff7f8}.pill[data-v-4c919921]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.pill[data-v-4c919921]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.pill-icon[data-v-4c919921]{font-size:.85rem}.pill-label[data-v-4c919921]{white-space:nowrap}.pill[data-v-10807199]{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;height:32px;border-radius:20px;border:none;background:#e8ecf1;cursor:pointer;font-size:.75rem;font-weight:600;color:#a0aec0;box-shadow:3px 3px 6px #e2d2abab,-3px -3px 6px #fffdf6;transition:box-shadow .15s,color .15s}.pill.active[data-v-10807199]{color:#d69e2e;box-shadow:3px 3px 6px #dacdac,-3px -3px 6px #fffdf6}.pill[data-v-10807199]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.pill[data-v-10807199]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.pill-icon[data-v-10807199]{font-size:.85rem}.pill-label[data-v-10807199]{white-space:nowrap}.pill[data-v-2665ddcd]{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;height:32px;border-radius:20px;border:none;background:#e8ecf1;cursor:pointer;font-size:.75rem;font-weight:600;color:#718096;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:box-shadow .15s,color .15s}.pill[data-v-2665ddcd]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.pill[data-v-2665ddcd]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.pill-icon[data-v-2665ddcd]{font-size:.85rem}.pill-label[data-v-2665ddcd]{white-space:nowrap}.pill[data-v-a643a4ed]{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;height:32px;border-radius:20px;border:none;background:#e8ecf1;cursor:pointer;font-size:.75rem;font-weight:600;color:#2563eb;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:box-shadow .15s,color .15s}.pill[data-v-a643a4ed]:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.pill[data-v-a643a4ed]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.pill-dot[data-v-a643a4ed]{width:8px;height:8px;border-radius:50%;background:#c125eb;animation:blink-a643a4ed 1.5s ease-in-out infinite;flex-shrink:0}@keyframes blink-a643a4ed{0%,to{opacity:1}50%{opacity:.25}}.pill-label[data-v-a643a4ed]{white-space:nowrap}.notif-item[data-v-a643a4ed]{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border-radius:12px;transition:background .1s}.notif-item[data-v-a643a4ed]:hover{background:#00000008}.notif-header[data-v-a643a4ed]{display:flex;align-items:center;justify-content:space-between;gap:8px}.notif-title[data-v-a643a4ed]{font-size:.82rem;color:#2d3748;font-weight:600}.notif-time[data-v-a643a4ed]{font-size:.68rem;color:#a0aec0;font-weight:500;white-space:nowrap}.notif-message[data-v-a643a4ed]{font-size:.78rem;color:#4a5568;font-weight:400;line-height:1.4;margin:0}.notif-dismiss[data-v-a643a4ed]{align-self:flex-end;background:none;border:none;color:#2563eb;cursor:pointer;font-size:.72rem;font-weight:500;padding:2px 0;transition:color .15s}.notif-dismiss[data-v-a643a4ed]:hover{color:#e53e3e}.dashboard[data-v-59b2ff83]{min-height:100vh;display:flex;flex-direction:column}.dashboard-header[data-v-59b2ff83]{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;background:#e8ecf1;position:relative;z-index:10;box-shadow:0 4px 12px -2px #c8cdd5}.header-left[data-v-59b2ff83]{display:flex;align-items:center;gap:10px}.app-name[data-v-59b2ff83]{font-size:1.1rem;font-weight:700;color:#2d3748;letter-spacing:-.02em;margin-right:6px}.header-right[data-v-59b2ff83]{display:flex;align-items:center}.clock[data-v-59b2ff83]{display:flex;flex-direction:column;gap:2px;text-align:right}.clock-time[data-v-59b2ff83]{font-size:1.9rem;font-weight:700;color:#2d3748;letter-spacing:-.03em;line-height:1}.clock-date[data-v-59b2ff83]{font-size:.78rem;color:#a0aec0;font-weight:500;letter-spacing:.01em}.dashboard-main[data-v-59b2ff83]{flex:1;display:grid;grid-template-columns:repeat(auto-fill,100px);grid-auto-rows:100px;grid-auto-flow:dense;gap:20px;padding:36px 32px;align-content:start}.dashboard-main[data-v-59b2ff83] .card{width:auto;min-height:unset}.dashboard-main[data-v-59b2ff83] .heading{max-height:50px;align-self:end}.page-tabs[data-v-59b2ff83]{display:flex;justify-content:center;padding:0 32px;margin-bottom:20px}.page-tabs-inner[data-v-59b2ff83]{display:flex;align-items:center;gap:6px;padding:6px 10px;border-radius:16px;background:#e8ecf1;box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.page-tab[data-v-59b2ff83]{position:relative;display:inline-flex;align-items:center;gap:4px;padding:6px 16px;border-radius:12px;border:none;background:transparent;cursor:pointer;font-size:.78rem;font-weight:500;color:#a0aec0;transition:all .2s}.page-tab.active[data-v-59b2ff83]{background:#e8ecf1;color:#2d3748;font-weight:600;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff}.page-tab[data-v-59b2ff83]:not(.active):hover{color:#718096}.page-tab-label[data-v-59b2ff83]{white-space:nowrap}.page-tab-input[data-v-59b2ff83]{background:transparent;border:none;border-bottom:1.5px solid #2563eb;outline:none;font-size:.78rem;font-weight:600;color:#2d3748;width:80px;padding:0;text-align:center}.page-delete-modal[data-v-59b2ff83]{max-width:340px}.page-delete-text[data-v-59b2ff83]{font-size:.85rem;color:#4a5568;line-height:1.5;margin:0 0 20px;text-align:center}.page-delete-actions[data-v-59b2ff83]{display:flex;gap:10px;justify-content:center}.page-delete-cancel[data-v-59b2ff83],.page-delete-confirm[data-v-59b2ff83]{padding:8px 20px;border-radius:10px;border:none;font-size:.8rem;font-weight:600;cursor:pointer;transition:box-shadow .15s,background .15s}.page-delete-cancel[data-v-59b2ff83]{background:#e8ecf1;color:#718096;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff}.page-delete-cancel[data-v-59b2ff83]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.page-delete-confirm[data-v-59b2ff83]{background:#e53e3e;color:#fff;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff}.page-delete-confirm[data-v-59b2ff83]:active{box-shadow:inset 2px 2px 4px #0003}.burger-wrap[data-v-59b2ff83]{position:fixed;bottom:28px;right:28px;z-index:60}.burger-btn[data-v-59b2ff83]{width:48px;height:48px;border-radius:50%;background:#e8ecf1;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;box-shadow:5px 5px 10px #c8cdd5,-5px -5px 10px #fff;transition:box-shadow .15s}.burger-btn[data-v-59b2ff83]:active{box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff}.burger-line[data-v-59b2ff83]{display:block;width:20px;height:2px;border-radius:1px;background:#718096}.burger-menu[data-v-59b2ff83]{position:absolute;bottom:58px;left:0;min-width:190px;background:#e8ecf1;border-radius:14px;padding:8px 0;box-shadow:6px 6px 14px #c8cdd5,-6px -6px 14px #fff;transform-origin:bottom left}.burger-pop-enter-active[data-v-59b2ff83]{transition:opacity .15s,transform .15s}.burger-pop-leave-active[data-v-59b2ff83]{transition:opacity .1s,transform .1s}.burger-pop-enter-from[data-v-59b2ff83],.burger-pop-leave-to[data-v-59b2ff83]{opacity:0;transform:scale(.9) translateY(8px)}.burger-item[data-v-59b2ff83]{display:flex;align-items:center;gap:8px;width:100%;padding:10px 18px;border:none;background:none;cursor:pointer;font-size:.82rem;font-weight:500;color:#2d3748;text-align:left;transition:background .1s}.burger-item[data-v-59b2ff83]:hover{background:#0000000a}.burger-item-icon[data-v-59b2ff83]{font-size:.9rem;font-weight:600;width:18px;text-align:center;color:#718096}.burger-item-danger[data-v-59b2ff83],.burger-item-danger .burger-item-icon[data-v-59b2ff83]{color:#e53e3e}.burger-item-muted[data-v-59b2ff83]{color:#a0aec0;font-size:.76rem}.burger-divider[data-v-59b2ff83]{height:1px;background:#d2d8e0;margin:4px 14px}.burger-auth-key[data-v-59b2ff83]{padding:6px 14px 10px}.burger-auth-input[data-v-59b2ff83]{width:100%;padding:6px 10px;border:none;border-radius:8px;background:#e8ecf1;box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff;font-size:.75rem;color:#2d3748;outline:none;box-sizing:border-box}.burger-auth-actions[data-v-59b2ff83]{display:flex;gap:6px;margin-top:6px}.burger-auth-save[data-v-59b2ff83],.burger-auth-clear[data-v-59b2ff83]{padding:4px 12px;border:none;border-radius:8px;font-size:.72rem;font-weight:600;cursor:pointer;background:#e8ecf1;color:#2d3748;box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.burger-auth-save[data-v-59b2ff83]:active,.burger-auth-clear[data-v-59b2ff83]:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.burger-auth-clear[data-v-59b2ff83]{color:#e53e3e}.card-dragging[data-v-59b2ff83]{opacity:.25}.drop-placeholder[data-v-59b2ff83]{border-radius:20px;background:#2563eb0f;border:2px dashed rgba(37,99,235,.25);box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff;pointer-events:none;transition:grid-column .15s,grid-row .15s}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,SF Pro Display,Segoe UI,Roboto,sans-serif;background:#e8ecf1;color:#2d3748;min-height:100vh;-webkit-font-smoothing:antialiased}#app{min-height:100vh}::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#0000001f;border-radius:2px}.ha-modal-overlay{position:fixed;top:0;right:0;bottom:0;left:0;background:#00000040;display:flex;align-items:center;justify-content:center;z-index:100}.ha-modal-box{width:340px;max-height:80vh;background:#e8ecf1;border-radius:20px;padding:28px 24px 24px;box-shadow:0 0 20px #969698;display:flex;flex-direction:column;gap:16px;overflow-y:auto}.ha-modal-header-row{display:flex;align-items:center;justify-content:space-between}.ha-modal-title{font-size:.9rem;font-weight:700;color:#2d3748;letter-spacing:.04em;text-transform:uppercase;margin:0}.ha-modal-close{background:none;border:none;color:#a0aec0;cursor:pointer;font-size:1rem;padding:4px 8px;border-radius:8px;transition:color .15s}.ha-modal-close:hover{color:#e53e3e}.ha-modal-fields{display:flex;flex-direction:column;gap:12px}.ha-modal-input-wrap{position:relative;width:100%}.ha-modal-input{background:#e8ecf1;border:none;border-radius:12px;color:#2d3748;font-size:.9rem;outline:none;padding:11px 14px;width:100%;box-sizing:border-box;transition:box-shadow .2s;box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff}.ha-modal-input:focus{box-shadow:inset 4px 4px 8px #c8cdd5,inset -4px -4px 8px #fff,0 0 0 2px #2563eb4d}.ha-modal-input::placeholder{color:#c0c7d0}.ha-modal-suggestions{background:#e8ecf1;border:none;border-radius:14px;box-shadow:8px 8px 20px #c8cdd5,-4px -4px 12px #fff;left:0;list-style:none;margin:0;padding:0;max-height:240px;overflow-y:auto;position:absolute;top:calc(100% + 6px);width:100%;z-index:20}.ha-modal-suggestion-item{cursor:pointer;display:flex;flex-direction:column;gap:2px;padding:9px 14px;transition:background .1s}.ha-modal-suggestion-item:hover,.ha-modal-suggestion-item.active{background:#2563eb12}.ha-modal-s-entity{color:#4a5568;font-size:.8rem;font-weight:500}.ha-modal-s-name{color:#a0aec0;font-size:.71rem}.ha-modal-hint{font-size:.72rem;color:#b0bac6;letter-spacing:.01em}.ha-modal-actions{display:flex;gap:10px}.ha-modal-btn{background:#e8ecf1;border:none;border-radius:10px;cursor:pointer;font-size:.82rem;font-weight:600;padding:10px 16px;flex:1;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;transition:box-shadow .15s,color .15s}.ha-modal-btn:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.ha-modal-btn:active{box-shadow:inset 2px 2px 5px #c8cdd5,inset -2px -2px 5px #fff}.ha-modal-btn.confirm{color:#38a169}.ha-modal-btn.cancel{color:#e53e3e}.ha-modal-empty{text-align:center;color:#a0aec0;font-size:.85rem;padding:16px 0}.ha-modal-entity-list{list-style:none;display:flex;flex-direction:column;gap:2px}.ha-modal-entity-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-radius:12px;transition:background .1s}.ha-modal-entity-row:hover{background:#00000008}.ha-modal-entity-name{font-size:.82rem;color:#4a5568;font-weight:500}.ha-modal-entity-value{font-size:.82rem;color:#2d3748;font-weight:600}.ha-modal-entity-badge{font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:12px}.ha-modal-entity-badge.closed{color:#38a169;background:#38a1691a}.ha-modal-entity-badge.open{color:#e53e3e;background:#e53e3e1a}.ha-modal-toggle-btn{font-size:.72rem;font-weight:600;padding:4px 12px;border-radius:10px;border:none;cursor:pointer;background:#e8ecf1;box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff;transition:box-shadow .15s,color .15s}.ha-modal-toggle-btn.on{color:#d69e2e}.ha-modal-toggle-btn.off{color:#a0aec0}.ha-modal-toggle-btn:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.ha-modal-header-actions{display:flex;align-items:center;gap:4px}.ha-modal-icon-btn{background:none;border:none;color:#a0aec0;cursor:pointer;padding:4px 6px;border-radius:8px;display:flex;align-items:center;transition:color .15s}.ha-modal-icon-btn:hover{color:#718096}.ha-modal-icon-btn.active{color:#2563eb}.ha-modal-remove-btn{background:none;border:none;color:#c0c7d0;cursor:pointer;font-size:.85rem;padding:2px 6px;border-radius:6px;transition:color .15s}.ha-modal-remove-btn:hover{color:#e53e3e}.ha-modal-delete-btn{background:none;border:none;color:#e53e3e;cursor:pointer;font-size:.78rem;font-weight:500;padding:8px 0;text-align:center;transition:color .15s}.ha-modal-delete-btn:hover{color:#c53030}.ha-light-section{display:flex;flex-direction:column;gap:10px}.ha-light-label{font-size:.75rem;font-weight:600;color:#a0aec0;text-transform:uppercase;letter-spacing:.06em}.ha-light-slider-wrap{display:flex;align-items:center;gap:14px}.ha-light-slider{-webkit-appearance:none;-moz-appearance:none;appearance:none;flex:1;height:10px;border-radius:10px;background:#e8ecf1;box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff;outline:none;cursor:pointer}.ha-light-slider::-webkit-slider-thumb{-webkit-appearance:none;-moz-appearance:none;appearance:none;width:26px;height:26px;border-radius:50%;background:#e8ecf1;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;cursor:pointer;border:none;transition:box-shadow .15s}.ha-light-slider::-webkit-slider-thumb:hover{box-shadow:2px 2px 4px #c8cdd5,-2px -2px 4px #fff}.ha-light-slider::-webkit-slider-thumb:active{box-shadow:inset 2px 2px 4px #c8cdd5,inset -2px -2px 4px #fff}.ha-light-slider::-moz-range-thumb{width:26px;height:26px;border-radius:50%;background:#e8ecf1;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;cursor:pointer;border:none}.ha-light-slider::-moz-range-track{height:10px;border-radius:10px;background:#e8ecf1;box-shadow:inset 3px 3px 6px #c8cdd5,inset -3px -3px 6px #fff}.ha-light-slider-value{font-size:.85rem;font-weight:700;color:#2d3748;min-width:40px;text-align:right}.ha-light-slider--hue{background:linear-gradient(to right,red,#ff0,#0f0,#0ff,#00f,#f0f,red)!important;box-shadow:none!important;border-radius:10px}.ha-light-slider--sat{background:linear-gradient(to right,#e8ecf1,var(--sat-color, #ff0000))!important;box-shadow:none!important;border-radius:10px}.ha-modal-box--wide{width:480px}.wf-current{display:flex;align-items:center;justify-content:space-between;padding:12px 0}.wf-current-left{display:flex;align-items:center;gap:12px}.wf-current-icon{display:flex;align-items:center;justify-content:center;flex-shrink:0}.wf-current-info{display:flex;flex-direction:column;gap:2px}.wf-current-condition{font-size:1rem;font-weight:700;color:#2d3748}.wf-current-ago{font-size:.72rem;color:#a0aec0;font-weight:500}.wf-current-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px}.wf-current-temp{font-size:1.4rem;font-weight:700;color:#2d3748;line-height:1}.wf-current-hilo{font-size:.72rem;color:#a0aec0;font-weight:500}.wf-details{display:flex;flex-direction:column;gap:0;padding:4px 0;border-top:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06)}.wf-detail-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0}.wf-detail-label{font-size:.8rem;color:#4a5568;font-weight:500}.wf-detail-value{font-size:.8rem;color:#2d3748;font-weight:600}.wf-tabs{display:flex;gap:0;position:relative}.wf-tab{flex:1;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;font-size:.82rem;font-weight:600;color:#a0aec0;padding:8px 0;text-align:center;transition:color .15s,border-color .15s}.wf-tab.active{color:#2563eb;border-bottom-color:#2563eb}.wf-tab:hover:not(.active){color:#718096}.weather-forecast-row{display:flex;gap:6px;justify-content:space-between}.weather-forecast-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px;background:#e8ecf1;border-radius:14px;box-shadow:inset 2px 2px 5px #c8cdd5,inset -2px -2px 5px #fff}.wf-date{font-size:.72rem;font-weight:700;color:#2d3748;text-transform:uppercase;letter-spacing:.04em}.wf-icon{display:flex;align-items:center;justify-content:center}.wf-temps{font-size:.78rem;font-weight:700;color:#2d3748}.wf-temps-low{font-size:.72rem;font-weight:500;color:#a0aec0}.wf-condition{font-size:.6rem;color:#a0aec0;font-weight:500;text-align:center;line-height:1.2}.wf-rain{font-size:.62rem;color:#5b9bd5;font-weight:500}.wf-hourly-scroll{display:flex;flex-direction:column;gap:12px;max-height:280px;overflow-y:auto}.wf-hourly-group{display:flex;flex-direction:column;gap:6px}.wf-hourly-day-label{font-size:.72rem;font-weight:700;color:#2d3748;text-transform:uppercase;letter-spacing:.04em}.wf-hourly-group .weather-forecast-row{overflow-x:auto;justify-content:flex-start;gap:6px;padding-bottom:4px}.wf-hourly-group .weather-forecast-day{flex:0 0 auto;min-width:50px;padding:8px 6px}.ha-light-color-preview{width:26px;height:26px;min-width:26px;border-radius:50%;box-shadow:3px 3px 6px #c8cdd5,-3px -3px 6px #fff;border:2px solid #fff}')),document.head.appendChild(e)}}catch(a){console.error("vite-plugin-css-injected-by-js",a)}})();
 var Fl = Object.defineProperty;
 var Bl = (e, t, n) => t in e ? Fl(e, t, { enumerable: !0, configurable: !0, writable: !0, value: n }) : e[t] = n;
 var ko = (e, t, n) => Bl(e, typeof t != "symbol" ? t + "" : t, n);
@@ -18,7 +18,7 @@ const be = {}, tn = [], ht = () => {
 (e.charCodeAt(2) > 122 || e.charCodeAt(2) < 97), so = (e) => e.startsWith("onUpdate:"), Me = Object.assign, oo = (e, t) => {
   const n = e.indexOf(t);
   n > -1 && e.splice(n, 1);
-}, jl = Object.prototype.hasOwnProperty, me = (e, t) => jl.call(e, t), Q = Array.isArray, nn = (e) => Pn(e) === "[object Map]", vi = (e) => Pn(e) === "[object Set]", So = (e) => Pn(e) === "[object Date]", ne = (e) => typeof e == "function", xe = (e) => typeof e == "string", gt = (e) => typeof e == "symbol", ve = (e) => e !== null && typeof e == "object", mi = (e) => (ve(e) || ne(e)) && ne(e.then) && ne(e.catch), yi = Object.prototype.toString, Pn = (e) => yi.call(e), Kl = (e) => Pn(e).slice(8, -1), bi = (e) => Pn(e) === "[object Object]", cs = (e) => xe(e) && e !== "NaN" && e[0] !== "-" && "" + parseInt(e, 10) === e, gn = /* @__PURE__ */ no(
+}, jl = Object.prototype.hasOwnProperty, me = (e, t) => jl.call(e, t), Q = Array.isArray, nn = (e) => Rn(e) === "[object Map]", vi = (e) => Rn(e) === "[object Set]", So = (e) => Rn(e) === "[object Date]", ne = (e) => typeof e == "function", xe = (e) => typeof e == "string", gt = (e) => typeof e == "symbol", ve = (e) => e !== null && typeof e == "object", mi = (e) => (ve(e) || ne(e)) && ne(e.then) && ne(e.catch), yi = Object.prototype.toString, Rn = (e) => yi.call(e), Kl = (e) => Rn(e).slice(8, -1), bi = (e) => Rn(e) === "[object Object]", cs = (e) => xe(e) && e !== "NaN" && e[0] !== "-" && "" + parseInt(e, 10) === e, vn = /* @__PURE__ */ no(
   // the leading comma is intentional so empty string "" is also included
   ",key,ref,ref_for,ref_key,onVnodeBeforeMount,onVnodeMounted,onVnodeBeforeUpdate,onVnodeUpdated,onVnodeBeforeUnmount,onVnodeUnmounted"
 ), fs = (e) => {
@@ -30,7 +30,7 @@ const be = {}, tn = [], ht = () => {
   (e) => e.replace(Wl, "-$1").toLowerCase()
 ), _i = fs((e) => e.charAt(0).toUpperCase() + e.slice(1)), As = fs(
   (e) => e ? `on${_i(e)}` : ""
-), dt = (e, t) => !Object.is(e, t), zn = (e, ...t) => {
+), dt = (e, t) => !Object.is(e, t), Gn = (e, ...t) => {
   for (let n = 0; n < e.length; n++)
     e[n](...t);
 }, wi = (e, t, n, s = !1) => {
@@ -274,13 +274,13 @@ class xi {
     return js(this);
   }
 }
-let Ci = 0, vn, mn;
+let Ci = 0, mn, yn;
 function Ti(e, t = !1) {
   if (e.flags |= 8, t) {
-    e.next = mn, mn = e;
+    e.next = yn, yn = e;
     return;
   }
-  e.next = vn, vn = e;
+  e.next = mn, mn = e;
 }
 function ro() {
   Ci++;
@@ -288,17 +288,17 @@ function ro() {
 function ao() {
   if (--Ci > 0)
     return;
-  if (mn) {
-    let t = mn;
-    for (mn = void 0; t; ) {
+  if (yn) {
+    let t = yn;
+    for (yn = void 0; t; ) {
       const n = t.next;
       t.next = void 0, t.flags &= -9, t = n;
     }
   }
   let e;
-  for (; vn; ) {
-    let t = vn;
-    for (vn = void 0; t; ) {
+  for (; mn; ) {
+    let t = mn;
+    for (mn = void 0; t; ) {
       const n = t.next;
       if (t.next = void 0, t.flags &= -9, t.flags & 1)
         try {
@@ -330,7 +330,7 @@ function js(e) {
   return !!e._dirty;
 }
 function Mi(e) {
-  if (e.flags & 4 && !(e.flags & 16) || (e.flags &= -17, e.globalVersion === Sn) || (e.globalVersion = Sn, !e.isSSR && e.flags & 128 && (!e.deps && !e._dirty || !js(e))))
+  if (e.flags & 4 && !(e.flags & 16) || (e.flags &= -17, e.globalVersion === xn) || (e.globalVersion = xn, !e.isSSR && e.flags & 128 && (!e.deps && !e._dirty || !js(e))))
     return;
   e.flags |= 2;
   const t = e.dep, n = we, s = st;
@@ -379,7 +379,7 @@ function Co(e) {
     }
   }
 }
-let Sn = 0;
+let xn = 0;
 class nr {
   constructor(t, n) {
     this.sub = t, this.dep = n, this.version = n.version, this.nextDep = this.prevDep = this.nextSub = this.prevSub = this.prevActiveLink = void 0;
@@ -403,7 +403,7 @@ class co {
     return n;
   }
   trigger(t) {
-    this.version++, Sn++, this.notify(t);
+    this.version++, xn++, this.notify(t);
   }
   notify(t) {
     ro();
@@ -431,7 +431,7 @@ const Zn = /* @__PURE__ */ new WeakMap(), zt = /* @__PURE__ */ Symbol(
   ""
 ), Ks = /* @__PURE__ */ Symbol(
   ""
-), xn = /* @__PURE__ */ Symbol(
+), Cn = /* @__PURE__ */ Symbol(
   ""
 );
 function Pe(e, t, n) {
@@ -445,7 +445,7 @@ function Pe(e, t, n) {
 function kt(e, t, n, s, o, i) {
   const l = Zn.get(e);
   if (!l) {
-    Sn++;
+    xn++;
     return;
   }
   const r = (a) => {
@@ -458,10 +458,10 @@ function kt(e, t, n, s, o, i) {
     if (a && n === "length") {
       const u = Number(s);
       l.forEach((d, b) => {
-        (b === "length" || b === xn || !gt(b) && b >= u) && r(d);
+        (b === "length" || b === Cn || !gt(b) && b >= u) && r(d);
       });
     } else
-      switch ((n !== void 0 || l.has(void 0)) && r(l.get(n)), c && r(l.get(xn)), t) {
+      switch ((n !== void 0 || l.has(void 0)) && r(l.get(n)), c && r(l.get(Cn)), t) {
         case "add":
           a ? c && r(l.get("length")) : (r(l.get(zt)), nn(e) && r(l.get(Ks)));
           break;
@@ -481,10 +481,10 @@ function sr(e, t) {
 }
 function Qt(e) {
   const t = /* @__PURE__ */ pe(e);
-  return t === e ? t : (Pe(t, "iterate", xn), /* @__PURE__ */ Je(e) ? t : t.map(ot));
+  return t === e ? t : (Pe(t, "iterate", Cn), /* @__PURE__ */ Je(e) ? t : t.map(ot));
 }
 function hs(e) {
-  return Pe(e = /* @__PURE__ */ pe(e), "iterate", xn), e;
+  return Pe(e = /* @__PURE__ */ pe(e), "iterate", Cn), e;
 }
 function ct(e, t) {
   return /* @__PURE__ */ At(e) ? rn(/* @__PURE__ */ Gt(e) ? ot(t) : t) : ot(t);
@@ -635,7 +635,7 @@ function To(e, t, n, s) {
 }
 function Ls(e, t, n) {
   const s = /* @__PURE__ */ pe(e);
-  Pe(s, "iterate", xn);
+  Pe(s, "iterate", Cn);
   const o = s[t](...n);
   return (o === -1 || o === !1) && /* @__PURE__ */ gs(n[0]) ? (n[0] = /* @__PURE__ */ pe(n[0]), s[t](...n)) : o;
 }
@@ -744,7 +744,7 @@ class ar extends Pi {
   }
 }
 const ur = /* @__PURE__ */ new Ri(), cr = /* @__PURE__ */ new ar(), fr = /* @__PURE__ */ new Ri(!0);
-const Vs = (e) => e, jn = (e) => Reflect.getPrototypeOf(e);
+const Vs = (e) => e, Kn = (e) => Reflect.getPrototypeOf(e);
 function dr(e, t, n) {
   return function(...s) {
     const o = this.__v_raw, i = /* @__PURE__ */ pe(o), l = nn(i), r = e === "entries" || e === Symbol.iterator && l, a = e === "keys" && l, c = o[e](...s), u = n ? Vs : t ? rn : ot;
@@ -768,7 +768,7 @@ function dr(e, t, n) {
     );
   };
 }
-function Kn(e) {
+function Vn(e) {
   return function(...t) {
     return e === "delete" ? !1 : e === "clear" ? void 0 : this;
   };
@@ -778,7 +778,7 @@ function hr(e, t) {
     get(o) {
       const i = this.__v_raw, l = /* @__PURE__ */ pe(i), r = /* @__PURE__ */ pe(o);
       e || (dt(o, r) && Pe(l, "get", o), Pe(l, "get", r));
-      const { has: a } = jn(l), c = t ? Vs : e ? rn : ot;
+      const { has: a } = Kn(l), c = t ? Vs : e ? rn : ot;
       if (a.call(l, o))
         return c(i.get(o));
       if (a.call(l, r))
@@ -801,25 +801,25 @@ function hr(e, t) {
   return Me(
     n,
     e ? {
-      add: Kn("add"),
-      set: Kn("set"),
-      delete: Kn("delete"),
-      clear: Kn("clear")
+      add: Vn("add"),
+      set: Vn("set"),
+      delete: Vn("delete"),
+      clear: Vn("clear")
     } : {
       add(o) {
-        const i = /* @__PURE__ */ pe(this), l = jn(i), r = /* @__PURE__ */ pe(o), a = !t && !/* @__PURE__ */ Je(o) && !/* @__PURE__ */ At(o) ? r : o;
+        const i = /* @__PURE__ */ pe(this), l = Kn(i), r = /* @__PURE__ */ pe(o), a = !t && !/* @__PURE__ */ Je(o) && !/* @__PURE__ */ At(o) ? r : o;
         return l.has.call(i, a) || dt(o, a) && l.has.call(i, o) || dt(r, a) && l.has.call(i, r) || (i.add(a), kt(i, "add", a, a)), this;
       },
       set(o, i) {
         !t && !/* @__PURE__ */ Je(i) && !/* @__PURE__ */ At(i) && (i = /* @__PURE__ */ pe(i));
-        const l = /* @__PURE__ */ pe(this), { has: r, get: a } = jn(l);
+        const l = /* @__PURE__ */ pe(this), { has: r, get: a } = Kn(l);
         let c = r.call(l, o);
         c || (o = /* @__PURE__ */ pe(o), c = r.call(l, o));
         const u = a.call(l, o);
         return l.set(o, i), c ? dt(i, u) && kt(l, "set", o, i) : kt(l, "add", o, i), this;
       },
       delete(o) {
-        const i = /* @__PURE__ */ pe(this), { has: l, get: r } = jn(i);
+        const i = /* @__PURE__ */ pe(this), { has: l, get: r } = Kn(i);
         let a = l.call(i, o);
         a || (o = /* @__PURE__ */ pe(o), a = l.call(i, o)), r && r.call(i, o);
         const c = i.delete(o);
@@ -1028,7 +1028,7 @@ function Tr(e, t, n) {
 }
 class Ar {
   constructor(t, n, s) {
-    this.fn = t, this.setter = n, this._value = void 0, this.dep = new co(this), this.__v_isRef = !0, this.deps = void 0, this.depsTail = void 0, this.flags = 16, this.globalVersion = Sn - 1, this.next = void 0, this.effect = this, this.__v_isReadonly = !n, this.isSSR = s;
+    this.fn = t, this.setter = n, this._value = void 0, this.dep = new co(this), this.__v_isRef = !0, this.deps = void 0, this.depsTail = void 0, this.flags = 16, this.globalVersion = xn - 1, this.next = void 0, this.effect = this, this.__v_isReadonly = !n, this.isSSR = s;
   }
   /**
    * @internal
@@ -1051,7 +1051,7 @@ function Er(e, t, n = !1) {
   let s, o;
   return ne(e) ? s = e : (s = e.get, o = e.set), new Ar(s, o, n);
 }
-const Vn = {}, es = /* @__PURE__ */ new WeakMap();
+const Wn = {}, es = /* @__PURE__ */ new WeakMap();
 let Vt;
 function Mr(e, t = !1, n = Vt) {
   if (n) {
@@ -1089,16 +1089,16 @@ function Ir(e, t, n = be) {
     const O = d, V = o === !0 ? 1 / 0 : o;
     d = () => St(O(), V);
   }
-  const P = er(), S = () => {
+  const P = er(), $ = () => {
     u.stop(), P && P.active && oo(P.effects, u);
   };
   if (i && t) {
     const O = t;
     t = (...V) => {
-      O(...V), S();
+      O(...V), $();
     };
   }
-  let v = T ? new Array(e.length).fill(Vn) : Vn;
+  let v = T ? new Array(e.length).fill(Wn) : Wn;
   const C = (O) => {
     if (!(!(u.flags & 1) || !u.dirty && !O))
       if (t) {
@@ -1111,7 +1111,7 @@ function Ir(e, t, n = be) {
             const ae = [
               V,
               // pass undefined as the old value when it's changed for the first time
-              v === Vn ? void 0 : T && v[0] === Vn ? [] : v,
+              v === Wn ? void 0 : T && v[0] === Wn ? [] : v,
               m
             ];
             v = V, a ? a(t, 3, ae) : (
@@ -1134,7 +1134,7 @@ function Ir(e, t, n = be) {
         for (const V of O) V();
       es.delete(u);
     }
-  }, t ? s ? C(!0) : v = u.run() : l ? l(C.bind(null, !0), !0) : u.run(), S.pause = u.pause.bind(u), S.resume = u.resume.bind(u), S.stop = S, S;
+  }, t ? s ? C(!0) : v = u.run() : l ? l(C.bind(null, !0), !0) : u.run(), $.pause = u.pause.bind(u), $.resume = u.resume.bind(u), $.stop = $, $;
 }
 function St(e, t = 1 / 0, n) {
   if (t <= 0 || !ve(e) || e.__v_skip || (n = n || /* @__PURE__ */ new Map(), (n.get(e) || 0) >= t))
@@ -1161,7 +1161,7 @@ function St(e, t = 1 / 0, n) {
 * (c) 2018-present Yuxi (Evan) You and Vue contributors
 * @license MIT
 **/
-function Rn(e, t, n, s) {
+function Nn(e, t, n, s) {
   try {
     return s ? e(...s) : e();
   } catch (o) {
@@ -1170,7 +1170,7 @@ function Rn(e, t, n, s) {
 }
 function it(e, t, n, s) {
   if (ne(e)) {
-    const o = Rn(e, t, n, s);
+    const o = Nn(e, t, n, s);
     return o && mi(o) && o.catch((i) => {
       vs(i, t, n);
     }), o;
@@ -1197,7 +1197,7 @@ function vs(e, t, n, s = !0) {
       r = r.parent;
     }
     if (i) {
-      Ct(), Rn(i, null, 10, [
+      Ct(), Nn(i, null, 10, [
         e,
         a,
         c
@@ -1225,16 +1225,16 @@ function ms(e) {
 function Or(e) {
   let t = at + 1, n = Be.length;
   for (; t < n; ) {
-    const s = t + n >>> 1, o = Be[s], i = Cn(o);
+    const s = t + n >>> 1, o = Be[s], i = Tn(o);
     i < e || i === e && o.flags & 2 ? t = s + 1 : n = s;
   }
   return t;
 }
 function go(e) {
   if (!(e.flags & 1)) {
-    const t = Cn(e), n = Be[Be.length - 1];
+    const t = Tn(e), n = Be[Be.length - 1];
     !n || // fast path when the job id is larger than the tail
-    !(e.flags & 2) && t >= Cn(n) ? Be.push(e) : Be.splice(Or(t), 0, e), e.flags |= 1, ji();
+    !(e.flags & 2) && t >= Tn(n) ? Be.push(e) : Be.splice(Or(t), 0, e), e.flags |= 1, ji();
   }
 }
 function ji() {
@@ -1256,7 +1256,7 @@ function Ao(e, t, n = at + 1) {
 function Ki(e) {
   if (sn.length) {
     const t = [...new Set(sn)].sort(
-      (n, s) => Cn(n) - Cn(s)
+      (n, s) => Tn(n) - Tn(s)
     );
     if (sn.length = 0, Ot) {
       Ot.push(...t);
@@ -1269,12 +1269,12 @@ function Ki(e) {
     Ot = null, Zt = 0;
   }
 }
-const Cn = (e) => e.id == null ? e.flags & 2 ? -1 : 1 / 0 : e.id;
+const Tn = (e) => e.id == null ? e.flags & 2 ? -1 : 1 / 0 : e.id;
 function Vi(e) {
   try {
     for (at = 0; at < Be.length; at++) {
       const t = Be[at];
-      t && !(t.flags & 8) && (t.flags & 4 && (t.flags &= -2), Rn(
+      t && !(t.flags & 8) && (t.flags & 4 && (t.flags &= -2), Nn(
         t,
         t.i,
         t.i ? 15 : 14
@@ -1350,7 +1350,7 @@ function Rr(e, t) {
     s === n && (n = Ke.provides = Object.create(s)), n[e] = t;
   }
 }
-function Gn(e, t, n = !1) {
+function Jn(e, t, n = !1) {
   const s = Sl();
   if (s || on) {
     let o = on ? on._context.provides : s ? s.parent == null || s.ce ? s.vnode.appContext && s.vnode.appContext.provides : s.parent.provides : void 0;
@@ -1360,14 +1360,14 @@ function Gn(e, t, n = !1) {
       return n && ne(t) ? t.call(s && s.proxy) : t;
   }
 }
-const Nr = /* @__PURE__ */ Symbol.for("v-scx"), Dr = () => Gn(Nr);
+const Nr = /* @__PURE__ */ Symbol.for("v-scx"), Dr = () => Jn(Nr);
 function Pt(e, t, n) {
   return zi(e, t, n);
 }
 function zi(e, t, n = be) {
   const { immediate: s, deep: o, flush: i, once: l } = n, r = Me({}, n), a = t && s || !t && i !== "post";
   let c;
-  if (In) {
+  if (Ln) {
     if (i === "sync") {
       const m = Dr();
       c = m.__watcherHandles || (m.__watcherHandles = []);
@@ -1388,13 +1388,13 @@ function zi(e, t, n = be) {
     t && (m.flags |= 4), d && (m.flags |= 2, u && (m.id = u.uid, m.i = u));
   };
   const b = Ir(e, t, r);
-  return In && (c ? c.push(b) : a && b()), b;
+  return Ln && (c ? c.push(b) : a && b()), b;
 }
 function Hr(e, t, n) {
   const s = this.proxy, o = xe(e) ? e.includes(".") ? Gi(s, e) : () => s[e] : e.bind(s, s);
   let i;
   ne(t) ? i = t : (i = t.handler, n = t);
-  const l = Nn(this), r = zi(o, i.bind(s), n);
+  const l = Dn(this), r = zi(o, i.bind(s), n);
   return l(), r;
 }
 function Gi(e, t) {
@@ -1406,7 +1406,7 @@ function Gi(e, t) {
     return s;
   };
 }
-const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, yn = (e) => e && (e.disabled || e.disabled === ""), Eo = (e) => e && (e.defer || e.defer === ""), Mo = (e) => typeof SVGElement < "u" && e instanceof SVGElement, Io = (e) => typeof MathMLElement == "function" && e instanceof MathMLElement, Us = (e, t) => {
+const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, bn = (e) => e && (e.disabled || e.disabled === ""), Eo = (e) => e && (e.defer || e.defer === ""), Mo = (e) => typeof SVGElement < "u" && e instanceof SVGElement, Io = (e) => typeof MathMLElement == "function" && e instanceof MathMLElement, Us = (e, t) => {
   const n = e && e.to;
   return xe(n) ? t ? t(n) : null : n;
 }, qi = {
@@ -1418,7 +1418,7 @@ const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, yn = (e) 
       pc: d,
       pbc: b,
       o: { insert: m, querySelector: N, createText: T, createComment: P }
-    } = c, S = yn(t.props);
+    } = c, $ = bn(t.props);
     let { shapeFlag: v, children: C, dynamicChildren: O } = t;
     if (e == null) {
       const V = t.el = T(""), ee = t.anchor = T("");
@@ -1436,9 +1436,9 @@ const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, yn = (e) 
         );
       }, ce = () => {
         const R = t.target = Us(t.props, N), H = zs(R, t, T, m);
-        R && (l !== "svg" && Mo(R) ? l = "svg" : l !== "mathml" && Io(R) && (l = "mathml"), o && o.isCE && (o.ce._teleportTargets || (o.ce._teleportTargets = /* @__PURE__ */ new Set())).add(R), S || (ae(R, H), Jn(t, !1)));
+        R && (l !== "svg" && Mo(R) ? l = "svg" : l !== "mathml" && Io(R) && (l = "mathml"), o && o.isCE && (o.ce._teleportTargets || (o.ce._teleportTargets = /* @__PURE__ */ new Set())).add(R), $ || (ae(R, H), Yn(t, !1)));
       };
-      S && (ae(n, ee), Jn(t, !0)), Eo(t.props) ? (t.el.__isMounted = !1, Oe(() => {
+      $ && (ae(n, ee), Yn(t, !0)), Eo(t.props) ? (t.el.__isMounted = !1, Oe(() => {
         ce(), delete t.el.__isMounted;
       }, i)) : ce();
     } else {
@@ -1460,7 +1460,7 @@ const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, yn = (e) 
         return;
       }
       t.el = e.el, t.targetStart = e.targetStart;
-      const V = t.anchor = e.anchor, ee = t.target = e.target, ae = t.targetAnchor = e.targetAnchor, ce = yn(e.props), R = ce ? n : ee, H = ce ? V : ae;
+      const V = t.anchor = e.anchor, ee = t.target = e.target, ae = t.targetAnchor = e.targetAnchor, ce = bn(e.props), R = ce ? n : ee, H = ce ? V : ae;
       if (l === "svg" || Mo(ee) ? l = "svg" : (l === "mathml" || Io(ee)) && (l = "mathml"), O ? (b(
         e.dynamicChildren,
         O,
@@ -1479,8 +1479,8 @@ const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, yn = (e) 
         l,
         r,
         !1
-      ), S)
-        ce ? t.props && e.props && t.props.to !== e.props.to && (t.props.to = e.props.to) : Wn(
+      ), $)
+        ce ? t.props && e.props && t.props.to !== e.props.to && (t.props.to = e.props.to) : Un(
           t,
           n,
           V,
@@ -1492,21 +1492,21 @@ const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, yn = (e) 
           t.props,
           N
         );
-        f && Wn(
+        f && Un(
           t,
           f,
           null,
           c,
           0
         );
-      } else ce && Wn(
+      } else ce && Un(
         t,
         ee,
         ae,
         c,
         1
       );
-      Jn(t, S);
+      Yn(t, $);
     }
   },
   remove(e, t, n, { um: s, o: { remove: o } }, i) {
@@ -1520,7 +1520,7 @@ const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, yn = (e) 
       props: b
     } = e;
     if (d && (o(c), o(u)), i && o(a), l & 16) {
-      const m = i || !yn(b);
+      const m = i || !bn(b);
       for (let N = 0; N < r.length; N++) {
         const T = r[N];
         s(
@@ -1533,13 +1533,13 @@ const Ji = /* @__PURE__ */ Symbol("_vte"), Yi = (e) => e.__isTeleport, yn = (e) 
       }
     }
   },
-  move: Wn,
+  move: Un,
   hydrate: Fr
 };
-function Wn(e, t, n, { o: { insert: s }, m: o }, i = 2) {
+function Un(e, t, n, { o: { insert: s }, m: o }, i = 2) {
   i === 0 && s(e.targetAnchor, t, n);
   const { el: l, anchor: r, shapeFlag: a, children: c, props: u } = e, d = i === 2;
-  if (d && s(l, t, n), (!d || yn(u)) && a & 16)
+  if (d && s(l, t, n), (!d || bn(u)) && a & 16)
     for (let b = 0; b < c.length; b++)
       o(
         c[b],
@@ -1552,8 +1552,8 @@ function Wn(e, t, n, { o: { insert: s }, m: o }, i = 2) {
 function Fr(e, t, n, s, o, i, {
   o: { nextSibling: l, parentNode: r, querySelector: a, insert: c, createText: u }
 }, d) {
-  function b(P, S) {
-    let v = S;
+  function b(P, $) {
+    let v = $;
     for (; v; ) {
       if (v && v.nodeType === 8) {
         if (v.data === "teleport start anchor")
@@ -1566,10 +1566,10 @@ function Fr(e, t, n, s, o, i, {
       v = l(v);
     }
   }
-  function m(P, S) {
-    S.anchor = d(
+  function m(P, $) {
+    $.anchor = d(
       l(P),
-      S,
+      $,
       r(P),
       n,
       s,
@@ -1580,7 +1580,7 @@ function Fr(e, t, n, s, o, i, {
   const N = t.target = Us(
     t.props,
     a
-  ), T = yn(t.props);
+  ), T = bn(t.props);
   if (N) {
     const P = N._lpa || N.firstChild;
     t.shapeFlag & 16 && (T ? (m(e, t), b(N, P), t.targetAnchor || zs(
@@ -1599,12 +1599,12 @@ function Fr(e, t, n, s, o, i, {
       s,
       o,
       i
-    ))), Jn(t, T);
+    ))), Yn(t, T);
   } else T && t.shapeFlag & 16 && (m(e, t), t.targetStart = e, t.targetAnchor = l(e));
   return t.anchor && l(t.anchor);
 }
 const Et = qi;
-function Jn(e, t) {
+function Yn(e, t) {
   const n = e.ctx;
   if (n && n.ut) {
     let s, o;
@@ -1625,7 +1625,7 @@ function Br() {
     isUnmounting: !1,
     leavingVNodes: /* @__PURE__ */ new Map()
   };
-  return An(() => {
+  return En(() => {
     e.isMounted = !0;
   }), ol(() => {
     e.isUnmounting = !0;
@@ -1676,7 +1676,7 @@ const qe = [Function, Array], Xi = {
         // #11061, ensure enterHooks is fresh after clone
         (d) => c = d
       );
-      a.type !== je && Tn(a, c);
+      a.type !== je && An(a, c);
       let u = n.subTree && Lo(n.subTree);
       if (u && u.type !== je && !Wt(u, a) && Qi(n).type !== je) {
         let d = Gs(
@@ -1685,7 +1685,7 @@ const qe = [Function, Array], Xi = {
           s,
           n
         );
-        if (Tn(u, d), r === "out-in" && a.type !== je)
+        if (An(u, d), r === "out-in" && a.type !== je)
           return s.isLeaving = !0, d.afterLeave = () => {
             s.isLeaving = !1, n.job.flags & 8 || n.update(), delete d.afterLeave, u = void 0;
           }, Os(i);
@@ -1736,7 +1736,7 @@ function Gs(e, t, n, s, o) {
     onAfterLeave: N,
     onLeaveCancelled: T,
     onBeforeAppear: P,
-    onAppear: S,
+    onAppear: $,
     onAfterAppear: v,
     onAppearCancelled: C
   } = t, O = String(e.key), V = el(n, e), ee = (R, H) => {
@@ -1771,7 +1771,7 @@ function Gs(e, t, n, s, o) {
       let H = c, f = u, x = d;
       if (!n.isMounted)
         if (i)
-          H = S || c, f = v || u, x = C || d;
+          H = $ || c, f = v || u, x = C || d;
         else
           return;
       let j = !1;
@@ -1826,8 +1826,8 @@ function Lo(e) {
       return n.default();
   }
 }
-function Tn(e, t) {
-  e.shapeFlag & 6 && e.component ? (e.transition = t, Tn(e.component.subTree, t)) : e.shapeFlag & 128 ? (e.ssContent.transition = t.clone(e.ssContent), e.ssFallback.transition = t.clone(e.ssFallback)) : e.transition = t;
+function An(e, t) {
+  e.shapeFlag & 6 && e.component ? (e.transition = t, An(e.component.subTree, t)) : e.shapeFlag & 128 ? (e.ssContent.transition = t.clone(e.ssContent), e.ssFallback.transition = t.clone(e.ssFallback)) : e.transition = t;
 }
 function tl(e, t = !1, n) {
   let s = [], o = 0;
@@ -1859,10 +1859,10 @@ function Oo(e, t) {
   return !!((n = Object.getOwnPropertyDescriptor(e, t)) && !n.configurable);
 }
 const ss = /* @__PURE__ */ new WeakMap();
-function bn(e, t, n, s, o = !1) {
+function _n(e, t, n, s, o = !1) {
   if (Q(e)) {
     e.forEach(
-      (T, P) => bn(
+      (T, P) => _n(
         T,
         t && (Q(t) ? t[P] : t),
         n,
@@ -1872,8 +1872,8 @@ function bn(e, t, n, s, o = !1) {
     );
     return;
   }
-  if (_n(s) && !o) {
-    s.shapeFlag & 512 && s.type.__asyncResolved && s.component.subTree.component && bn(e, t, n, s.component.subTree);
+  if (wn(s) && !o) {
+    s.shapeFlag & 512 && s.type.__asyncResolved && s.component.subTree.component && _n(e, t, n, s.component.subTree);
     return;
   }
   const i = s.shapeFlag & 4 ? $s(s.component) : s.el, l = o ? null : i, { i: r, r: a } = e, c = t && t.r, u = r.refs === be ? r.refs = {} : r.refs, d = r.setupState, b = /* @__PURE__ */ pe(d), m = d === be ? gi : (T) => Oo(u, T) ? !1 : me(b, T), N = (T, P) => !(P && Oo(u, P));
@@ -1886,11 +1886,11 @@ function bn(e, t, n, s, o = !1) {
     }
   }
   if (ne(a))
-    Rn(a, r, 12, [l, u]);
+    Nn(a, r, 12, [l, u]);
   else {
     const T = xe(a), P = /* @__PURE__ */ Ee(a);
     if (T || P) {
-      const S = () => {
+      const $ = () => {
         if (e.f) {
           const v = T ? m(a) ? d[a] : u[a] : N() || !e.k ? a.value : u[e.k];
           if (o)
@@ -1907,11 +1907,11 @@ function bn(e, t, n, s, o = !1) {
       };
       if (l) {
         const v = () => {
-          S(), ss.delete(e);
+          $(), ss.delete(e);
         };
         v.id = -1, ss.set(e, v), Oe(v, n);
       } else
-        Po(e), S();
+        Po(e), $();
     }
   }
 }
@@ -1921,7 +1921,7 @@ function Po(e) {
 }
 ds().requestIdleCallback;
 ds().cancelIdleCallback;
-const _n = (e) => !!e.type.__asyncLoader, ys = (e) => e.type.__isKeepAlive;
+const wn = (e) => !!e.type.__asyncLoader, ys = (e) => e.type.__isKeepAlive;
 function Vr(e, t) {
   sl(e, "a", t);
 }
@@ -1952,7 +1952,7 @@ function Ur(e, t, n, s) {
     !0
     /* prepend */
   );
-  En(() => {
+  Mn(() => {
     oo(s[t], o);
   }, n);
 }
@@ -1960,19 +1960,19 @@ function bs(e, t, n = Ke, s = !1) {
   if (n) {
     const o = n[e] || (n[e] = []), i = t.__weh || (t.__weh = (...l) => {
       Ct();
-      const r = Nn(n), a = it(t, n, e, l);
+      const r = Dn(n), a = it(t, n, e, l);
       return r(), Tt(), a;
     });
     return s ? o.unshift(i) : o.push(i), i;
   }
 }
 const Mt = (e) => (t, n = Ke) => {
-  (!In || e === "sp") && bs(e, (...s) => t(...s), n);
-}, zr = Mt("bm"), An = Mt("m"), Gr = Mt(
+  (!Ln || e === "sp") && bs(e, (...s) => t(...s), n);
+}, zr = Mt("bm"), En = Mt("m"), Gr = Mt(
   "bu"
 ), Jr = Mt("u"), ol = Mt(
   "bum"
-), En = Mt("um"), Yr = Mt(
+), Mn = Mt("um"), Yr = Mt(
   "sp"
 ), qr = Mt("rtg"), Xr = Mt("rtc");
 function Qr(e, t = Ke) {
@@ -2015,7 +2015,7 @@ function Ue(e, t, n, s) {
     o = [];
   return o;
 }
-const Js = (e) => e ? xl(e) ? $s(e) : Js(e.parent) : null, wn = (
+const Js = (e) => e ? xl(e) ? $s(e) : Js(e.parent) : null, $n = (
   // Move PURE marker to new line to workaround compiler discarding it
   // due to type annotation
   /* @__PURE__ */ Me(/* @__PURE__ */ Object.create(null), {
@@ -2067,7 +2067,7 @@ const Js = (e) => e ? xl(e) ? $s(e) : Js(e.parent) : null, wn = (
         Ys && (l[t] = 0);
       }
     }
-    const c = wn[t];
+    const c = $n[t];
     let u, d;
     if (c)
       return t === "$attrs" && Pe(e.attrs, "get", ""), c(e);
@@ -2092,7 +2092,7 @@ const Js = (e) => e ? xl(e) ? $s(e) : Js(e.parent) : null, wn = (
     _: { data: e, setupState: t, accessCache: n, ctx: s, appContext: o, props: i, type: l }
   }, r) {
     let a;
-    return !!(n[r] || e !== be && r[0] !== "$" && me(e, r) || Ps(t, r) || me(i, r) || me(s, r) || me(wn, r) || me(o.config.globalProperties, r) || (a = l.__cssModules) && a[r]);
+    return !!(n[r] || e !== be && r[0] !== "$" && me(e, r) || Ps(t, r) || me(i, r) || me(s, r) || me($n, r) || me(o.config.globalProperties, r) || (a = l.__cssModules) && a[r]);
   },
   defineProperty(e, t, n) {
     return n.get != null ? e._.accessCache[t] = 0 : me(n, "value") && this.set(e, t, n.value, null), Reflect.defineProperty(e, t, n);
@@ -2124,7 +2124,7 @@ function ta(e) {
     updated: N,
     activated: T,
     deactivated: P,
-    beforeDestroy: S,
+    beforeDestroy: $,
     beforeUnmount: v,
     destroyed: C,
     unmounted: O,
@@ -2176,7 +2176,7 @@ function ta(e) {
   function fe(ge, U) {
     Q(U) ? U.forEach((J) => ge(J.bind(n))) : U && ge(U.bind(n));
   }
-  if (fe(zr, d), fe(An, b), fe(Gr, m), fe(Jr, N), fe(Vr, T), fe(Wr, P), fe(Qr, ce), fe(Xr, ee), fe(qr, ae), fe(ol, v), fe(En, O), fe(Yr, R), Q(H))
+  if (fe(zr, d), fe(En, b), fe(Gr, m), fe(Jr, N), fe(Vr, T), fe(Wr, P), fe(Qr, ce), fe(Xr, ee), fe(qr, ae), fe(ol, v), fe(Mn, O), fe(Yr, R), Q(H))
     if (H.length) {
       const ge = e.exposed || (e.exposed = {});
       H.forEach((U) => {
@@ -2194,11 +2194,11 @@ function na(e, t, n = ht) {
   for (const s in e) {
     const o = e[s];
     let i;
-    ve(o) ? "default" in o ? i = Gn(
+    ve(o) ? "default" in o ? i = Jn(
       o.from || s,
       o.default,
       !0
-    ) : i = Gn(o.from || s) : i = Gn(o), /* @__PURE__ */ Ee(i) ? Object.defineProperty(t, s, {
+    ) : i = Jn(o.from || s) : i = Jn(o), /* @__PURE__ */ Ee(i) ? Object.defineProperty(t, s, {
       enumerable: !0,
       configurable: !0,
       get: () => i.value,
@@ -2474,11 +2474,11 @@ function Fo(e) {
     ctx: N,
     inheritAttrs: T
   } = e, P = ns(e);
-  let S, v;
+  let $, v;
   try {
     if (n.shapeFlag & 4) {
       const O = o || s, V = O;
-      S = ft(
+      $ = ft(
         c.call(
           V,
           O,
@@ -2491,7 +2491,7 @@ function Fo(e) {
       ), v = r;
     } else {
       const O = t;
-      S = ft(
+      $ = ft(
         O.length > 1 ? O(
           d,
           { attrs: r, slots: l, emit: a }
@@ -2502,9 +2502,9 @@ function Fo(e) {
       ), v = t.props ? r : fa(r);
     }
   } catch (O) {
-    $n.length = 0, vs(O, e, 1), S = Ae(je);
+    kn.length = 0, vs(O, e, 1), $ = Ae(je);
   }
-  let C = S;
+  let C = $;
   if (v && T !== !1) {
     const O = Object.keys(v), { shapeFlag: V } = C;
     O.length && V & 7 && (i && O.some(so) && (v = da(
@@ -2512,7 +2512,7 @@ function Fo(e) {
       i
     )), C = Dt(C, v, !1, !0));
   }
-  return n.dirs && (C = Dt(C, null, !1, !0), C.dirs = C.dirs ? C.dirs.concat(n.dirs) : n.dirs), n.transition && Tn(C, n.transition), S = C, ns(P), S;
+  return n.dirs && (C = Dt(C, null, !1, !0), C.dirs = C.dirs ? C.dirs.concat(n.dirs) : n.dirs), n.transition && An(C, n.transition), $ = C, ns(P), $;
 }
 const fa = (e) => {
   let t;
@@ -2644,7 +2644,7 @@ function hl(e, t, n, s) {
   let l = !1, r;
   if (t)
     for (let a in t) {
-      if (gn(a))
+      if (vn(a))
         continue;
       const c = t[a];
       let u;
@@ -2677,7 +2677,7 @@ function Xs(e, t, n, s, o, i) {
         if (n in c)
           s = c[n];
         else {
-          const u = Nn(o);
+          const u = Dn(o);
           s = c[n] = a.call(
             null,
             t
@@ -2726,8 +2726,8 @@ function pl(e, t, n = !1) {
         const b = i[u], m = l[d] = Q(b) || ne(b) ? { type: b } : Me({}, b), N = m.type;
         let T = !1, P = !0;
         if (Q(N))
-          for (let S = 0; S < N.length; ++S) {
-            const v = N[S], C = ne(v) && v.name;
+          for (let $ = 0; $ < N.length; ++$) {
+            const v = N[$], C = ne(v) && v.name;
             if (C === "Boolean") {
               T = !0;
               break;
@@ -2748,7 +2748,7 @@ function pl(e, t, n = !1) {
   return ve(e) && s.set(e, c), c;
 }
 function jo(e) {
-  return e[0] !== "$" && !gn(e);
+  return e[0] !== "$" && !vn(e);
 }
 const vo = (e) => e === "_" || e === "_ctx" || e === "$stable", mo = (e) => Q(e) ? e.map(ft) : [ft(e)], ya = (e, t, n) => {
   if (t._n)
@@ -2819,9 +2819,9 @@ function $a(e, t) {
         P(h, g, w, L);
         break;
       case je:
-        S(h, g, w, L);
+        $(h, g, w, L);
         break;
-      case Yn:
+      case qn:
         h == null && v(g, w, L, B);
         break;
       case ie:
@@ -2871,7 +2871,7 @@ function $a(e, t) {
           yt
         );
     }
-    z != null && A ? bn(z, h && h.ref, E, g || h, !g) : z == null && h && h.ref != null && bn(h.ref, null, E, h, !0);
+    z != null && A ? _n(z, h && h.ref, E, g || h, !g) : z == null && h && h.ref != null && _n(h.ref, null, E, h, !0);
   }, P = (h, g, w, L) => {
     if (h == null)
       s(
@@ -2883,7 +2883,7 @@ function $a(e, t) {
       const A = g.el = h.el;
       g.children !== h.children && c(A, g.children);
     }
-  }, S = (h, g, w, L) => {
+  }, $ = (h, g, w, L) => {
     h == null ? s(
       g.el = a(g.children || ""),
       w,
@@ -2955,7 +2955,7 @@ function $a(e, t) {
       F
     ), Z && Ft(h, null, L, "created"), ae(D, h, h.scopeId, B, L), z) {
       for (const ye in z)
-        ye !== "value" && !gn(ye) && i(D, ye, null, z[ye], E, L);
+        ye !== "value" && !vn(ye) && i(D, ye, null, z[ye], E, L);
       "value" in z && i(D, "value", null, z.value, E), (M = z.onVnodeBeforeMount) && rt(M, L, h);
     }
     Z && Ft(h, null, L, "beforeMount");
@@ -3066,7 +3066,7 @@ function $a(e, t) {
     if (g !== w) {
       if (g !== be)
         for (const E in g)
-          !gn(E) && !(E in w) && i(
+          !vn(E) && !(E in w) && i(
             h,
             E,
             g[E],
@@ -3075,7 +3075,7 @@ function $a(e, t) {
             L
           );
       for (const E in w) {
-        if (gn(E)) continue;
+        if (vn(E)) continue;
         const B = w[E], F = g[E];
         B !== F && E !== "value" && i(h, E, F, B, A, L);
       }
@@ -3152,7 +3152,7 @@ function $a(e, t) {
     if (ys(h) && (F.ctx.renderer = yt), Oa(F, !1, B), F.asyncDep) {
       if (A && A.registerDep(F, fe, B), !h.el) {
         const D = F.subTree = Ae(je);
-        S(null, D, g, w), h.placeholder = D.el;
+        $(null, D, g, w), h.placeholder = D.el;
       }
     } else
       fe(
@@ -3190,15 +3190,15 @@ function $a(e, t) {
           }
         }
         let de = K, y;
-        Bt(h, !1), K ? (K.el = ye.el, ge(h, K, B)) : K = ye, q && zn(q), (y = K.props && K.props.onVnodeBeforeUpdate) && rt(y, le, K, ye), Bt(h, !0);
-        const _ = Fo(h), $ = h.subTree;
+        Bt(h, !1), K ? (K.el = ye.el, ge(h, K, B)) : K = ye, q && Gn(q), (y = K.props && K.props.onVnodeBeforeUpdate) && rt(y, le, K, ye), Bt(h, !0);
+        const _ = Fo(h), k = h.subTree;
         h.subTree = _, T(
-          $,
+          k,
           _,
           // parent may have changed if it's in a teleport
-          d($.el),
+          d(k.el),
           // anchor may have changed if it's in a fragment
-          et($),
+          et(k),
           h,
           A,
           E
@@ -3208,8 +3208,8 @@ function $a(e, t) {
         );
       } else {
         let K;
-        const { el: q, props: Z } = g, { bm: le, m: ye, parent: de, root: y, type: _ } = h, $ = _n(g);
-        Bt(h, !1), le && zn(le), !$ && (K = Z && Z.onVnodeBeforeMount) && rt(K, de, g), Bt(h, !0);
+        const { el: q, props: Z } = g, { bm: le, m: ye, parent: de, root: y, type: _ } = h, k = wn(g);
+        Bt(h, !1), le && Gn(le), !k && (K = Z && Z.onVnodeBeforeMount) && rt(K, de, g), Bt(h, !0);
         {
           y.ce && y.ce._hasShadowRoot() && y.ce._injectChildStyle(
             _,
@@ -3226,14 +3226,14 @@ function $a(e, t) {
             E
           ), g.el = te.el;
         }
-        if (ye && Oe(ye, A), !$ && (K = Z && Z.onVnodeMounted)) {
+        if (ye && Oe(ye, A), !k && (K = Z && Z.onVnodeMounted)) {
           const te = g;
           Oe(
             () => rt(K, de, te),
             A
           );
         }
-        (g.shapeFlag & 256 || de && _n(de.vnode) && de.vnode.shapeFlag & 256) && h.a && Oe(h.a, A), h.isMounted = !0, g = w = L = null;
+        (g.shapeFlag & 256 || de && wn(de.vnode) && de.vnode.shapeFlag & 256) && h.a && Oe(h.a, A), h.isMounted = !0, g = w = L = null;
       }
     };
     h.scope.on();
@@ -3399,7 +3399,7 @@ function $a(e, t) {
       }
       let de, y = 0;
       const _ = q - le + 1;
-      let $ = !1, te = 0;
+      let k = !1, te = 0;
       const he = new Array(_);
       for (M = 0; M < _; M++) he[M] = 0;
       for (M = Z; M <= K; M++) {
@@ -3417,7 +3417,7 @@ function $a(e, t) {
               Ce = de;
               break;
             }
-        Ce === void 0 ? Ne(re, A, E, !0) : (he[Ce - le] = M + 1, Ce >= te ? te = Ce : $ = !0, T(
+        Ce === void 0 ? Ne(re, A, E, !0) : (he[Ce - le] = M + 1, Ce >= te ? te = Ce : k = !0, T(
           re,
           g[Ce],
           w,
@@ -3429,7 +3429,7 @@ function $a(e, t) {
           D
         ), y++);
       }
-      const He = $ ? Sa(he) : tn;
+      const He = k ? Sa(he) : tn;
       for (de = He.length - 1, M = _ - 1; M >= 0; M--) {
         const re = le + M, Ce = g[re], Ye = g[re + 1], $e = re + 1 < z ? (
           // #13559, #14173 fallback to el placeholder for unresolved async component
@@ -3445,7 +3445,7 @@ function $a(e, t) {
           B,
           F,
           D
-        ) : $ && (de < 0 || M !== He[de] ? Re(Ce, w, $e, 2) : de--);
+        ) : k && (de < 0 || M !== He[de] ? Re(Ce, w, $e, 2) : de--);
       }
     }
   }, Re = (h, g, w, L, A = null) => {
@@ -3469,7 +3469,7 @@ function $a(e, t) {
       s(h.anchor, g, w);
       return;
     }
-    if (B === Yn) {
+    if (B === qn) {
       C(h, g, w);
       return;
     }
@@ -3503,11 +3503,11 @@ function $a(e, t) {
       dirs: q,
       cacheIndex: Z
     } = h;
-    if (K === -2 && (A = !1), F != null && (Ct(), bn(F, null, w, h, !0), Tt()), Z != null && (g.renderCache[Z] = void 0), z & 256) {
+    if (K === -2 && (A = !1), F != null && (Ct(), _n(F, null, w, h, !0), Tt()), Z != null && (g.renderCache[Z] = void 0), z & 256) {
       g.ctx.deactivate(h);
       return;
     }
-    const le = z & 1 && q, ye = !_n(h);
+    const le = z & 1 && q, ye = !wn(h);
     let de;
     if (ye && (de = B && B.onVnodeBeforeUnmount) && rt(de, g, h), z & 6)
       qt(h.component, w, L);
@@ -3545,7 +3545,7 @@ function $a(e, t) {
       an(w, L);
       return;
     }
-    if (g === Yn) {
+    if (g === qn) {
       O(h);
       return;
     }
@@ -3564,7 +3564,7 @@ function $a(e, t) {
     o(g);
   }, qt = (h, g, w) => {
     const { bum: L, scope: A, job: E, subTree: B, um: F, m: D, a: M } = h;
-    Ko(D), Ko(M), L && zn(L), A.stop(), E && (E.flags |= 8, Ne(B, h, g, w)), F && Oe(F, g), Oe(() => {
+    Ko(D), Ko(M), L && Gn(L), A.stop(), E && (E.flags |= 8, Ne(B, h, g, w)), F && Oe(F, g), Oe(() => {
       h.isUnmounted = !0;
     }, g);
   }, ze = (h, g, w, L = !1, A = !1, E = 0) => {
@@ -3666,20 +3666,20 @@ const _l = (e) => e.__isSuspense;
 function xa(e, t) {
   t && t.pendingBranch ? Q(e) ? t.effects.push(...e) : t.effects.push(e) : Pr(e);
 }
-const ie = /* @__PURE__ */ Symbol.for("v-fgt"), ws = /* @__PURE__ */ Symbol.for("v-txt"), je = /* @__PURE__ */ Symbol.for("v-cmt"), Yn = /* @__PURE__ */ Symbol.for("v-stc"), $n = [];
+const ie = /* @__PURE__ */ Symbol.for("v-fgt"), ws = /* @__PURE__ */ Symbol.for("v-txt"), je = /* @__PURE__ */ Symbol.for("v-cmt"), qn = /* @__PURE__ */ Symbol.for("v-stc"), kn = [];
 let Ge = null;
-function k(e = !1) {
-  $n.push(Ge = e ? null : []);
+function S(e = !1) {
+  kn.push(Ge = e ? null : []);
 }
 function Ca() {
-  $n.pop(), Ge = $n[$n.length - 1] || null;
+  kn.pop(), Ge = kn[kn.length - 1] || null;
 }
-let Mn = 1;
+let In = 1;
 function is(e, t = !1) {
-  Mn += e, e < 0 && Ge && t && (Ge.hasOnce = !0);
+  In += e, e < 0 && Ge && t && (Ge.hasOnce = !0);
 }
 function wl(e) {
-  return e.dynamicChildren = Mn > 0 ? Ge || tn : null, Ca(), Mn > 0 && Ge && Ge.push(e), e;
+  return e.dynamicChildren = In > 0 ? Ge || tn : null, Ca(), In > 0 && Ge && Ge.push(e), e;
 }
 function I(e, t, n, s, o, i) {
   return wl(
@@ -3712,7 +3712,7 @@ function ls(e) {
 function Wt(e, t) {
   return e.type === t.type && e.key === t.key;
 }
-const $l = ({ key: e }) => e ?? null, qn = ({
+const $l = ({ key: e }) => e ?? null, Xn = ({
   ref: e,
   ref_key: t,
   ref_for: n
@@ -3724,7 +3724,7 @@ function p(e, t = null, n = null, s = 0, o = null, i = e === ie ? 0 : 1, l = !1,
     type: e,
     props: t,
     key: t && $l(t),
-    ref: t && qn(t),
+    ref: t && Xn(t),
     scopeId: Wi,
     slotScopeIds: null,
     children: n,
@@ -3747,7 +3747,7 @@ function p(e, t = null, n = null, s = 0, o = null, i = e === ie ? 0 : 1, l = !1,
     appContext: null,
     ctx: Xe
   };
-  return r ? (bo(a, n), i & 128 && e.normalize(a)) : n && (a.shapeFlag |= xe(n) ? 8 : 16), Mn > 0 && // avoid a block node from tracking itself
+  return r ? (bo(a, n), i & 128 && e.normalize(a)) : n && (a.shapeFlag |= xe(n) ? 8 : 16), In > 0 && // avoid a block node from tracking itself
   !l && // has current parent block
   Ge && // presence of a patch flag indicates this node needs patching on updates.
   // component nodes also should always be patched, because even if the
@@ -3766,7 +3766,7 @@ function Ta(e, t = null, n = null, s = 0, o = null, i = !1) {
       !0
       /* mergeRef: true */
     );
-    return n && bo(r, n), Mn > 0 && !i && Ge && (r.shapeFlag & 6 ? Ge[Ge.indexOf(e)] = r : Ge.push(r)), r.patchFlag = -2, r;
+    return n && bo(r, n), In > 0 && !i && Ge && (r.shapeFlag & 6 ? Ge[Ge.indexOf(e)] = r : Ge.push(r)), r.patchFlag = -2, r;
   }
   if (Da(e) && (e = e.__vccOpts), t) {
     t = Aa(t);
@@ -3799,7 +3799,7 @@ function Dt(e, t, n = !1, s = !1) {
       // #2078 in the case of <component :is="vnode" ref="extra"/>
       // if the vnode itself already has a ref, cloneVNode will need to merge
       // the refs so the single vnode can be set on multiple refs
-      n && i ? Q(i) ? i.concat(qn(t)) : [i, qn(t)] : qn(t)
+      n && i ? Q(i) ? i.concat(Xn(t)) : [i, Xn(t)] : Xn(t)
     ) : i,
     scopeId: e.scopeId,
     slotScopeIds: e.slotScopeIds,
@@ -3833,7 +3833,7 @@ function Dt(e, t, n = !1, s = !1) {
     ctx: e.ctx,
     ce: e.ce
   };
-  return a && s && Tn(
+  return a && s && An(
     u,
     a.clone(u)
   ), u;
@@ -3842,11 +3842,11 @@ function xt(e = " ", t = 0) {
   return Ae(ws, null, e, t);
 }
 function kl(e, t) {
-  const n = Ae(Yn, null, e);
+  const n = Ae(qn, null, e);
   return n.staticCount = t, n;
 }
 function oe(e = "", t = !1) {
-  return t ? (k(), Le(je, null, e)) : Ae(je, null, e);
+  return t ? (S(), Le(je, null, e)) : Ae(je, null, e);
 }
 function ft(e) {
   return e == null || typeof e == "boolean" ? Ae(je) : Q(e) ? Ae(
@@ -3997,10 +3997,10 @@ let rs, Qs;
     (n) => Ke = n
   ), Qs = t(
     "__VUE_SSR_SETTERS__",
-    (n) => In = n
+    (n) => Ln = n
   );
 }
-const Nn = (e) => {
+const Dn = (e) => {
   const t = Ke;
   return rs(e), e.scope.on(), () => {
     e.scope.off(), rs(t);
@@ -4011,7 +4011,7 @@ const Nn = (e) => {
 function xl(e) {
   return e.vnode.shapeFlag & 4;
 }
-let In = !1;
+let Ln = !1;
 function Oa(e, t = !1, n = !1) {
   t && Qs(t);
   const { props: s, children: o } = e.vnode, i = xl(e);
@@ -4025,7 +4025,7 @@ function Pa(e, t) {
   const { setup: s } = n;
   if (s) {
     Ct();
-    const o = e.setupContext = s.length > 1 ? Na(e) : null, i = Nn(e), l = Rn(
+    const o = e.setupContext = s.length > 1 ? Na(e) : null, i = Dn(e), l = Nn(
       s,
       e,
       0,
@@ -4034,7 +4034,7 @@ function Pa(e, t) {
         o
       ]
     ), r = mi(l);
-    if (Tt(), i(), (r || e.sp) && !_n(e) && nl(e), r) {
+    if (Tt(), i(), (r || e.sp) && !wn(e) && nl(e), r) {
       if (l.then(Vo, Vo), t)
         return l.then((a) => {
           Wo(e, a);
@@ -4054,7 +4054,7 @@ function Cl(e, t, n) {
   const s = e.type;
   e.render || (e.render = s.render || ht);
   {
-    const o = Nn(e);
+    const o = Dn(e);
     Ct();
     try {
       ta(e);
@@ -4084,18 +4084,18 @@ function $s(e) {
     get(t, n) {
       if (n in t)
         return t[n];
-      if (n in wn)
-        return wn[n](e);
+      if (n in $n)
+        return $n[n](e);
     },
     has(t, n) {
-      return n in t || n in wn;
+      return n in t || n in $n;
     }
   })) : e.proxy;
 }
 function Da(e) {
   return ne(e) && "__vccOpts" in e;
 }
-const X = (e, t) => /* @__PURE__ */ Er(e, t, In);
+const X = (e, t) => /* @__PURE__ */ Er(e, t, Ln);
 function Ha(e, t, n) {
   try {
     is(-1);
@@ -4175,7 +4175,7 @@ const Tl = Zs ? (e) => Zs.createHTML(e) : (e) => e, Ba = "http://www.w3.org/2000
       n ? n.previousSibling : t.lastChild
     ];
   }
-}, Lt = "transition", dn = "animation", Ln = /* @__PURE__ */ Symbol("_vtc"), Al = {
+}, Lt = "transition", dn = "animation", On = /* @__PURE__ */ Symbol("_vtc"), Al = {
   name: String,
   type: String,
   css: {
@@ -4221,12 +4221,12 @@ function za(e) {
     leaveActiveClass: b = `${n}-leave-active`,
     leaveToClass: m = `${n}-leave-to`
   } = e, N = Ga(o), T = N && N[0], P = N && N[1], {
-    onBeforeEnter: S,
+    onBeforeEnter: $,
     onEnter: v,
     onEnterCancelled: C,
     onLeave: O,
     onLeaveCancelled: V,
-    onBeforeAppear: ee = S,
+    onBeforeAppear: ee = $,
     onAppear: ae = v,
     onAppearCancelled: ce = C
   } = t, R = (x, j, Y, ue) => {
@@ -4241,7 +4241,7 @@ function za(e) {
   };
   return Me(t, {
     onBeforeEnter(x) {
-      jt(S, [x]), _t(x, i), _t(x, l);
+      jt($, [x]), _t(x, i), _t(x, l);
     },
     onBeforeAppear(x) {
       jt(ee, [x]), _t(x, a), _t(x, c);
@@ -4280,12 +4280,12 @@ function Ns(e) {
   return Ul(e);
 }
 function _t(e, t) {
-  t.split(/\s+/).forEach((n) => n && e.classList.add(n)), (e[Ln] || (e[Ln] = /* @__PURE__ */ new Set())).add(t);
+  t.split(/\s+/).forEach((n) => n && e.classList.add(n)), (e[On] || (e[On] = /* @__PURE__ */ new Set())).add(t);
 }
 function Kt(e, t) {
   t.split(/\s+/).forEach((s) => s && e.classList.remove(s));
-  const n = e[Ln];
-  n && (n.delete(t), n.size || (e[Ln] = void 0));
+  const n = e[On];
+  n && (n.delete(t), n.size || (e[On] = void 0));
 }
 function Jo(e) {
   requestAnimationFrame(() => {
@@ -4339,7 +4339,7 @@ function Qo(e) {
   return (e ? e.ownerDocument : document).body.offsetHeight;
 }
 function qa(e, t, n) {
-  const s = e[Ln];
+  const s = e[On];
   s && (t = (t ? [t, ...s] : [...s]).join(" ")), t == null ? e.removeAttribute("class") : n ? e.setAttribute("class", t) : e.className = t;
 }
 const Zo = /* @__PURE__ */ Symbol("_vod"), Xa = /* @__PURE__ */ Symbol("_vsh"), Qa = /* @__PURE__ */ Symbol(""), Za = /(?:^|;)\s*display\s*:/;
@@ -4351,13 +4351,13 @@ function eu(e, t, n) {
       if (xe(t))
         for (const l of t.split(";")) {
           const r = l.slice(0, l.indexOf(":")).trim();
-          n[r] == null && Xn(s, r, "");
+          n[r] == null && Qn(s, r, "");
         }
       else
         for (const l in t)
-          n[l] == null && Xn(s, l, "");
+          n[l] == null && Qn(s, l, "");
     for (const l in n)
-      l === "display" && (i = !0), Xn(s, l, n[l]);
+      l === "display" && (i = !0), Qn(s, l, n[l]);
   } else if (o) {
     if (t !== n) {
       const l = s[Qa];
@@ -4367,9 +4367,9 @@ function eu(e, t, n) {
   Zo in e && (e[Zo] = i ? s.display : "", e[Xa] && (s.display = "none"));
 }
 const ei = /\s*!important$/;
-function Xn(e, t, n) {
+function Qn(e, t, n) {
   if (Q(n))
-    n.forEach((s) => Xn(e, t, s));
+    n.forEach((s) => Qn(e, t, s));
   else if (n == null && (n = ""), t.startsWith("--"))
     e.setProperty(t, n);
   else {
@@ -4523,7 +4523,7 @@ function fu(e, t) {
 }
 const ai = (e) => {
   const t = e.props["onUpdate:modelValue"] || !1;
-  return Q(t) ? (n) => zn(t, n) : t;
+  return Q(t) ? (n) => Gn(t, n) : t;
 };
 function du(e) {
   e.target.composing = !0;
@@ -4654,7 +4654,7 @@ const wu = { class: "setup" }, $u = { class: "setup-card" }, ku = { class: "fiel
         }
       }
     }
-    return (c, u) => (k(), I("div", wu, [
+    return (c, u) => (S(), I("div", wu, [
       p("div", $u, [
         u[5] || (u[5] = p("h2", null, "Home Assistant", -1)),
         u[6] || (u[6] = p("p", null, [
@@ -4697,7 +4697,7 @@ const wu = { class: "setup" }, $u = { class: "setup-card" }, ku = { class: "fiel
           onClick: a,
           disabled: !r.value
         }, "Verbinden", 8, xu),
-        i.value ? (k(), I("p", Cu, G(i.value), 1)) : oe("", !0)
+        i.value ? (S(), I("p", Cu, G(i.value), 1)) : oe("", !0)
       ])
     ]));
   }
@@ -4764,12 +4764,12 @@ async function Pu(e) {
   if (!t.ok) throw new Error(`HTTP ${t.status}`);
   return t.json();
 }
-const Ol = "homeboard", as = /* @__PURE__ */ W(!1), Dn = /* @__PURE__ */ W(null), pn = [];
+const Ol = "homeboard", as = /* @__PURE__ */ W(!1), Hn = /* @__PURE__ */ W(null), pn = [];
 function Ru(e) {
-  as.value ? e(Dn.value) : pn.push(e);
+  as.value ? e(Hn.value) : pn.push(e);
 }
-let ke = null, kn = 1, ln = null;
-const Jt = /* @__PURE__ */ new Map(), On = /* @__PURE__ */ new Map(), eo = /* @__PURE__ */ W(0);
+let ke = null, Sn = 1, ln = null;
+const Jt = /* @__PURE__ */ new Map(), Pn = /* @__PURE__ */ new Map(), eo = /* @__PURE__ */ W(0);
 let pt = !1, di = [];
 const Rt = /* @__PURE__ */ new Map();
 function Nu() {
@@ -4785,16 +4785,16 @@ function Pl(e) {
     }
     if (n.type === "auth_ok") {
       pt = !0;
-      const i = kn++;
+      const i = Sn++;
       ke.send(JSON.stringify({ id: i, type: "get_states" }));
-      const l = kn++;
+      const l = Sn++;
       ke.send(JSON.stringify({ id: l, type: "subscribe_events", event_type: "state_changed" }));
-      const r = kn++;
+      const r = Sn++;
       Rt.set(r, {
         resolve: (a) => {
           var u;
           const c = (a == null ? void 0 : a.value) ?? null;
-          console.log("[HomeBoard] HA user data loaded:", c ? { hasPages: !!((u = c.pages) != null && u.length), hasGroups: !!c.groups && Object.keys(c.groups).length, hasAuthKey: !!c.authKey, groupKeys: c.groups ? Object.keys(c.groups) : [] } : "null/empty"), Dn.value = c, as.value = !0, c != null && c.authKey && (ks.value = c.authKey, localStorage.setItem("ha_auth_key", c.authKey));
+          console.log("[HomeBoard] HA user data loaded:", c ? { hasPages: !!((u = c.pages) != null && u.length), hasGroups: !!c.groups && Object.keys(c.groups).length, hasAuthKey: !!c.authKey, groupKeys: c.groups ? Object.keys(c.groups) : [] } : "null/empty"), Hn.value = c, as.value = !0, c != null && c.authKey && (ks.value = c.authKey, localStorage.setItem("ha_auth_key", c.authKey));
           for (const d of pn) d(c);
           pn.length = 0;
         },
@@ -4819,13 +4819,13 @@ function Pl(e) {
     }
     if (n.type === "result" && n.success && Array.isArray(n.result)) {
       for (const i of n.result)
-        On.set(i.entity_id, i), hi(i.entity_id, i);
+        Pn.set(i.entity_id, i), hi(i.entity_id, i);
       eo.value++;
       return;
     }
     if (n.type === "event" && ((o = n.event) == null ? void 0 : o.event_type) === "state_changed") {
       const i = n.event.data.new_state;
-      i && (On.set(i.entity_id, i), eo.value++, hi(i.entity_id, i));
+      i && (Pn.set(i.entity_id, i), eo.value++, hi(i.entity_id, i));
     }
   }, ke.onclose = () => {
     pt = !1, ln && clearTimeout(ln), ln = setTimeout(() => {
@@ -4842,7 +4842,7 @@ function hi(e, t) {
 }
 function Du(e, t) {
   Jt.has(e) || Jt.set(e, /* @__PURE__ */ new Set()), Jt.get(e).add(t);
-  const n = On.get(e);
+  const n = Pn.get(e);
   n && t(n);
 }
 function Hu(e, t) {
@@ -4850,16 +4850,16 @@ function Hu(e, t) {
   n && (n.delete(t), n.size === 0 && Jt.delete(e));
 }
 function Fu() {
-  ln && (clearTimeout(ln), ln = null), ke && (ke.close(), ke = null), pt = !1, On.clear(), Jt.clear(), as.value = !1, Dn.value = null;
+  ln && (clearTimeout(ln), ln = null), ke && (ke.close(), ke = null), pt = !1, Pn.clear(), Jt.clear(), as.value = !1, Hn.value = null;
 }
-async function Qn(e) {
+async function gn(e) {
   var n;
-  if (Dn.value = e, !ke || !pt) {
+  if (Hn.value = e, !ke || !pt) {
     console.warn("[HomeBoard] Cannot save to HA: WS not connected", { ws: !!ke, authenticated: pt });
     return;
   }
   console.log("[HomeBoard] Saving to HA:", { hasPages: !!((n = e.pages) != null && n.length), hasGroups: !!e.groups && Object.keys(e.groups).length, groupKeys: e.groups ? Object.keys(e.groups) : [] });
-  const t = kn++;
+  const t = Sn++;
   return new Promise((s, o) => {
     Rt.set(t, {
       resolve: () => {
@@ -4871,7 +4871,7 @@ async function Qn(e) {
     }), ke.send(JSON.stringify({ id: t, type: "frontend/set_user_data", key: Ol, value: e }));
   });
 }
-let Un = null;
+let zn = null;
 function to() {
   const e = {}, t = {};
   for (let n = 0; n < localStorage.length; n++) {
@@ -4901,20 +4901,20 @@ function to() {
   return { groups: e, cardSettings: t };
 }
 function Rl() {
-  Un && clearTimeout(Un), Un = setTimeout(() => {
-    if (Un = null, !ke || !pt) {
+  zn && clearTimeout(zn), zn = setTimeout(() => {
+    if (zn = null, !ke || !pt) {
       console.warn("[HomeBoard] scheduleSettingsSync skipped: WS not ready", { ws: !!ke, authenticated: pt });
       return;
     }
     const e = to();
     console.log("[HomeBoard] scheduleSettingsSync firing:", { groupKeys: e.groups ? Object.keys(e.groups) : [] });
-    const t = { ...Dn.value ?? {}, ...e };
-    Qn(t);
+    const t = { ...Hn.value ?? {}, ...e };
+    gn(t);
   }, 500);
 }
 async function Bu(e, t, n, s) {
   if (!ke || !pt) throw new Error("WebSocket not connected");
-  const o = kn++;
+  const o = Sn++;
   return new Promise((i, l) => {
     Rt.set(o, { resolve: i, reject: l }), ke.send(JSON.stringify({
       id: o,
@@ -4954,7 +4954,7 @@ function ju(e) {
   return { state: n, error: s, loading: o, start: r, stop: a };
 }
 function wo() {
-  return { cache: On, version: eo };
+  return { cache: Pn, version: eo };
 }
 const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { class: "weather-temp" }, Uu = { class: "weather-condition" }, zu = {
   key: 0,
@@ -5117,7 +5117,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
       if (f < 60) return `Vor ${f} Min.`;
       const x = Math.round(f / 60);
       return x < 24 ? `Vor ${x} Stunde${x > 1 ? "n" : ""}` : `Vor ${Math.round(x / 24)} Tag${Math.round(x / 24) > 1 ? "en" : ""}`;
-    }), P = X(() => t.state && d.value.length ? d.value[0].tempHigh : null), S = X(() => t.state && d.value.length ? d.value[0].tempLow : null), v = X(() => {
+    }), P = X(() => t.state && d.value.length ? d.value[0].tempHigh : null), $ = X(() => t.state && d.value.length ? d.value[0].tempLow : null), v = X(() => {
       if (!t.state) return "";
       const R = t.state.attributes.wind_bearing;
       return R == null ? "" : ["N", "NNO", "NO", "ONO", "O", "OSO", "SO", "SSO", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"][Math.round(R / 22.5) % 16];
@@ -5199,7 +5199,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
     }
     return (R, H) => {
       var f;
-      return k(), I(ie, null, [
+      return S(), I(ie, null, [
         p("button", {
           class: "light-ctrl-btn",
           onClick: se(O, ["stop"]),
@@ -5214,9 +5214,9 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
             p("div", Vu, [
               p("span", Wu, G(r.value) + "°", 1),
               p("span", Uu, G(l.value), 1),
-              e.isCompact ? oe("", !0) : (k(), I("div", zu, [
-                a.value !== null ? (k(), I("span", Gu, "💧 " + G(a.value) + "%", 1)) : oe("", !0),
-                c.value !== null ? (k(), I("span", Ju, "💨 " + G(Math.round(c.value)) + " km/h", 1)) : oe("", !0)
+              e.isCompact ? oe("", !0) : (S(), I("div", zu, [
+                a.value !== null ? (S(), I("span", Gu, "💧 " + G(a.value) + "%", 1)) : oe("", !0),
+                c.value !== null ? (S(), I("span", Ju, "💨 " + G(Math.round(c.value)) + " km/h", 1)) : oe("", !0)
               ]))
             ]),
             p("div", Yu, [
@@ -5227,8 +5227,8 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
             ])
           ])
         ], 2),
-        (k(), Le(Et, { to: "body" }, [
-          n.value ? (k(), I("div", {
+        (S(), Le(Et, { to: "body" }, [
+          n.value ? (S(), I("div", {
             key: 0,
             class: "ha-modal-overlay",
             onClick: H[4] || (H[4] = se((x) => n.value = !1, ["self"]))
@@ -5258,19 +5258,19 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                 ]),
                 p("div", ic, [
                   p("span", lc, G(r.value) + "°C", 1),
-                  P.value !== null && S.value !== null ? (k(), I("span", rc, G(P.value) + "°C / " + G(S.value) + "°C", 1)) : oe("", !0)
+                  P.value !== null && $.value !== null ? (S(), I("span", rc, G(P.value) + "°C / " + G($.value) + "°C", 1)) : oe("", !0)
                 ])
               ]),
               p("div", ac, [
-                u.value !== null ? (k(), I("div", uc, [
+                u.value !== null ? (S(), I("div", uc, [
                   H[6] || (H[6] = p("span", { class: "wf-detail-label" }, "Luftdruck", -1)),
                   p("span", cc, G(C(u.value)) + " hPa", 1)
                 ])) : oe("", !0),
-                a.value !== null ? (k(), I("div", fc, [
+                a.value !== null ? (S(), I("div", fc, [
                   H[7] || (H[7] = p("span", { class: "wf-detail-label" }, "Luftfeuchtigkeit", -1)),
                   p("span", dc, G(a.value) + " %", 1)
                 ])) : oe("", !0),
-                c.value !== null ? (k(), I("div", hc, [
+                c.value !== null ? (S(), I("div", hc, [
                   H[8] || (H[8] = p("span", { class: "wf-detail-label" }, "Windgeschwindigkeit", -1)),
                   p("span", pc, G(C(c.value)) + " km/h" + G(v.value ? ` (${v.value})` : ""), 1)
                 ])) : oe("", !0)
@@ -5285,9 +5285,9 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                   onClick: H[2] || (H[2] = (x) => V("hourly"))
                 }, "Stündlich", 2)
               ]),
-              m.value === "daily" ? (k(), I(ie, { key: 0 }, [
-                d.value.length ? (k(), I("div", vc, [
-                  (k(!0), I(ie, null, Ue(d.value, (x) => (k(), I("div", {
+              m.value === "daily" ? (S(), I(ie, { key: 0 }, [
+                d.value.length ? (S(), I("div", vc, [
+                  (S(!0), I(ie, null, Ue(d.value, (x) => (S(), I("div", {
                     key: x.date,
                     class: "weather-forecast-day"
                   }, [
@@ -5299,17 +5299,17 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                     p("span", bc, G(x.tempHigh) + "°", 1),
                     p("span", _c, G(x.tempLow) + "°", 1)
                   ]))), 128))
-                ])) : (k(), I("div", wc, "Keine Vorhersagedaten verfügbar"))
+                ])) : (S(), I("div", wc, "Keine Vorhersagedaten verfügbar"))
               ], 64)) : oe("", !0),
-              m.value === "hourly" ? (k(), I(ie, { key: 1 }, [
-                b.value.length ? (k(), I("div", $c, [
-                  (k(!0), I(ie, null, Ue(N.value, (x) => (k(), I("div", {
+              m.value === "hourly" ? (S(), I(ie, { key: 1 }, [
+                b.value.length ? (S(), I("div", $c, [
+                  (S(!0), I(ie, null, Ue(N.value, (x) => (S(), I("div", {
                     key: x.day,
                     class: "wf-hourly-group"
                   }, [
                     p("span", kc, G(x.day), 1),
                     p("div", Sc, [
-                      (k(!0), I(ie, null, Ue(x.hours, (j) => (k(), I("div", {
+                      (S(!0), I(ie, null, Ue(x.hours, (j) => (S(), I("div", {
                         key: j.time,
                         class: "weather-forecast-day"
                       }, [
@@ -5322,7 +5322,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                       ]))), 128))
                     ])
                   ]))), 128))
-                ])) : (k(), I("div", Ac, "Keine stündlichen Daten verfügbar"))
+                ])) : (S(), I("div", Ac, "Keine stündlichen Daten verfügbar"))
               ], 64)) : oe("", !0)
             ])
           ])) : oe("", !0)
@@ -5352,9 +5352,9 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
   setup(e) {
     const t = e, n = X(() => {
       if (!t.state) return !1;
-      const S = t.state.state;
-      if (S === "on" || S === "home" || S === "open" || S === "unlocked") return !0;
-      const v = parseFloat(S);
+      const $ = t.state.state;
+      if ($ === "on" || $ === "home" || $ === "open" || $ === "unlocked") return !0;
+      const v = parseFloat($);
       return !isNaN(v) && v > 0;
     }), s = /* @__PURE__ */ W(!1);
     async function o() {
@@ -5362,43 +5362,43 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
     }
     const i = X(() => t.state ? new Date(t.state.last_updated).toLocaleTimeString("de-DE") : null), l = /* @__PURE__ */ W(!1), r = X(() => t.state ? t.state.attributes.brightness ?? 0 : 0), a = X(() => {
       if (!t.state) return !1;
-      const S = t.state.attributes.supported_color_modes;
-      return (S == null ? void 0 : S.some((v) => ["rgb", "rgbw", "rgbww", "hs", "xy"].includes(v))) ?? !1;
+      const $ = t.state.attributes.supported_color_modes;
+      return ($ == null ? void 0 : $.some((v) => ["rgb", "rgbw", "rgbww", "hs", "xy"].includes(v))) ?? !1;
     }), c = X(() => {
       if (!t.state) return 0;
-      const S = t.state.attributes.hs_color;
-      return Math.round((S == null ? void 0 : S[0]) ?? 0);
+      const $ = t.state.attributes.hs_color;
+      return Math.round(($ == null ? void 0 : $[0]) ?? 0);
     }), u = X(() => {
       if (!t.state) return 100;
-      const S = t.state.attributes.hs_color;
-      return Math.round((S == null ? void 0 : S[1]) ?? 100);
+      const $ = t.state.attributes.hs_color;
+      return Math.round(($ == null ? void 0 : $[1]) ?? 100);
     }), d = X(() => ({
       "--sat-color": `hsl(${c.value}, 100%, 50%)`
     }));
     let b = null, m = null;
-    function N(S) {
-      const v = parseInt(S.target.value);
+    function N($) {
+      const v = parseInt($.target.value);
       b && clearTimeout(b), b = setTimeout(() => {
         v === 0 ? Ut(t.token, t.entityId, "turn_off") : Ut(t.token, t.entityId, "turn_on", { brightness: v });
       }, 150);
     }
-    function T(S) {
-      const v = parseInt(S.target.value);
+    function T($) {
+      const v = parseInt($.target.value);
       m && clearTimeout(m), m = setTimeout(() => {
         Ut(t.token, t.entityId, "turn_on", {
           hs_color: [v, u.value]
         });
       }, 150);
     }
-    function P(S) {
-      const v = parseInt(S.target.value);
+    function P($) {
+      const v = parseInt($.target.value);
       m && clearTimeout(m), m = setTimeout(() => {
         Ut(t.token, t.entityId, "turn_on", {
           hs_color: [c.value, v]
         });
       }, 150);
     }
-    return (S, v) => (k(), I(ie, null, [
+    return ($, v) => (S(), I(ie, null, [
       p("button", {
         class: "light-ctrl-btn",
         onClick: v[0] || (v[0] = se((C) => l.value = !0, ["stop"])),
@@ -5434,10 +5434,10 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
             ], -1)
           ])], 42, Lc)
         ]),
-        i.value ? (k(), I("div", Oc, " Aktualisiert: " + G(i.value), 1)) : oe("", !0)
+        i.value ? (S(), I("div", Oc, " Aktualisiert: " + G(i.value), 1)) : oe("", !0)
       ], 2),
-      (k(), Le(Et, { to: "body" }, [
-        l.value ? (k(), I("div", {
+      (S(), Le(Et, { to: "body" }, [
+        l.value ? (S(), I("div", {
           key: 0,
           class: "ha-modal-overlay",
           onClick: v[8] || (v[8] = se((C) => l.value = !1, ["self"]))
@@ -5468,7 +5468,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                 p("span", Hc, G(Math.round(r.value / 255 * 100)) + "%", 1)
               ])
             ]),
-            a.value ? (k(), I("div", Fc, [
+            a.value ? (S(), I("div", Fc, [
               v[13] || (v[13] = p("label", { class: "ha-light-label" }, "Farbe", -1)),
               p("div", Bc, [
                 p("input", {
@@ -5485,7 +5485,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                 }, null, 4)
               ])
             ])) : oe("", !0),
-            a.value ? (k(), I("div", Kc, [
+            a.value ? (S(), I("div", Kc, [
               v[14] || (v[14] = p("label", { class: "ha-light-label" }, "Sättigung", -1)),
               p("div", Vc, [
                 p("input", {
@@ -5530,7 +5530,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
       t.state && await Ut(t.token, t.entityId, "toggle");
     }
     const i = X(() => t.state ? new Date(t.state.last_updated).toLocaleTimeString("de-DE") : null);
-    return (l, r) => (k(), I("div", {
+    return (l, r) => (S(), I("div", {
       class: Se(["body-center", { compact: e.isCompact, short: e.isShort, narrow: e.isNarrow }])
     }, [
       p("div", Jc, [
@@ -5562,7 +5562,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
           ], -1)
         ])], 42, Yc)
       ]),
-      i.value ? (k(), I("div", qc, " Aktualisiert: " + G(i.value), 1)) : oe("", !0)
+      i.value ? (S(), I("div", qc, " Aktualisiert: " + G(i.value), 1)) : oe("", !0)
     ], 2));
   }
 }), Qc = /* @__PURE__ */ Ze(Xc, [["__scopeId", "data-v-495ed0f0"]]), Zc = { class: "state value center-wrap" }, ef = { class: "number" }, tf = { class: "unit" }, nf = {
@@ -5587,14 +5587,14 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
       var i;
       return ((i = t.state) == null ? void 0 : i.attributes.unit_of_measurement) ?? "";
     }), o = X(() => t.state ? new Date(t.state.last_updated).toLocaleTimeString("de-DE") : null);
-    return (i, l) => (k(), I("div", {
+    return (i, l) => (S(), I("div", {
       class: Se(["body-center", { compact: e.isCompact, short: e.isShort, narrow: e.isNarrow }])
     }, [
       p("div", Zc, [
         p("span", ef, G(n.value), 1),
         p("span", tf, G(s.value), 1)
       ]),
-      o.value && !e.isCompact ? (k(), I("div", nf, " Aktualisiert: " + G(o.value), 1)) : oe("", !0)
+      o.value && !e.isCompact ? (S(), I("div", nf, " Aktualisiert: " + G(o.value), 1)) : oe("", !0)
     ], 2));
   }
 }), of = /* @__PURE__ */ Ze(sf, [["__scopeId", "data-v-336a5298"]]), lf = {
@@ -5632,7 +5632,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
     Pt(() => n.entityId, (U) => {
       b.value = localStorage.getItem(`ha_title_${U}`) ?? "", m.value = localStorage.getItem(`ha_showtitle_${U}`) !== "false";
     });
-    const N = X(() => n.state ? n.state.attributes.friendly_name ?? n.state.entity_id : n.entityId), T = /* @__PURE__ */ W(!1), P = /* @__PURE__ */ W(""), S = /* @__PURE__ */ W(""), v = /* @__PURE__ */ W(!0), C = /* @__PURE__ */ W(null), O = /* @__PURE__ */ W([]), V = /* @__PURE__ */ W([]), ee = /* @__PURE__ */ W(-1);
+    const N = X(() => n.state ? n.state.attributes.friendly_name ?? n.state.entity_id : n.entityId), T = /* @__PURE__ */ W(!1), P = /* @__PURE__ */ W(""), $ = /* @__PURE__ */ W(""), v = /* @__PURE__ */ W(!0), C = /* @__PURE__ */ W(null), O = /* @__PURE__ */ W([]), V = /* @__PURE__ */ W([]), ee = /* @__PURE__ */ W(-1);
     async function ae() {
       try {
         O.value = await Pu(n.token);
@@ -5663,7 +5663,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
       ee.value >= 0 && V.value[ee.value] ? f(V.value[ee.value].entity_id) : Y();
     }
     function j() {
-      P.value = n.entityId, S.value = b.value, v.value = m.value, V.value = [], ee.value = -1, T.value = !0, ae(), ms(() => {
+      P.value = n.entityId, $.value = b.value, v.value = m.value, V.value = [], ee.value = -1, T.value = !0, ae(), ms(() => {
         var U;
         return (U = C.value) == null ? void 0 : U.select();
       });
@@ -5671,7 +5671,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
     function Y() {
       const U = P.value.trim();
       if (U) {
-        const J = S.value.trim();
+        const J = $.value.trim();
         localStorage.setItem(`ha_title_${U}`, J), localStorage.setItem(`ha_showtitle_${U}`, String(v.value)), Rl(), U === n.entityId && (b.value = J, m.value = v.value), s("change-entity", U);
       }
       V.value = [], T.value = !1;
@@ -5698,7 +5698,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
       }
       document.addEventListener("mousemove", ze), document.addEventListener("mouseup", et), document.addEventListener("touchmove", ze), document.addEventListener("touchend", et);
     }
-    return (U, J) => (k(), I("div", {
+    return (U, J) => (S(), I("div", {
       class: Se(["card", { active: d.value, small: o.value, short: i.value, narrow: l.value }])
     }, [
       p("button", {
@@ -5710,11 +5710,11 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
         p("span", { class: "dot" }, null, -1),
         p("span", { class: "dot" }, null, -1)
       ])]),
-      m.value ? (k(), I("div", lf, [
+      m.value ? (S(), I("div", lf, [
         p("span", rf, G(b.value || N.value), 1)
       ])) : oe("", !0),
-      (k(), Le(Et, { to: "body" }, [
-        T.value ? (k(), I("div", {
+      (S(), Le(Et, { to: "body" }, [
+        T.value ? (S(), I("div", {
           key: 0,
           class: "ha-modal-overlay",
           onClick: se(ue, ["self"])
@@ -5744,8 +5744,8 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                 }, null, 40, cf), [
                   [mt, P.value]
                 ]),
-                V.value.length ? (k(), I("ul", ff, [
-                  (k(!0), I(ie, null, Ue(V.value, (_e, Re) => (k(), I("li", {
+                V.value.length ? (S(), I("ul", ff, [
+                  (S(!0), I(ie, null, Ue(V.value, (_e, Re) => (S(), I("li", {
                     key: _e.entity_id,
                     class: Se(["ha-modal-suggestion-item", { active: Re === ee.value }]),
                     onMousedown: se((Ne) => f(_e.entity_id), ["prevent"])
@@ -5756,7 +5756,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                 ])) : oe("", !0)
               ]),
               vt(p("input", {
-                "onUpdate:modelValue": J[1] || (J[1] = (_e) => S.value = _e),
+                "onUpdate:modelValue": J[1] || (J[1] = (_e) => $.value = _e),
                 class: "ha-modal-input",
                 placeholder: "Alternativer Titel (optional)",
                 autocomplete: "off",
@@ -5765,7 +5765,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
                   Te(ue, ["escape"])
                 ]
               }, null, 40, gf), [
-                [mt, S.value]
+                [mt, $.value]
               ])
             ]),
             p("div", vf, [
@@ -5798,12 +5798,12 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
           ])
         ])) : oe("", !0)
       ])),
-      e.loading ? (k(), I("div", mf, [...J[9] || (J[9] = [
+      e.loading ? (S(), I("div", mf, [...J[9] || (J[9] = [
         p("span", { class: "spinner" }, null, -1)
-      ])])) : e.error ? (k(), I("div", yf, [
+      ])])) : e.error ? (S(), I("div", yf, [
         J[10] || (J[10] = p("span", null, "⚠️", -1)),
         xt(" " + G(e.error), 1)
-      ])) : r.value ? (k(), Le(Mc, {
+      ])) : r.value ? (S(), Le(Mc, {
         key: 3,
         "entity-id": e.entityId,
         token: e.token,
@@ -5813,7 +5813,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
         "is-narrow": l.value,
         label: b.value || N.value,
         "custom-title": b.value
-      }, null, 8, ["entity-id", "token", "state", "is-compact", "is-short", "is-narrow", "label", "custom-title"])) : a.value ? (k(), Le(Gc, {
+      }, null, 8, ["entity-id", "token", "state", "is-compact", "is-short", "is-narrow", "label", "custom-title"])) : a.value ? (S(), Le(Gc, {
         key: 4,
         "entity-id": e.entityId,
         token: e.token,
@@ -5821,7 +5821,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
         "is-compact": o.value,
         "is-short": i.value,
         "is-narrow": l.value
-      }, null, 8, ["entity-id", "token", "state", "is-compact", "is-short", "is-narrow"])) : u.value ? (k(), Le(Qc, {
+      }, null, 8, ["entity-id", "token", "state", "is-compact", "is-short", "is-narrow"])) : u.value ? (S(), Le(Qc, {
         key: 5,
         "entity-id": e.entityId,
         token: e.token,
@@ -5829,7 +5829,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
         "is-compact": o.value,
         "is-short": i.value,
         "is-narrow": l.value
-      }, null, 8, ["entity-id", "token", "state", "is-compact", "is-short", "is-narrow"])) : (k(), Le(of, {
+      }, null, 8, ["entity-id", "token", "state", "is-compact", "is-short", "is-narrow"])) : (S(), Le(of, {
         key: 6,
         "entity-id": e.entityId,
         token: e.token,
@@ -5880,7 +5880,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
     function N(T) {
       const P = T.target.closest(".heading");
       if (!P) return;
-      const S = P.getBoundingClientRect(), v = "touches" in T ? T.touches[0].clientX : T.clientX, C = "touches" in T ? T.touches[0].clientY : T.clientY, O = S.width, V = S.height, ee = 120;
+      const $ = P.getBoundingClientRect(), v = "touches" in T ? T.touches[0].clientX : T.clientX, C = "touches" in T ? T.touches[0].clientY : T.clientY, O = $.width, V = $.height, ee = 120;
       document.body.style.userSelect = "none";
       function ae(R) {
         const H = "touches" in R ? R.touches[0].clientX : R.clientX, f = "touches" in R ? R.touches[0].clientY : R.clientY, x = O + (H - v), j = V + (f - C), Y = Math.max(1, Math.min(12, Math.round((x + 20) / ee))), ue = Math.max(1, Math.min(4, Math.round((j + 20) / ee)));
@@ -5893,15 +5893,15 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
       }
       document.addEventListener("mousemove", ae), document.addEventListener("mouseup", ce), document.addEventListener("touchmove", ae, { passive: !1 }), document.addEventListener("touchend", ce);
     }
-    return (T, P) => (k(), I("div", {
+    return (T, P) => (S(), I("div", {
       class: Se(["heading", { short: e.rows === 1 }])
     }, [
       p("div", wf, [
-        o.value ? vt((k(), I("input", {
+        o.value ? vt((S(), I("input", {
           key: 1,
           ref_key: "inputRef",
           ref: l,
-          "onUpdate:modelValue": P[0] || (P[0] = (S) => i.value = S),
+          "onUpdate:modelValue": P[0] || (P[0] = ($) => i.value = $),
           class: "heading-input",
           onBlur: a,
           onKeydown: [
@@ -5910,7 +5910,7 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
           ]
         }, null, 544)), [
           [mt, i.value]
-        ]) : (k(), I("h2", {
+        ]) : (S(), I("h2", {
           key: 0,
           class: "heading-text",
           onDblclick: r
@@ -5926,11 +5926,11 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
         p("span", { class: "dot" }, null, -1),
         p("span", { class: "dot" }, null, -1)
       ])]),
-      (k(), Le(Et, { to: "body" }, [
-        u.value ? (k(), I("div", {
+      (S(), Le(Et, { to: "body" }, [
+        u.value ? (S(), I("div", {
           key: 0,
           class: "ha-modal-overlay",
-          onClick: P[7] || (P[7] = se((S) => u.value = !1, ["self"]))
+          onClick: P[7] || (P[7] = se(($) => u.value = !1, ["self"]))
         }, [
           p("div", {
             class: "ha-modal-box",
@@ -5941,17 +5941,17 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
               P[10] || (P[10] = p("h3", { class: "ha-modal-title" }, "Überschrift", -1)),
               p("button", {
                 class: "ha-modal-close",
-                onClick: P[1] || (P[1] = (S) => u.value = !1)
+                onClick: P[1] || (P[1] = ($) => u.value = !1)
               }, "✕")
             ]),
             p("div", kf, [
               vt(p("input", {
-                "onUpdate:modelValue": P[2] || (P[2] = (S) => d.value = S),
+                "onUpdate:modelValue": P[2] || (P[2] = ($) => d.value = $),
                 class: "ha-modal-input",
                 placeholder: "Überschrift...",
                 onKeydown: [
                   Te(se(m, ["prevent"]), ["enter"]),
-                  P[3] || (P[3] = Te((S) => u.value = !1, ["escape"]))
+                  P[3] || (P[3] = Te(($) => u.value = !1, ["escape"]))
                 ]
               }, null, 40, Sf), [
                 [mt, d.value]
@@ -5964,12 +5964,12 @@ const Ku = { class: "weather-layout" }, Vu = { class: "weather-left" }, Wu = { c
               }, "✓ Übernehmen"),
               p("button", {
                 class: "ha-modal-btn cancel",
-                onClick: P[4] || (P[4] = (S) => u.value = !1)
+                onClick: P[4] || (P[4] = ($) => u.value = !1)
               }, "✕ Abbrechen")
             ]),
             p("button", {
               class: "ha-modal-delete-btn",
-              onClick: P[5] || (P[5] = (S) => {
+              onClick: P[5] || (P[5] = ($) => {
                 T.$emit("remove"), u.value = !1;
               })
             }, " Überschrift entfernen ")
@@ -6059,7 +6059,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
       autoDetect: (r) => r.entity_id.startsWith("binary_sensor.") && ["door", "window", "garage_door", "opening"].includes(r.attributes.device_class),
       token: /* @__PURE__ */ po(() => t.token)
     }), s = X(() => n.entities.value.filter((r) => r.state === "on")), o = X(() => s.value.length > 0), i = X(() => s.value.length), l = /* @__PURE__ */ W(!1);
-    return (r, a) => (k(), I(ie, null, [
+    return (r, a) => (S(), I(ie, null, [
       p("button", {
         class: Se(["pill", { active: o.value }]),
         onClick: a[0] || (a[0] = (c) => l.value = !0)
@@ -6067,8 +6067,8 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
         a[4] || (a[4] = p("span", { class: "pill-icon" }, "🔒", -1)),
         p("span", Ef, G(o.value ? `${i.value} offen` : "Gesichert"), 1)
       ], 2),
-      (k(), Le(Et, { to: "body" }, [
-        l.value ? (k(), I("div", {
+      (S(), Le(Et, { to: "body" }, [
+        l.value ? (S(), I("div", {
           key: 0,
           class: "ha-modal-overlay",
           onClick: a[3] || (a[3] = se((c) => l.value = !1, ["self"]))
@@ -6085,8 +6085,8 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 onClick: a[1] || (a[1] = (c) => l.value = !1)
               }, "✕")
             ]),
-            Ie(n).entities.value.length ? (k(), I("ul", Lf, [
-              (k(!0), I(ie, null, Ue(Ie(n).entities.value, (c) => (k(), I("li", {
+            Ie(n).entities.value.length ? (S(), I("ul", Lf, [
+              (S(!0), I(ie, null, Ue(Ie(n).entities.value, (c) => (S(), I("li", {
                 key: c.entity_id,
                 class: "ha-modal-entity-row"
               }, [
@@ -6095,7 +6095,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                   class: Se(["ha-modal-entity-badge", c.state === "on" ? "open" : "closed"])
                 }, G(c.state === "on" ? "Offen" : "Zu"), 3)
               ]))), 128))
-            ])) : (k(), I("div", If, " Keine Sensoren gefunden "))
+            ])) : (S(), I("div", If, " Keine Sensoren gefunden "))
           ])
         ])) : oe("", !0)
       ]))
@@ -6151,10 +6151,10 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
     function P() {
       d.value.length && T(d.value[0].entity_id);
     }
-    async function S(v) {
+    async function $(v) {
       await Ut(t.token, v, "toggle");
     }
-    return (v, C) => (k(), I(ie, null, [
+    return (v, C) => (S(), I(ie, null, [
       p("button", {
         class: Se(["pill", { active: l.value }]),
         onClick: C[0] || (C[0] = (O) => a.value = !0)
@@ -6162,8 +6162,8 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
         C[6] || (C[6] = p("span", { class: "pill-icon" }, "💡", -1)),
         p("span", Nf, G(l.value ? `${r.value} an` : "Lichter aus"), 1)
       ], 2),
-      (k(), Le(Et, { to: "body" }, [
-        a.value ? (k(), I("div", {
+      (S(), Le(Et, { to: "body" }, [
+        a.value ? (S(), I("div", {
           key: 0,
           class: "ha-modal-overlay",
           onClick: C[5] || (C[5] = se((O) => a.value = !1, ["self"]))
@@ -6203,7 +6203,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 }, "✕")
               ])
             ]),
-            c.value ? (k(), I(ie, { key: 1 }, [
+            c.value ? (S(), I(ie, { key: 1 }, [
               p("div", Vf, [
                 vt(p("input", {
                   "onUpdate:modelValue": C[2] || (C[2] = (O) => u.value = O),
@@ -6220,8 +6220,8 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 }, null, 40, Wf), [
                   [mt, u.value]
                 ]),
-                d.value.length ? (k(), I("ul", Uf, [
-                  (k(!0), I(ie, null, Ue(d.value, (O) => (k(), I("li", {
+                d.value.length ? (S(), I("ul", Uf, [
+                  (S(!0), I(ie, null, Ue(d.value, (O) => (S(), I("li", {
                     key: O.entity_id,
                     class: "ha-modal-suggestion-item",
                     onMousedown: se((V) => T(O.entity_id), ["prevent"])
@@ -6232,7 +6232,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 ])) : oe("", !0)
               ]),
               p("ul", Yf, [
-                (k(!0), I(ie, null, Ue(Ie(n).entityIds.value, (O) => (k(), I("li", {
+                (S(!0), I(ie, null, Ue(Ie(n).entityIds.value, (O) => (S(), I("li", {
                   key: O,
                   class: "ha-modal-entity-row"
                 }, [
@@ -6244,20 +6244,20 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                   }, "✕", 8, Xf)
                 ]))), 128))
               ]),
-              Ie(n).entityIds.value.length ? oe("", !0) : (k(), I("div", Qf, " Keine Lichter ausgewählt "))
-            ], 64)) : (k(), I(ie, { key: 0 }, [
-              Ie(n).entities.value.length ? (k(), I("ul", Bf, [
-                (k(!0), I(ie, null, Ue(Ie(n).entities.value, (O) => (k(), I("li", {
+              Ie(n).entityIds.value.length ? oe("", !0) : (S(), I("div", Qf, " Keine Lichter ausgewählt "))
+            ], 64)) : (S(), I(ie, { key: 0 }, [
+              Ie(n).entities.value.length ? (S(), I("ul", Bf, [
+                (S(!0), I(ie, null, Ue(Ie(n).entities.value, (O) => (S(), I("li", {
                   key: O.entity_id,
                   class: "ha-modal-entity-row"
                 }, [
                   p("span", jf, G(O.attributes.friendly_name ?? O.entity_id), 1),
                   p("button", {
                     class: Se(["ha-modal-toggle-btn", O.state === "on" ? "on" : "off"]),
-                    onClick: (V) => S(O.entity_id)
+                    onClick: (V) => $(O.entity_id)
                   }, G(O.state === "on" ? "An" : "Aus"), 11, Kf)
                 ]))), 128))
-              ])) : (k(), I("div", Ff, " Keine Lichter gefunden "))
+              ])) : (S(), I("div", Ff, " Keine Lichter gefunden "))
             ], 64))
           ])
         ])) : oe("", !0)
@@ -6284,58 +6284,58 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
   setup(e) {
     const t = e, n = $o({
       key: "climate",
-      autoDetect: (S) => S.entity_id.startsWith("climate.") || S.entity_id.startsWith("sensor.") && S.attributes.device_class === "temperature",
+      autoDetect: ($) => $.entity_id.startsWith("climate.") || $.entity_id.startsWith("sensor.") && $.attributes.device_class === "temperature",
       token: /* @__PURE__ */ po(() => t.token)
     }), { cache: s, version: o } = wo();
-    function i(S) {
-      if (S.entity_id.startsWith("climate.")) {
-        const C = S.attributes.current_temperature;
+    function i($) {
+      if ($.entity_id.startsWith("climate.")) {
+        const C = $.attributes.current_temperature;
         return typeof C == "number" ? C : null;
       }
-      const v = parseFloat(S.state);
+      const v = parseFloat($.state);
       return isNaN(v) ? null : v;
     }
-    function l(S) {
-      const v = i(S);
-      if (v === null) return S.state;
-      const C = S.attributes.unit_of_measurement ?? "°C";
+    function l($) {
+      const v = i($);
+      if (v === null) return $.state;
+      const C = $.attributes.unit_of_measurement ?? "°C";
       return `${v.toFixed(1)} ${C}`;
     }
     const r = X(() => {
-      const S = n.entities.value.map(i).filter((O) => O !== null);
-      if (!S.length) return "-- °C";
-      const v = Math.min(...S), C = Math.max(...S);
+      const $ = n.entities.value.map(i).filter((O) => O !== null);
+      if (!$.length) return "-- °C";
+      const v = Math.min(...$), C = Math.max(...$);
       return v === C ? `${v.toFixed(1)} °C` : `${v.toFixed(1)}–${C.toFixed(1)} °C`;
     });
-    function a(S) {
+    function a($) {
       o.value;
-      const v = s.get(S);
-      return (v == null ? void 0 : v.attributes.friendly_name) ?? S;
+      const v = s.get($);
+      return (v == null ? void 0 : v.attributes.friendly_name) ?? $;
     }
     const c = /* @__PURE__ */ W(!1), u = /* @__PURE__ */ W(!1), d = /* @__PURE__ */ W(""), b = /* @__PURE__ */ W([]);
     function m() {
       u.value = !u.value, d.value = "", b.value = [];
     }
     function N() {
-      const S = d.value.trim().toLowerCase();
-      if (!S) {
+      const $ = d.value.trim().toLowerCase();
+      if (!$) {
         b.value = [];
         return;
       }
       const v = new Set(n.entityIds.value), C = [];
       o.value;
       for (const [, O] of s)
-        if (!v.has(O.entity_id) && (O.entity_id.toLowerCase().includes(S) || (O.attributes.friendly_name ?? "").toLowerCase().includes(S)) && (C.push(O), C.length >= 8))
+        if (!v.has(O.entity_id) && (O.entity_id.toLowerCase().includes($) || (O.attributes.friendly_name ?? "").toLowerCase().includes($)) && (C.push(O), C.length >= 8))
           break;
       b.value = C;
     }
-    function T(S) {
-      n.addEntity(S), d.value = "", b.value = [];
+    function T($) {
+      n.addEntity($), d.value = "", b.value = [];
     }
     function P() {
       b.value.length && T(b.value[0].entity_id);
     }
-    return (S, v) => (k(), I(ie, null, [
+    return ($, v) => (S(), I(ie, null, [
       p("button", {
         class: "pill",
         onClick: v[0] || (v[0] = (C) => c.value = !0)
@@ -6343,8 +6343,8 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
         v[6] || (v[6] = p("span", { class: "pill-icon" }, "🌡", -1)),
         p("span", td, G(r.value), 1)
       ]),
-      (k(), Le(Et, { to: "body" }, [
-        c.value ? (k(), I("div", {
+      (S(), Le(Et, { to: "body" }, [
+        c.value ? (S(), I("div", {
           key: 0,
           class: "ha-modal-overlay",
           onClick: v[5] || (v[5] = se((C) => c.value = !1, ["self"]))
@@ -6384,7 +6384,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 }, "✕")
               ])
             ]),
-            u.value ? (k(), I(ie, { key: 1 }, [
+            u.value ? (S(), I(ie, { key: 1 }, [
               p("div", ad, [
                 vt(p("input", {
                   "onUpdate:modelValue": v[2] || (v[2] = (C) => d.value = C),
@@ -6401,8 +6401,8 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 }, null, 40, ud), [
                   [mt, d.value]
                 ]),
-                b.value.length ? (k(), I("ul", cd, [
-                  (k(!0), I(ie, null, Ue(b.value, (C) => (k(), I("li", {
+                b.value.length ? (S(), I("ul", cd, [
+                  (S(!0), I(ie, null, Ue(b.value, (C) => (S(), I("li", {
                     key: C.entity_id,
                     class: "ha-modal-suggestion-item",
                     onMousedown: se((O) => T(C.entity_id), ["prevent"])
@@ -6413,7 +6413,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 ])) : oe("", !0)
               ]),
               p("ul", pd, [
-                (k(!0), I(ie, null, Ue(Ie(n).entityIds.value, (C) => (k(), I("li", {
+                (S(!0), I(ie, null, Ue(Ie(n).entityIds.value, (C) => (S(), I("li", {
                   key: C,
                   class: "ha-modal-entity-row"
                 }, [
@@ -6425,17 +6425,17 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                   }, "✕", 8, vd)
                 ]))), 128))
               ]),
-              Ie(n).entityIds.value.length ? oe("", !0) : (k(), I("div", md, " Keine Sensoren ausgewählt "))
-            ], 64)) : (k(), I(ie, { key: 0 }, [
-              Ie(n).entities.value.length ? (k(), I("ul", id, [
-                (k(!0), I(ie, null, Ue(Ie(n).entities.value, (C) => (k(), I("li", {
+              Ie(n).entityIds.value.length ? oe("", !0) : (S(), I("div", md, " Keine Sensoren ausgewählt "))
+            ], 64)) : (S(), I(ie, { key: 0 }, [
+              Ie(n).entities.value.length ? (S(), I("ul", id, [
+                (S(!0), I(ie, null, Ue(Ie(n).entities.value, (C) => (S(), I("li", {
                   key: C.entity_id,
                   class: "ha-modal-entity-row"
                 }, [
                   p("span", ld, G(C.attributes.friendly_name ?? C.entity_id), 1),
                   p("span", rd, G(l(C)), 1)
                 ]))), 128))
-              ])) : (k(), I("div", od, " Keine Klimasensoren gefunden "))
+              ])) : (S(), I("div", od, " Keine Klimasensoren gefunden "))
             ], 64))
           ])
         ])) : oe("", !0)
@@ -6505,12 +6505,12 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
       const b = Math.round(d / 60);
       return b < 24 ? `Vor ${b} Stunde${b > 1 ? "n" : ""}` : `Vor ${Math.round(b / 24)} Tag${Math.round(b / 24) > 1 ? "en" : ""}`;
     }
-    return An(() => {
+    return En(() => {
       i(), o = setInterval(i, 3e4);
-    }), En(() => {
+    }), Mn(() => {
       o && clearInterval(o);
-    }), (a, c) => (k(), I(ie, null, [
-      n.value.length ? (k(), I("button", {
+    }), (a, c) => (S(), I(ie, null, [
+      n.value.length ? (S(), I("button", {
         key: 0,
         class: "pill",
         onClick: c[0] || (c[0] = (u) => s.value = !0)
@@ -6518,8 +6518,8 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
         c[4] || (c[4] = p("span", { class: "pill-dot" }, null, -1)),
         p("span", _d, G(n.value.length), 1)
       ])) : oe("", !0),
-      (k(), Le(Et, { to: "body" }, [
-        s.value ? (k(), I("div", {
+      (S(), Le(Et, { to: "body" }, [
+        s.value ? (S(), I("div", {
           key: 0,
           class: "ha-modal-overlay",
           onClick: c[3] || (c[3] = se((u) => s.value = !1, ["self"]))
@@ -6536,8 +6536,8 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 onClick: c[1] || (c[1] = (u) => s.value = !1)
               }, "✕")
             ]),
-            n.value.length ? (k(), I("ul", kd, [
-              (k(!0), I(ie, null, Ue(n.value, (u) => (k(), I("li", {
+            n.value.length ? (S(), I("ul", kd, [
+              (S(!0), I(ie, null, Ue(n.value, (u) => (S(), I("li", {
                 key: u.notification_id,
                 class: "notif-item"
               }, [
@@ -6545,13 +6545,13 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                   p("span", xd, G(u.title || u.message), 1),
                   p("span", Cd, G(r(u.created_at)), 1)
                 ]),
-                u.title && u.message ? (k(), I("p", Td, G(u.message), 1)) : oe("", !0),
+                u.title && u.message ? (S(), I("p", Td, G(u.message), 1)) : oe("", !0),
                 p("button", {
                   class: "notif-dismiss",
                   onClick: (d) => l(u.notification_id)
                 }, "Löschen", 8, Ad)
               ]))), 128))
-            ])) : (k(), I("div", $d, " Keine Benachrichtigungen "))
+            ])) : (S(), I("div", $d, " Keine Benachrichtigungen "))
           ])
         ])) : oe("", !0)
       ]))
@@ -6581,10 +6581,10 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
         if (y) {
           const _ = JSON.parse(y);
           if (Array.isArray(_) && _.length)
-            return _.map(($) => ({
-              id: $.id,
-              name: $.name || "Seite",
-              cards: ($.cards || []).map((te) => ({
+            return _.map((k) => ({
+              id: k.id,
+              name: k.name || "Seite",
+              cards: (k.cards || []).map((te) => ({
                 id: te.id,
                 type: te.type ?? "card",
                 entityId: te.entityId ?? "",
@@ -6601,11 +6601,11 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
       try {
         const y = localStorage.getItem("ha_cards");
         if (y) {
-          const _ = JSON.parse(y).map(($) => ({
-            id: $.id,
-            entityId: $.entityId,
-            cols: $.cols ?? ($.size === "small" ? 1 : 2),
-            rows: $.rows ?? ($.size === "small" ? 1 : 2)
+          const _ = JSON.parse(y).map((k) => ({
+            id: k.id,
+            entityId: k.entityId,
+            cols: k.cols ?? (k.size === "small" ? 1 : 2),
+            rows: k.rows ?? (k.size === "small" ? 1 : 2)
           }));
           return [{ id: d(), name: "Home", cards: _ }];
         }
@@ -6617,7 +6617,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
       var y;
       return ((y = T.value) == null ? void 0 : y.cards) ?? [];
     });
-    function S() {
+    function $() {
       return {
         pages: m.value,
         authKey: i.value ?? null,
@@ -6626,12 +6626,12 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
       };
     }
     function v() {
-      localStorage.setItem("ha_pages", JSON.stringify(m.value)), localStorage.setItem("ha_active_page", N.value), Qn(S());
+      localStorage.setItem("ha_pages", JSON.stringify(m.value)), localStorage.setItem("ha_active_page", N.value), gn($());
     }
     function C(y) {
       if (N.value !== y) {
         for (const _ of P.value) _e(_.id);
-        N.value = y, localStorage.setItem("ha_active_page", y);
+        N.value = y, localStorage.setItem("ha_active_page", y), gn($());
         for (const _ of P.value)
           _.type !== "heading" && J(_.id, _.entityId);
       }
@@ -6653,13 +6653,13 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
     function R() {
       const y = V.value;
       if (V.value = null, !y || m.value.length <= 1) return;
-      const _ = m.value.find(($) => $.id === y);
+      const _ = m.value.find((k) => k.id === y);
       if (_)
-        for (const $ of _.cards) _e($.id);
-      if (m.value = m.value.filter(($) => $.id !== y), N.value === y) {
+        for (const k of _.cards) _e(k.id);
+      if (m.value = m.value.filter((k) => k.id !== y), N.value === y) {
         N.value = m.value[0].id, localStorage.setItem("ha_active_page", N.value);
-        for (const $ of P.value)
-          $.type !== "heading" && J($.id, $.entityId);
+        for (const k of P.value)
+          k.type !== "heading" && J(k.id, k.entityId);
       }
       v();
     }
@@ -6674,7 +6674,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
     }
     const j = /* @__PURE__ */ W(null), Y = /* @__PURE__ */ W(""), ue = /* @__PURE__ */ W(null);
     function fe(y) {
-      const _ = m.value.find(($) => $.id === y);
+      const _ = m.value.find((k) => k.id === y);
       _ && (j.value = y, Y.value = _.name, ms(() => {
         ue.value && ue.value.length && (ue.value[0].focus(), ue.value[0].select());
       }));
@@ -6689,14 +6689,14 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
     }
     function J(y, _) {
       if (u.has(y)) return;
-      const $ = ju(_);
-      u.set(y, $), c[y] = { state: null, loading: !0, error: null }, Pt($.state, (te) => {
+      const k = ju(_);
+      u.set(y, k), c[y] = { state: null, loading: !0, error: null }, Pt(k.state, (te) => {
         c[y] && (c[y].state = te);
-      }), Pt($.loading, (te) => {
+      }), Pt(k.loading, (te) => {
         c[y] && (c[y].loading = te);
-      }), Pt($.error, (te) => {
+      }), Pt(k.error, (te) => {
         c[y] && (c[y].error = te);
-      }), o.value && $.start(o.value);
+      }), o.value && k.start(o.value);
     }
     function _e(y) {
       const _ = u.get(y);
@@ -6710,7 +6710,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
       y.type !== "heading" && J(y.id, y.entityId);
     Pt(o, (y, _) => {
       if (y && !_)
-        for (const [, $] of u) $.start(y);
+        for (const [, k] of u) k.start(y);
     }), Ru((y) => {
       var re, Ce;
       if ((re = y == null ? void 0 : y.pages) != null && re.length) {
@@ -6742,46 +6742,46 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
       if (y != null && y.cardSettings && Object.keys(y.cardSettings).length)
         for (const [Ye, $e] of Object.entries(y.cardSettings))
           $e.title !== void 0 && localStorage.setItem(`ha_title_${Ye}`, $e.title), $e.showTitle !== void 0 && localStorage.setItem(`ha_showtitle_${Ye}`, String($e.showTitle));
-      const _ = to(), $ = (y == null ? void 0 : y.groups) && Object.keys(y.groups).length > 0, te = _.groups && Object.keys(_.groups).length > 0, he = (y == null ? void 0 : y.pages) && y.pages.length > 0, He = m.value.length > 0;
-      console.log("[HomeBoard] onUserDataReady sync check:", { haHasGroups: $, localHasGroups: te, haHasPages: he, localHasPages: He, localGroupKeys: _.groups ? Object.keys(_.groups) : [] }), (!$ && te || !he && He) && (console.log("[HomeBoard] Pushing local settings to HA (HA missing data)"), Qn(S()));
+      const _ = to(), k = (y == null ? void 0 : y.groups) && Object.keys(y.groups).length > 0, te = _.groups && Object.keys(_.groups).length > 0, he = (y == null ? void 0 : y.pages) && y.pages.length > 0, He = m.value.length > 0;
+      console.log("[HomeBoard] onUserDataReady sync check:", { haHasGroups: k, localHasGroups: te, haHasPages: he, localHasPages: He, localGroupKeys: _.groups ? Object.keys(_.groups) : [] }), (!k && te || !he && He) && (console.log("[HomeBoard] Pushing local settings to HA (HA missing data)"), gn($()));
     });
     function Yt() {
-      const y = d(), _ = "sensor.wohnzimmer_soll_temperatur", $ = T.value;
-      $ && ($.cards = [...$.cards, { id: y, type: "card", entityId: _, cols: 2, rows: 2 }], m.value = [...m.value], J(y, _), v());
+      const y = d(), _ = "sensor.wohnzimmer_soll_temperatur", k = T.value;
+      k && (k.cards = [...k.cards, { id: y, type: "card", entityId: _, cols: 2, rows: 2 }], m.value = [...m.value], J(y, _), v());
     }
     function an() {
       const y = d(), _ = T.value;
       _ && (_.cards = [..._.cards, { id: y, type: "heading", entityId: "", label: "Überschrift", cols: 4, rows: 1 }], m.value = [...m.value], v());
     }
     function qt(y, _) {
-      const $ = T.value;
-      if (!$) return;
-      const te = $.cards.find((he) => he.id === y);
+      const k = T.value;
+      if (!k) return;
+      const te = k.cards.find((he) => he.id === y);
       te && (te.label = _, m.value = [...m.value], v());
     }
     function ze(y) {
       _e(y);
       const _ = T.value;
-      _ && (_.cards = _.cards.filter(($) => $.id !== y), m.value = [...m.value], v());
+      _ && (_.cards = _.cards.filter((k) => k.id !== y), m.value = [...m.value], v());
     }
     function et(y) {
       n.value = y;
       for (const [, _] of u) _.start(y);
     }
     function De(y, _) {
-      const $ = T.value;
-      if (!$) return;
-      const te = $.cards.find((He) => He.id === y);
+      const k = T.value;
+      if (!k) return;
+      const te = k.cards.find((He) => He.id === y);
       if (!te) return;
       te.entityId = _;
       const he = u.get(y);
       he && o.value && he.start(o.value, _), m.value = [...m.value], v();
     }
-    function lt(y, _, $) {
+    function lt(y, _, k) {
       const te = T.value;
       if (!te) return;
       const he = te.cards.find((He) => He.id === y);
-      he && (he.cols = _, he.rows = $, m.value = [...m.value], v());
+      he && (he.cols = _, he.rows = k, m.value = [...m.value], v());
     }
     function yt() {
       for (const [y] of u) _e(y);
@@ -6789,65 +6789,65 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
     }
     const Xt = /* @__PURE__ */ W(null), h = /* @__PURE__ */ W(null), g = /* @__PURE__ */ W(null), w = /* @__PURE__ */ W(1), L = /* @__PURE__ */ W(1), A = /* @__PURE__ */ W(2), E = /* @__PURE__ */ W(2);
     function B(y) {
-      const _ = y.gridCol ? `${y.gridCol} / span ${y.cols}` : `span ${y.cols}`, $ = y.gridRow ? `${y.gridRow} / span ${y.rows}` : `span ${y.rows}`;
-      return { gridColumn: _, gridRow: $ };
+      const _ = y.gridCol ? `${y.gridCol} / span ${y.cols}` : `span ${y.cols}`, k = y.gridRow ? `${y.gridRow} / span ${y.rows}` : `span ${y.rows}`;
+      return { gridColumn: _, gridRow: k };
     }
     const F = X(() => ({
       gridColumn: `${w.value} / span ${A.value}`,
       gridRow: `${L.value} / span ${E.value}`
     }));
     function D(y, _) {
-      const $ = y.target;
-      if ($.closest(".edit-ctrl-btn") || $.closest(".resize-handle") || $.closest("button") || $.closest("input")) return;
-      const te = $.closest("[data-card-id]") ?? $, he = te.getBoundingClientRect(), He = "touches" in y ? y.touches[0].clientX : y.clientX, re = "touches" in y ? y.touches[0].clientY : y.clientY, Ce = He - he.left, Ye = re - he.top;
+      const k = y.target;
+      if (k.closest(".edit-ctrl-btn") || k.closest(".resize-handle") || k.closest("button") || k.closest("input")) return;
+      const te = k.closest("[data-card-id]") ?? k, he = te.getBoundingClientRect(), He = "touches" in y ? y.touches[0].clientX : y.clientX, re = "touches" in y ? y.touches[0].clientY : y.clientY, Ce = He - he.left, Ye = re - he.top;
       let $e = !1;
       const tt = P.value.find((It) => It.id === _);
       if (!tt) return;
       const un = tt;
-      function Hn(It) {
+      function Fn(It) {
         const xs = "touches" in It ? It.touches[0].clientX : It.clientX, Cs = "touches" in It ? It.touches[0].clientY : It.clientY;
         if (!$e) {
-          const Bn = xs - He, Ts = Cs - re;
-          if (Math.abs(Bn) < 5 && Math.abs(Ts) < 5) return;
+          const jn = xs - He, Ts = Cs - re;
+          if (Math.abs(jn) < 5 && Math.abs(Ts) < 5) return;
           $e = !0, h.value = _, A.value = un.cols, E.value = un.rows;
           const Ve = te.cloneNode(!0);
           Ve.classList.add("drag-ghost"), Ve.style.position = "fixed", Ve.style.width = he.width + "px", Ve.style.height = he.height + "px", Ve.style.zIndex = "1000", Ve.style.pointerEvents = "none", Ve.style.opacity = "0.85", Ve.style.transform = "scale(1.04)", Ve.style.transition = "none", Ve.style.boxShadow = "12px 12px 24px #c8cdd5, -12px -12px 24px #ffffff", document.body.appendChild(Ve), g.value = Ve, te.style.opacity = "0.25", document.body.style.userSelect = "none";
         }
         if (g.value && (g.value.style.left = xs - Ce + "px", g.value.style.top = Cs - Ye + "px"), Xt.value) {
-          const Bn = Xt.value.getBoundingClientRect(), Ts = xs - Ce - Bn.left - Jd + he.width / 2, Ve = Cs - Ye - Bn.top - Gd + he.height / 2, Dl = Math.max(1, Math.round(Ts / pi)), Hl = Math.max(1, Math.round(Ve / pi));
+          const jn = Xt.value.getBoundingClientRect(), Ts = xs - Ce - jn.left - Jd + he.width / 2, Ve = Cs - Ye - jn.top - Gd + he.height / 2, Dl = Math.max(1, Math.round(Ts / pi)), Hl = Math.max(1, Math.round(Ve / pi));
           w.value = Dl, L.value = Hl;
         }
       }
-      function Fn() {
-        document.removeEventListener("mousemove", Hn), document.removeEventListener("mouseup", Fn), document.removeEventListener("touchmove", Hn), document.removeEventListener("touchend", Fn), document.body.style.userSelect = "", $e && (g.value && (g.value.remove(), g.value = null), te.style.opacity = "", un && (un.gridCol = w.value, un.gridRow = L.value, m.value = [...m.value], v()), h.value = null);
+      function Bn() {
+        document.removeEventListener("mousemove", Fn), document.removeEventListener("mouseup", Bn), document.removeEventListener("touchmove", Fn), document.removeEventListener("touchend", Bn), document.body.style.userSelect = "", $e && (g.value && (g.value.remove(), g.value = null), te.style.opacity = "", un && (un.gridCol = w.value, un.gridRow = L.value, m.value = [...m.value], v()), h.value = null);
       }
-      document.addEventListener("mousemove", Hn), document.addEventListener("mouseup", Fn), document.addEventListener("touchmove", Hn, { passive: !1 }), document.addEventListener("touchend", Fn);
+      document.addEventListener("mousemove", Fn), document.addEventListener("mouseup", Bn), document.addEventListener("touchmove", Fn, { passive: !1 }), document.addEventListener("touchend", Bn);
     }
     function M() {
       const y = r.value.trim();
-      Bs(y || null), a.value = !1, Qn(S());
+      Bs(y || null), a.value = !1, gn($());
     }
     const z = /* @__PURE__ */ W(!1);
     function K(y) {
       z.value && (z.value = !1);
     }
-    An(() => document.addEventListener("click", K)), En(() => document.removeEventListener("click", K));
+    En(() => document.addEventListener("click", K)), Mn(() => document.removeEventListener("click", K));
     const q = /* @__PURE__ */ W(""), Z = /* @__PURE__ */ W("");
     function le() {
       const y = /* @__PURE__ */ new Date();
       q.value = y.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" }), Z.value = y.toLocaleDateString("de-DE", { weekday: "long", day: "numeric", month: "long" });
     }
     let ye;
-    return An(() => {
+    return En(() => {
       le(), ye = setInterval(le, 1e3);
-    }), En(() => {
+    }), Mn(() => {
       for (const [y] of u) _e(y);
       clearInterval(ye);
-    }), (y, _) => (k(), I("div", null, [
-      !o.value && !e.panelMode ? (k(), Le(Au, {
+    }), (y, _) => (S(), I("div", null, [
+      !o.value && !e.panelMode ? (S(), Le(Au, {
         key: 0,
         onToken: et
-      })) : (k(), I("div", Id, [
+      })) : (S(), I("div", Id, [
         p("header", Ld, [
           p("div", Od, [
             Ae(Rf, { token: l.value }, null, 8, ["token"]),
@@ -6867,45 +6867,45 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
           ref: Xt,
           class: "dashboard-main"
         }, [
-          (k(!0), I(ie, null, Ue(P.value, ($) => {
+          (S(!0), I(ie, null, Ue(P.value, (k) => {
             var te, he, He;
-            return k(), I(ie, {
-              key: $.id
+            return S(), I(ie, {
+              key: k.id
             }, [
-              $.type === "heading" ? (k(), Le(Tf, {
+              k.type === "heading" ? (S(), Le(Tf, {
                 key: 0,
-                "data-card-id": $.id,
-                style: Nt(B($)),
-                class: Se({ "card-dragging": h.value === $.id }),
-                label: $.label || "Überschrift",
-                cols: $.cols,
-                rows: $.rows,
-                onUpdateLabel: (re) => qt($.id, re),
-                onRemove: (re) => ze($.id),
-                onResize: (re, Ce) => lt($.id, re, Ce),
-                onMousedown: (re) => D(re, $.id),
-                onTouchstart: (re) => D(re, $.id)
-              }, null, 8, ["data-card-id", "style", "class", "label", "cols", "rows", "onUpdateLabel", "onRemove", "onResize", "onMousedown", "onTouchstart"])) : (k(), Le(_f, {
+                "data-card-id": k.id,
+                style: Nt(B(k)),
+                class: Se({ "card-dragging": h.value === k.id }),
+                label: k.label || "Überschrift",
+                cols: k.cols,
+                rows: k.rows,
+                onUpdateLabel: (re) => qt(k.id, re),
+                onRemove: (re) => ze(k.id),
+                onResize: (re, Ce) => lt(k.id, re, Ce),
+                onMousedown: (re) => D(re, k.id),
+                onTouchstart: (re) => D(re, k.id)
+              }, null, 8, ["data-card-id", "style", "class", "label", "cols", "rows", "onUpdateLabel", "onRemove", "onResize", "onMousedown", "onTouchstart"])) : (S(), Le(_f, {
                 key: 1,
-                "data-card-id": $.id,
-                style: Nt(B($)),
-                class: Se({ "card-dragging": h.value === $.id }),
-                "entity-id": $.entityId,
+                "data-card-id": k.id,
+                style: Nt(B(k)),
+                class: Se({ "card-dragging": h.value === k.id }),
+                "entity-id": k.entityId,
                 token: l.value,
-                cols: $.cols,
-                rows: $.rows,
-                state: ((te = c[$.id]) == null ? void 0 : te.state) ?? null,
-                loading: ((he = c[$.id]) == null ? void 0 : he.loading) ?? !0,
-                error: ((He = c[$.id]) == null ? void 0 : He.error) ?? null,
-                onChangeEntity: (re) => De($.id, re),
-                onRemove: (re) => ze($.id),
-                onResize: (re, Ce) => lt($.id, re, Ce),
-                onMousedown: (re) => D(re, $.id),
-                onTouchstart: (re) => D(re, $.id)
+                cols: k.cols,
+                rows: k.rows,
+                state: ((te = c[k.id]) == null ? void 0 : te.state) ?? null,
+                loading: ((he = c[k.id]) == null ? void 0 : he.loading) ?? !0,
+                error: ((He = c[k.id]) == null ? void 0 : He.error) ?? null,
+                onChangeEntity: (re) => De(k.id, re),
+                onRemove: (re) => ze(k.id),
+                onResize: (re, Ce) => lt(k.id, re, Ce),
+                onMousedown: (re) => D(re, k.id),
+                onTouchstart: (re) => D(re, k.id)
               }, null, 8, ["data-card-id", "style", "class", "entity-id", "token", "cols", "rows", "state", "loading", "error", "onChangeEntity", "onRemove", "onResize", "onMousedown", "onTouchstart"]))
             ], 64);
           }), 128)),
-          h.value ? (k(), I("div", {
+          h.value ? (S(), I("div", {
             key: 0,
             class: "drop-placeholder",
             style: Nt(F.value)
@@ -6913,16 +6913,16 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
         ], 512),
         p("nav", Hd, [
           p("div", Fd, [
-            (k(!0), I(ie, null, Ue(m.value, ($, te) => (k(), I("button", {
-              key: $.id,
-              class: Se(["page-tab", { active: N.value === $.id }]),
-              onClick: (he) => C($.id),
-              onDblclick: (he) => fe($.id),
-              onTouchstartPassive: (he) => f($.id),
+            (S(!0), I(ie, null, Ue(m.value, (k, te) => (S(), I("button", {
+              key: k.id,
+              class: Se(["page-tab", { active: N.value === k.id }]),
+              onClick: (he) => C(k.id),
+              onDblclick: (he) => fe(k.id),
+              onTouchstartPassive: (he) => f(k.id),
               onTouchend: x,
               onTouchmove: x
             }, [
-              j.value === $.id ? vt((k(), I("input", {
+              j.value === k.id ? vt((S(), I("input", {
                 key: 0,
                 ref_for: !0,
                 ref_key: "renameInputRef",
@@ -6938,15 +6938,15 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 }, ["stop"]))
               }, null, 544)), [
                 [mt, Y.value]
-              ]) : (k(), I("span", jd, G($.name), 1))
+              ]) : (S(), I("span", jd, G(k.name), 1))
             ], 42, Bd))), 128))
           ])
         ]),
-        (k(), Le(Et, { to: "body" }, [
-          V.value ? (k(), I("div", {
+        (S(), Le(Et, { to: "body" }, [
+          V.value ? (S(), I("div", {
             key: 0,
             class: "ha-modal-overlay",
-            onClick: _[5] || (_[5] = se(($) => V.value = null, ["self"]))
+            onClick: _[5] || (_[5] = se((k) => V.value = null, ["self"]))
           }, [
             p("div", {
               class: "ha-modal-box page-delete-modal",
@@ -6957,14 +6957,14 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 _[19] || (_[19] = p("h3", { class: "ha-modal-title" }, "Seite löschen", -1)),
                 p("button", {
                   class: "ha-modal-close",
-                  onClick: _[2] || (_[2] = ($) => V.value = null)
+                  onClick: _[2] || (_[2] = (k) => V.value = null)
                 }, "✕")
               ]),
               p("p", Vd, " „" + G(ee.value) + '" mit ' + G(ae.value) + " Karte" + G(ae.value !== 1 ? "n" : "") + " wirklich löschen? ", 1),
               p("div", Wd, [
                 p("button", {
                   class: "page-delete-cancel",
-                  onClick: _[3] || (_[3] = ($) => V.value = null)
+                  onClick: _[3] || (_[3] = (k) => V.value = null)
                 }, "Abbrechen"),
                 p("button", {
                   class: "page-delete-confirm",
@@ -6977,7 +6977,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
         p("div", Ud, [
           p("button", {
             class: "burger-btn",
-            onClick: _[6] || (_[6] = se(($) => z.value = !z.value, ["stop"]))
+            onClick: _[6] || (_[6] = se((k) => z.value = !z.value, ["stop"]))
           }, [..._[20] || (_[20] = [
             p("span", { class: "burger-line" }, null, -1),
             p("span", { class: "burger-line" }, null, -1),
@@ -6985,7 +6985,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
           ])]),
           Ae(Ua, { name: "burger-pop" }, {
             default: Ui(() => [
-              z.value ? (k(), I("div", {
+              z.value ? (S(), I("div", {
                 key: 0,
                 class: "burger-menu",
                 onClick: _[18] || (_[18] = se(() => {
@@ -6993,7 +6993,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
               }, [
                 p("button", {
                   class: "burger-item",
-                  onClick: _[7] || (_[7] = ($) => {
+                  onClick: _[7] || (_[7] = (k) => {
                     Yt(), z.value = !1;
                   })
                 }, [..._[21] || (_[21] = [
@@ -7002,7 +7002,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 ])]),
                 p("button", {
                   class: "burger-item",
-                  onClick: _[8] || (_[8] = ($) => {
+                  onClick: _[8] || (_[8] = (k) => {
                     an(), z.value = !1;
                   })
                 }, [..._[22] || (_[22] = [
@@ -7011,17 +7011,17 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 ])]),
                 p("button", {
                   class: "burger-item",
-                  onClick: _[9] || (_[9] = ($) => {
+                  onClick: _[9] || (_[9] = (k) => {
                     O(), z.value = !1;
                   })
                 }, [..._[23] || (_[23] = [
                   p("span", { class: "burger-item-icon" }, "+", -1),
                   xt(" Neue Seite ", -1)
                 ])]),
-                m.value.length > 1 ? (k(), I("button", {
+                m.value.length > 1 ? (S(), I("button", {
                   key: 0,
                   class: "burger-item burger-item-danger",
-                  onClick: _[10] || (_[10] = ($) => {
+                  onClick: _[10] || (_[10] = (k) => {
                     ce(N.value), z.value = !1;
                   })
                 }, [..._[24] || (_[24] = [
@@ -7031,45 +7031,45 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
                 _[27] || (_[27] = p("div", { class: "burger-divider" }, null, -1)),
                 p("button", {
                   class: "burger-item burger-item-muted",
-                  onClick: _[11] || (_[11] = ($) => a.value = !a.value)
+                  onClick: _[11] || (_[11] = (k) => a.value = !a.value)
                 }, [
                   _[25] || (_[25] = p("span", { class: "burger-item-icon" }, "🔑", -1)),
                   xt(" Auth Key " + G(Ie(i) ? "✓" : ""), 1)
                 ]),
-                a.value ? (k(), I("div", {
+                a.value ? (S(), I("div", {
                   key: 1,
                   class: "burger-auth-key",
                   onClick: _[16] || (_[16] = se(() => {
                   }, ["stop"]))
                 }, [
                   vt(p("input", {
-                    "onUpdate:modelValue": _[12] || (_[12] = ($) => r.value = $),
+                    "onUpdate:modelValue": _[12] || (_[12] = (k) => r.value = k),
                     class: "burger-auth-input",
                     type: "password",
                     placeholder: "Long-Lived Access Token",
-                    onKeydown: _[13] || (_[13] = Te(($) => M(), ["enter"]))
+                    onKeydown: _[13] || (_[13] = Te((k) => M(), ["enter"]))
                   }, null, 544), [
                     [mt, r.value]
                   ]),
                   p("div", zd, [
                     p("button", {
                       class: "burger-auth-save",
-                      onClick: _[14] || (_[14] = ($) => M())
+                      onClick: _[14] || (_[14] = (k) => M())
                     }, "Speichern"),
-                    Ie(i) ? (k(), I("button", {
+                    Ie(i) ? (S(), I("button", {
                       key: 0,
                       class: "burger-auth-clear",
-                      onClick: _[15] || (_[15] = ($) => {
+                      onClick: _[15] || (_[15] = (k) => {
                         r.value = "", Ie(Bs)(null);
                       })
                     }, "Löschen")) : oe("", !0)
                   ])
                 ])) : oe("", !0),
-                e.panelMode ? oe("", !0) : (k(), I(ie, { key: 2 }, [
+                e.panelMode ? oe("", !0) : (S(), I(ie, { key: 2 }, [
                   _[26] || (_[26] = p("div", { class: "burger-divider" }, null, -1)),
                   p("button", {
                     class: "burger-item burger-item-muted",
-                    onClick: _[17] || (_[17] = ($) => {
+                    onClick: _[17] || (_[17] = (k) => {
                       yt(), z.value = !1;
                     })
                   }, " Abmelden ")
@@ -7082,7 +7082,7 @@ const Ef = { class: "pill-label" }, Mf = { class: "ha-modal-header-row" }, If = 
       ]))
     ]));
   }
-}), qd = /* @__PURE__ */ Ze(Yd, [["__scopeId", "data-v-2bd2031d"]]);
+}), qd = /* @__PURE__ */ Ze(Yd, [["__scopeId", "data-v-59b2ff83"]]);
 class Xd extends HTMLElement {
   constructor() {
     super(...arguments);

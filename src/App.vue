@@ -288,6 +288,8 @@ function switchPage(pageId: string) {
   for (const card of activeCards.value) destroySensor(card.id)
   activePageId.value = pageId
   localStorage.setItem('ha_active_page', pageId)
+  // Sync active page to HA server
+  saveHaUserData(buildUserData())
   // Start sensors for new page
   for (const card of activeCards.value) { if (card.type !== 'heading') createSensor(card.id, card.entityId) }
 }
@@ -929,7 +931,7 @@ onUnmounted(() => {
 .burger-wrap {
   position: fixed;
   bottom: 28px;
-  left: 28px;
+  right: 28px;
   z-index: 60;
 }
 
