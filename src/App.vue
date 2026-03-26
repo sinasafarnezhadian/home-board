@@ -171,7 +171,7 @@ import SecurityPill from './components/SecurityPill.vue'
 import LightsPill from './components/LightsPill.vue'
 import ClimatePill from './components/ClimatePill.vue'
 import NotificationsPill from './components/NotificationsPill.vue'
-import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode, getAuthKey, setAuthKey, getEffectiveToken, onUserDataReady, saveHaUserData, scheduleSettingsSync } from './composables/useHomeAssistant'
+import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode, getAuthKey, setAuthKey, getEffectiveToken, onUserDataReady, saveHaUserData, scheduleSettingsSync, collectLocalSettings } from './composables/useHomeAssistant'
 import type { HaUserData, HaState } from './composables/useHomeAssistant'
 import { reloadAllGroups } from './composables/useEntityGroup'
 
@@ -272,6 +272,7 @@ function buildUserData(): HaUserData {
     pages: pages.value,
     authKey: authKey.value ?? null,
     activePage: activePageId.value,
+    ...collectLocalSettings(),
   }
 }
 

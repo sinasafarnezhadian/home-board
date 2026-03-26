@@ -283,7 +283,7 @@ export async function saveHaUserData(data: HaUserData): Promise<void> {
 
 let _syncTimer: ReturnType<typeof setTimeout> | null = null
 
-function collectLocalSettings(): Pick<HaUserData, 'groups' | 'cardSettings'> {
+export function collectLocalSettings(): Pick<HaUserData, 'groups' | 'cardSettings'> {
   const groups: Record<string, { included: string[]; excluded: string[] }> = {}
   const cardSettings: Record<string, { title?: string; showTitle?: boolean }> = {}
 
@@ -322,9 +322,9 @@ export function scheduleSettingsSync() {
   if (_syncTimer) clearTimeout(_syncTimer)
   _syncTimer = setTimeout(() => {
     _syncTimer = null
-    if (!_userData.value || !ws || !authenticated) return
+    if (!ws || !authenticated) return
     const local = collectLocalSettings()
-    const merged: HaUserData = { ..._userData.value, ...local }
+    const merged: HaUserData = { ...(_userData.value ?? {}), ...local }
     saveHaUserData(merged)
   }, 500)
 }
