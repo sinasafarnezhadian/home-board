@@ -420,51 +420,70 @@ watch(token, (newToken, oldToken) => {
 
 // When WS connects and HA user data loads, sync pages + settings from server
 onUserDataReady((data) => {
-  if (!data?.pages?.length) return
-  // Stop sensors for current cards
-  for (const card of activeCards.value) destroySensor(card.id)
-  // Replace pages with server data
-  pages.value = data.pages.map((p: any) => ({
-    id: p.id,
-    name: p.name || 'Seite',
-    cards: (p.cards || []).map((c: any) => ({
-      id: c.id,
-      type: c.type ?? 'card',
-      entityId: c.entityId ?? '',
-      label: c.label,
-      cols: c.cols ?? 2,
-      rows: c.rows ?? 2,
-      gridCol: c.gridCol,
-      gridRow: c.gridRow,
-    })),
-  }))
-  // Restore active page
-  const savedId = data.activePage ?? localStorage.getItem('ha_active_page')
-  activePageId.value = pages.value.find(p => p.id === savedId)?.id ?? pages.value[0].id
-  // Persist synced data to localStorage as backup
-  localStorage.setItem('ha_pages', JSON.stringify(pages.value))
-  localStorage.setItem('ha_active_page', activePageId.value)
-  // Restart sensors for new page
-  for (const card of activeCards.value) {
-    if (card.type !== 'heading') createSensor(card.id, card.entityId)
+  // ── Restore pages from HA (if available) ──
+  if (data?.pages?.length) {
+    // Stop sensors for current cards
+    for (const card of activeCards.value) destroySensor(card.id)
+    // Replace pages with server data
+    pages.value = data.pages.map((p: any) => ({
+      id: p.id,
+      name: p.name || 'Seite',
+      cards: (p.cards || []).map((c: any) => ({
+        id: c.id,
+        type: c.type ?? 'card',
+        entityId: c.entityId ?? '',
+        label: c.label,
+        cols: c.cols ?? 2,
+        rows: c.rows ?? 2,
+        gridCol: c.gridCol,
+        gridRow: c.gridRow,
+      })),
+    }))
+    // Restore active page
+    const savedId = data.activePage ?? localStorage.getItem('ha_active_page')
+    activePageId.value = pages.value.find(p => p.id === savedId)?.id ?? pages.value[0].id
+    // Persist synced data to localStorage as backup
+    localStorage.setItem('ha_pages', JSON.stringify(pages.value))
+    localStorage.setItem('ha_active_page', activePageId.value)
+    // Restart sensors for new page
+    for (const card of activeCards.value) {
+      if (card.type !== 'heading') createSensor(card.id, card.entityId)
+    }
   }
-  // Sync auth key if set server-side
-  if (data.authKey) {
+
+  // ── Sync auth key ──
+  if (data?.authKey) {
     authKeyInput.value = data.authKey
   }
-  // Restore group configs (pills) from HA and reload pill instances
-  if (data.groups) {
+
+  // ── Restore group configs (pills) from HA → localStorage → reload instances ──
+  if (data?.groups && Object.keys(data.groups).length) {
     for (const [key, cfg] of Object.entries(data.groups)) {
       localStorage.setItem(`ha_group_${key}`, JSON.stringify(cfg))
     }
     reloadAllGroups()
   }
-  // Restore card settings (titles) from HA
-  if (data.cardSettings) {
+
+  // ── Restore card settings (titles) from HA ──
+  if (data?.cardSettings && Object.keys(data.cardSettings).length) {
     for (const [entityId, settings] of Object.entries(data.cardSettings)) {
       if (settings.title !== undefined) localStorage.setItem(`ha_title_${entityId}`, settings.title)
       if (settings.showTitle !== undefined) localStorage.setItem(`ha_showtitle_${entityId}`, String(settings.showTitle))
     }
+  }
+
+  // ── Push local settings to HA if HA is missing them ──
+  // This handles the case where settings exist in localStorage but were
+  // never pushed to HA (e.g. configured before sync feature was added)
+  const local = collectLocalSettings()
+  const haHasGroups = data?.groups && Object.keys(data.groups).length > 0
+  const localHasGroups = local.groups && Object.keys(local.groups).length > 0
+  const haHasPages = data?.pages && data.pages.length > 0
+  const localHasPages = pages.value.length > 0
+
+  if ((!haHasGroups && localHasGroups) || (!haHasPages && localHasPages)) {
+    // HA is missing data that localStorage has → push everything to HA
+    saveHaUserData(buildUserData())
   }
 })
 
