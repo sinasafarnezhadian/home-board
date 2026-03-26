@@ -158,6 +158,7 @@ function connectWs(token: string) {
       pendingResponses.set(udId, {
         resolve: (result: any) => {
           const data: HaUserData | null = result?.value ?? null
+          console.log('[HomeBoard] HA user data loaded:', data ? { hasPages: !!data.pages?.length, hasGroups: !!data.groups && Object.keys(data.groups).length, hasAuthKey: !!data.authKey, groupKeys: data.groups ? Object.keys(data.groups) : [] } : 'null/empty')
           _userData.value = data
           _userDataLoaded.value = true
           if (data?.authKey) {
@@ -167,7 +168,8 @@ function connectWs(token: string) {
           for (const cb of _userDataCallbacks) cb(data)
           _userDataCallbacks.length = 0
         },
-        reject: () => {
+        reject: (err) => {
+          console.error('[HomeBoard] Failed to load HA user data:', err)
           _userDataLoaded.value = true
           for (const cb of _userDataCallbacks) cb(null)
           _userDataCallbacks.length = 0
@@ -267,12 +269,16 @@ function disconnectWs() {
 
 export async function saveHaUserData(data: HaUserData): Promise<void> {
   _userData.value = data
-  if (!ws || !authenticated) return
+  if (!ws || !authenticated) {
+    console.warn('[HomeBoard] Cannot save to HA: WS not connected', { ws: !!ws, authenticated })
+    return
+  }
+  console.log('[HomeBoard] Saving to HA:', { hasPages: !!data.pages?.length, hasGroups: !!data.groups && Object.keys(data.groups).length, groupKeys: data.groups ? Object.keys(data.groups) : [] })
   const id = msgId++
   return new Promise((resolve, reject) => {
     pendingResponses.set(id, {
-      resolve: () => resolve(),
-      reject: (err) => reject(err),
+      resolve: () => { console.log('[HomeBoard] Save to HA successful'); resolve() },
+      reject: (err) => { console.error('[HomeBoard] Save to HA failed:', err); reject(err) },
     })
     ws!.send(JSON.stringify({ id, type: 'frontend/set_user_data', key: HA_STORAGE_KEY, value: data }))
   })
@@ -322,8 +328,12 @@ export function scheduleSettingsSync() {
   if (_syncTimer) clearTimeout(_syncTimer)
   _syncTimer = setTimeout(() => {
     _syncTimer = null
-    if (!ws || !authenticated) return
+    if (!ws || !authenticated) {
+      console.warn('[HomeBoard] scheduleSettingsSync skipped: WS not ready', { ws: !!ws, authenticated })
+      return
+    }
     const local = collectLocalSettings()
+    console.log('[HomeBoard] scheduleSettingsSync firing:', { groupKeys: local.groups ? Object.keys(local.groups) : [] })
     const merged: HaUserData = { ...(_userData.value ?? {}), ...local }
     saveHaUserData(merged)
   }, 500)

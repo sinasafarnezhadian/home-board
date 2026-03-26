@@ -481,8 +481,11 @@ onUserDataReady((data) => {
   const haHasPages = data?.pages && data.pages.length > 0
   const localHasPages = pages.value.length > 0
 
+  console.log('[HomeBoard] onUserDataReady sync check:', { haHasGroups, localHasGroups, haHasPages, localHasPages, localGroupKeys: local.groups ? Object.keys(local.groups) : [] })
+
   if ((!haHasGroups && localHasGroups) || (!haHasPages && localHasPages)) {
     // HA is missing data that localStorage has → push everything to HA
+    console.log('[HomeBoard] Pushing local settings to HA (HA missing data)')
     saveHaUserData(buildUserData())
   }
 })
