@@ -7,6 +7,16 @@ interface GroupConfig {
   excluded: string[]
 }
 
+// Global registry of all group instances for reloading after HA data sync
+const _groupInstances = new Map<string, { reload: () => void }>()
+
+/** Reload all group configs from localStorage (call after HA user data restores localStorage) */
+export function reloadAllGroups() {
+  for (const [, instance] of _groupInstances) {
+    instance.reload()
+  }
+}
+
 export function useEntityGroup(options: {
   key: string
   autoDetect: (entity: HaState) => boolean
@@ -35,6 +45,11 @@ export function useEntityGroup(options: {
     localStorage.setItem(`ha_group_${options.key}`, JSON.stringify(config.value))
     scheduleSettingsSync()
   }
+
+  // Register for global reload
+  _groupInstances.set(options.key, {
+    reload: () => { config.value = loadConfig() },
+  })
 
   // Auto-detected entity IDs (reactive via version counter)
   const autoDetectedIds: ComputedRef<string[]> = computed(() => {

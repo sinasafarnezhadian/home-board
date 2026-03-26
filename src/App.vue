@@ -172,8 +172,8 @@ import LightsPill from './components/LightsPill.vue'
 import ClimatePill from './components/ClimatePill.vue'
 import NotificationsPill from './components/NotificationsPill.vue'
 import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode, getAuthKey, setAuthKey, getEffectiveToken, onUserDataReady, saveHaUserData, scheduleSettingsSync } from './composables/useHomeAssistant'
-import type { HaUserData } from './composables/useHomeAssistant'
-import type { HaState } from './composables/useHomeAssistant'
+import type { HaUserData, HaState } from './composables/useHomeAssistant'
+import { reloadAllGroups } from './composables/useEntityGroup'
 
 const props = withDefaults(defineProps<{
   panelMode?: boolean
@@ -451,11 +451,12 @@ onUserDataReady((data) => {
   if (data.authKey) {
     authKeyInput.value = data.authKey
   }
-  // Restore group configs (pills) from HA
+  // Restore group configs (pills) from HA and reload pill instances
   if (data.groups) {
     for (const [key, cfg] of Object.entries(data.groups)) {
       localStorage.setItem(`ha_group_${key}`, JSON.stringify(cfg))
     }
+    reloadAllGroups()
   }
   // Restore card settings (titles) from HA
   if (data.cardSettings) {
