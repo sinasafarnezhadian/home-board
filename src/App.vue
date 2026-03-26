@@ -171,7 +171,7 @@ import SecurityPill from './components/SecurityPill.vue'
 import LightsPill from './components/LightsPill.vue'
 import ClimatePill from './components/ClimatePill.vue'
 import NotificationsPill from './components/NotificationsPill.vue'
-import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode, getAuthKey, setAuthKey, getEffectiveToken, onUserDataReady, saveHaUserData } from './composables/useHomeAssistant'
+import { useSensor, disconnectWs, isPanelMode, getPanelToken, setPanelMode, getAuthKey, setAuthKey, getEffectiveToken, onUserDataReady, saveHaUserData, scheduleSettingsSync } from './composables/useHomeAssistant'
 import type { HaUserData } from './composables/useHomeAssistant'
 import type { HaState } from './composables/useHomeAssistant'
 
@@ -450,6 +450,19 @@ onUserDataReady((data) => {
   // Sync auth key if set server-side
   if (data.authKey) {
     authKeyInput.value = data.authKey
+  }
+  // Restore group configs (pills) from HA
+  if (data.groups) {
+    for (const [key, cfg] of Object.entries(data.groups)) {
+      localStorage.setItem(`ha_group_${key}`, JSON.stringify(cfg))
+    }
+  }
+  // Restore card settings (titles) from HA
+  if (data.cardSettings) {
+    for (const [entityId, settings] of Object.entries(data.cardSettings)) {
+      if (settings.title !== undefined) localStorage.setItem(`ha_title_${entityId}`, settings.title)
+      if (settings.showTitle !== undefined) localStorage.setItem(`ha_showtitle_${entityId}`, String(settings.showTitle))
+    }
   }
 })
 

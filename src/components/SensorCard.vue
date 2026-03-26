@@ -136,7 +136,7 @@
 
 <script setup lang="ts">
 import { computed, ref, nextTick, watch as vueWatch } from 'vue'
-import { fetchAllStates } from '../composables/useHomeAssistant'
+import { fetchAllStates, scheduleSettingsSync } from '../composables/useHomeAssistant'
 import type { HaState } from '../composables/useHomeAssistant'
 import WeatherBody from './WeatherBody.vue'
 import LightBody from './LightBody.vue'
@@ -267,6 +267,7 @@ function confirmEdit() {
     const titleVal = editTitle.value.trim()
     localStorage.setItem(`ha_title_${id}`, titleVal)
     localStorage.setItem(`ha_showtitle_${id}`, String(editShowTitle.value))
+    scheduleSettingsSync()
     if (id === props.entityId) {
       customTitle.value = titleVal
       showTitle.value = editShowTitle.value

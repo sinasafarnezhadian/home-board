@@ -91,6 +91,8 @@ export interface HaUserData {
   pages?: any[]
   authKey?: string | null
   activePage?: string
+  groups?: Record<string, { included: string[]; excluded: string[] }>
+  cardSettings?: Record<string, { title?: string; showTitle?: boolean }>
 }
 
 const _userDataLoaded = ref(false)
@@ -274,6 +276,57 @@ export async function saveHaUserData(data: HaUserData): Promise<void> {
     })
     ws!.send(JSON.stringify({ id, type: 'frontend/set_user_data', key: HA_STORAGE_KEY, value: data }))
   })
+}
+
+// ── Debounced settings sync ──
+// Collects groups and card settings from localStorage, merges into user data, saves to HA
+
+let _syncTimer: ReturnType<typeof setTimeout> | null = null
+
+function collectLocalSettings(): Pick<HaUserData, 'groups' | 'cardSettings'> {
+  const groups: Record<string, { included: string[]; excluded: string[] }> = {}
+  const cardSettings: Record<string, { title?: string; showTitle?: boolean }> = {}
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i)
+    if (!key) continue
+
+    if (key.startsWith('ha_group_')) {
+      const groupName = key.slice('ha_group_'.length)
+      try {
+        const parsed = JSON.parse(localStorage.getItem(key)!)
+        groups[groupName] = {
+          included: Array.isArray(parsed.included) ? parsed.included : [],
+          excluded: Array.isArray(parsed.excluded) ? parsed.excluded : [],
+        }
+      } catch { /* ignore */ }
+    }
+
+    if (key.startsWith('ha_title_')) {
+      const entityId = key.slice('ha_title_'.length)
+      if (!cardSettings[entityId]) cardSettings[entityId] = {}
+      cardSettings[entityId].title = localStorage.getItem(key) ?? ''
+    }
+
+    if (key.startsWith('ha_showtitle_')) {
+      const entityId = key.slice('ha_showtitle_'.length)
+      if (!cardSettings[entityId]) cardSettings[entityId] = {}
+      cardSettings[entityId].showTitle = localStorage.getItem(key) !== 'false'
+    }
+  }
+
+  return { groups, cardSettings }
+}
+
+export function scheduleSettingsSync() {
+  if (_syncTimer) clearTimeout(_syncTimer)
+  _syncTimer = setTimeout(() => {
+    _syncTimer = null
+    if (!_userData.value || !ws || !authenticated) return
+    const local = collectLocalSettings()
+    const merged: HaUserData = { ..._userData.value, ...local }
+    saveHaUserData(merged)
+  }, 500)
 }
 
 // ── WebSocket service call with response ──

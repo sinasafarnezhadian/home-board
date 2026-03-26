@@ -1,5 +1,5 @@
 import { ref, computed, type Ref, type ComputedRef } from 'vue'
-import { getAllStates, connectWs } from './useHomeAssistant'
+import { getAllStates, connectWs, scheduleSettingsSync } from './useHomeAssistant'
 import type { HaState } from './useHomeAssistant'
 
 interface GroupConfig {
@@ -33,6 +33,7 @@ export function useEntityGroup(options: {
 
   function saveConfig() {
     localStorage.setItem(`ha_group_${options.key}`, JSON.stringify(config.value))
+    scheduleSettingsSync()
   }
 
   // Auto-detected entity IDs (reactive via version counter)
