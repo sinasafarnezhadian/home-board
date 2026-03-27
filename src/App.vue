@@ -35,6 +35,20 @@
             @mousedown="(e: MouseEvent) => onDragStart(e, card.id)"
             @touchstart="(e: TouchEvent) => onDragStart(e, card.id)"
           />
+          <TemplateCard
+            v-else-if="card.type === 'template'"
+            :data-card-id="card.id"
+            :style="cardStyle(card)"
+            :class="{ 'card-dragging': dragCardId === card.id }"
+            :template="card.template || ''"
+            :cols="card.cols"
+            :rows="card.rows"
+            @update-template="(tmpl: string) => onUpdateTemplate(card.id, tmpl)"
+            @remove="removeCard(card.id)"
+            @resize="(cols: number, rows: number) => onResizeCard(card.id, cols, rows)"
+            @mousedown="(e: MouseEvent) => onDragStart(e, card.id)"
+            @touchstart="(e: TouchEvent) => onDragStart(e, card.id)"
+          />
           <SensorCard
             v-else
             :data-card-id="card.id"
@@ -122,6 +136,9 @@
             <button class="burger-item" @click="addHeading(); burgerOpen = false">
               <span class="burger-item-icon">H</span> Überschrift hinzufügen
             </button>
+            <button class="burger-item" @click="addTemplate(); burgerOpen = false">
+              <span class="burger-item-icon">{}</span> Template Card
+            </button>
             <button class="burger-item" @click="addPage(); burgerOpen = false">
               <span class="burger-item-icon">+</span> Neue Seite
             </button>
@@ -167,6 +184,7 @@ import { ref, reactive, computed, onUnmounted, onMounted, watch, nextTick } from
 import TokenSetup from './components/TokenSetup.vue'
 import SensorCard from './components/SensorCard.vue'
 import HeadingCard from './components/HeadingCard.vue'
+import TemplateCard from './components/TemplateCard.vue'
 import SecurityPill from './components/SecurityPill.vue'
 import LightsPill from './components/LightsPill.vue'
 import ClimatePill from './components/ClimatePill.vue'
@@ -193,9 +211,10 @@ const showAuthKeyInput = ref(false)
 
 interface CardData {
   id: string
-  type?: 'card' | 'heading'
+  type?: 'card' | 'heading' | 'template'
   entityId: string
   label?: string
+  template?: string
   cols: number
   rows: number
   gridCol?: number
@@ -234,6 +253,7 @@ function loadPages(): PageData[] {
             type: c.type ?? 'card',
             entityId: c.entityId ?? '',
             label: c.label,
+            template: c.template,
             cols: c.cols ?? 2,
             rows: c.rows ?? 2,
             gridCol: c.gridCol,
@@ -291,7 +311,7 @@ function switchPage(pageId: string) {
   // Sync active page to HA server
   saveHaUserData(buildUserData())
   // Start sensors for new page
-  for (const card of activeCards.value) { if (card.type !== 'heading') createSensor(card.id, card.entityId) }
+  for (const card of activeCards.value) { if (card.type === 'card' || card.type === undefined) createSensor(card.id, card.entityId) }
 }
 
 function addPage() {
@@ -330,7 +350,7 @@ function doRemovePage() {
   if (activePageId.value === pageId) {
     activePageId.value = pages.value[0].id
     localStorage.setItem('ha_active_page', activePageId.value)
-    for (const card of activeCards.value) { if (card.type !== 'heading') createSensor(card.id, card.entityId) }
+    for (const card of activeCards.value) { if (card.type === 'card' || card.type === undefined) createSensor(card.id, card.entityId) }
   }
   savePages()
 }
@@ -411,7 +431,7 @@ const savedPages = loadPages()
 pages.value = savedPages
 const savedActiveId = localStorage.getItem('ha_active_page')
 activePageId.value = savedPages.find(p => p.id === savedActiveId)?.id ?? savedPages[0].id
-for (const c of activeCards.value) { if (c.type !== 'heading') createSensor(c.id, c.entityId) }
+for (const c of activeCards.value) { if (c.type === 'card' || c.type === undefined) createSensor(c.id, c.entityId) }
 
 // In panel mode, start sensors when token first arrives
 watch(token, (newToken, oldToken) => {
@@ -449,7 +469,7 @@ onUserDataReady((data) => {
     localStorage.setItem('ha_active_page', activePageId.value)
     // Restart sensors for new page
     for (const card of activeCards.value) {
-      if (card.type !== 'heading') createSensor(card.id, card.entityId)
+      if (card.type === 'card' || card.type === undefined) createSensor(card.id, card.entityId)
     }
   }
 
@@ -508,6 +528,26 @@ function addHeading() {
   const page = activePage.value
   if (!page) return
   page.cards = [...page.cards, { id, type: 'heading', entityId: '', label: 'Überschrift', cols: 4, rows: 1 }]
+  pages.value = [...pages.value]
+  savePages()
+}
+
+function addTemplate() {
+  const id = generateId()
+  const page = activePage.value
+  if (!page) return
+  const defaultTemplate = '<h3>Mein Template</h3>\n{{ states(\'sensor.wohnzimmer_soll_temperatur\') }} °C'
+  page.cards = [...page.cards, { id, type: 'template', entityId: '', template: defaultTemplate, cols: 2, rows: 2 }]
+  pages.value = [...pages.value]
+  savePages()
+}
+
+function onUpdateTemplate(cardId: string, tmpl: string) {
+  const page = activePage.value
+  if (!page) return
+  const card = page.cards.find(c => c.id === cardId)
+  if (!card) return
+  card.template = tmpl
   pages.value = [...pages.value]
   savePages()
 }
@@ -966,7 +1006,7 @@ onUnmounted(() => {
 .burger-menu {
   position: absolute;
   bottom: 58px;
-  left: 0;
+  right: 0;
   min-width: 190px;
   background: #e8ecf1;
   border-radius: 14px;

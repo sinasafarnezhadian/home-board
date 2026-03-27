@@ -206,6 +206,12 @@ function connectWs(token: string) {
       return
     }
 
+    // Subscription events (render_template, etc.)
+    if (msg.type === 'event' && _subscriptionHandlers.has(msg.id)) {
+      _subscriptionHandlers.get(msg.id)!(msg.event)
+      return
+    }
+
     // state_changed event
     if (msg.type === 'event' && msg.event?.event_type === 'state_changed') {
       const newState = msg.event.data.new_state as HaState | null
@@ -261,6 +267,7 @@ function disconnectWs() {
   authenticated = false
   stateCache.clear()
   listeners.clear()
+  _subscriptionHandlers.clear()
   _userDataLoaded.value = false
   _userData.value = null
 }
@@ -367,6 +374,57 @@ export async function callServiceWs(
       }
     }, 10000)
   })
+}
+
+// ── Template rendering via WS subscription ──
+// HA sends continuous updates when referenced entities change
+
+const _subscriptionHandlers = new Map<number, (event: any) => void>()
+
+export function subscribeRenderTemplate(
+  template: string,
+  onResult: (rendered: string) => void,
+  onError?: (err: string) => void,
+): { unsubscribe: () => void } {
+  let subId: number | null = null
+
+  function start() {
+    if (!ws || !authenticated) {
+      pendingAuth.push(start)
+      return
+    }
+    const id = msgId++
+    subId = id
+    // Register event handler for this subscription
+    _subscriptionHandlers.set(id, (event: any) => {
+      const result = event?.result
+      if (typeof result === 'string') onResult(result)
+    })
+    pendingResponses.set(id, {
+      resolve: () => { /* subscription confirmed, events will flow via _subscriptionHandlers */ },
+      reject: (err) => {
+        _subscriptionHandlers.delete(id)
+        onError?.(err.message)
+        subId = null
+      },
+    })
+    ws!.send(JSON.stringify({ id, type: 'render_template', template }))
+  }
+
+  start()
+
+  return {
+    unsubscribe: () => {
+      if (subId !== null) {
+        _subscriptionHandlers.delete(subId)
+        if (ws && authenticated) {
+          const id = msgId++
+          ws.send(JSON.stringify({ id, type: 'unsubscribe_events', subscription: subId }))
+        }
+      }
+      subId = null
+    },
+  }
 }
 
 // ── Per-entity sensor composable ──

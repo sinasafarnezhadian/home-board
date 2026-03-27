@@ -235,6 +235,10 @@ function onSatChange(e: Event) {
 
 :global(.card:hover) .light-ctrl-btn { opacity: 1; }
 
+.card:hover .light-ctrl-btn { 
+  opacity: 1; 
+}
+
 .light-ctrl-btn:hover {
   box-shadow: 2px 2px 4px #c8cdd5, -2px -2px 4px #ffffff;
 }

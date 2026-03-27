@@ -424,7 +424,10 @@ function startResize(e: MouseEvent | TouchEvent) {
   transition: opacity 0.2s, box-shadow 0.15s;
 }
 
-.card:hover .edit-ctrl-btn { opacity: 1; }
+.card:hover .edit-ctrl-btn, 
+.card:hover .light-ctrl-btn { 
+  opacity: 1; 
+}
 
 .edit-ctrl-btn:hover {
   box-shadow: 2px 2px 4px #c8cdd5, -2px -2px 4px #ffffff;
