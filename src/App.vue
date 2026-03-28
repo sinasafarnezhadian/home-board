@@ -455,6 +455,7 @@ onUserDataReady((data) => {
         type: c.type ?? 'card',
         entityId: c.entityId ?? '',
         label: c.label,
+        template: c.template,
         cols: c.cols ?? 2,
         rows: c.rows ?? 2,
         gridCol: c.gridCol,
